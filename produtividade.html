@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversão de Produtividade — Sacas/ha, t/ha | Agro do Dia</title>
+<meta name="description" content="Conversor de produtividade online e gratuito. Converta a produtividade da lavoura entre sacas por hectare, kg/ha e toneladas/ha.">
+<link rel="canonical" href="https://agrododia.com.br/produtividade.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Conversão de Produtividade">
+<meta property="og:description" content="Converta a produtividade entre sacas por hectare, kg/ha e t/ha.">
+<meta property="og:url" content="https://agrododia.com.br/produtividade.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Conversao de Produtividade",
+  "url": "https://agrododia.com.br/produtividade.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "description": "Conversao de produtividade entre sacas/ha, kg/ha e t/ha."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Conversão de produtividade","item":"https://agrododia.com.br/produtividade.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Calculadoras</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="disclaimer-bar">
+  <strong>Estimativas.</strong> As calculadoras dão valores orientativos — confira sempre com o seu técnico ou agrônomo.
+</div>
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>Conversão de produtividade</li>
+        </ol>
+      </nav>
+      <h1>Conversão de Produtividade</h1>
+      <p class="lead">Converta a produtividade da lavoura entre sacas por hectare, quilos por hectare e toneladas por hectare.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Converter produtividade
+      </h2>
+      <p class="calculator__hint">Informe o valor e as unidades.</p>
+
+      <fieldset class="field-group">
+        <legend>Conversão</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="valor">Produtividade</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="valor" placeholder="Ex.: 60" autocomplete="off">
+              <span class="input-affix__unit"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="de">De</label>
+            <select class="input" id="de">
+              <option value="sacas_ha">Sacas por hectare</option>
+              <option value="kg_ha">Quilos por hectare</option>
+              <option value="t_ha">Toneladas por hectare</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="para">Para</label>
+            <select class="input" id="para">
+              <option value="t_ha">Toneladas por hectare</option>
+              <option value="kg_ha">Quilos por hectare</option>
+              <option value="sacas_ha">Sacas por hectare</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pesoSaca">Peso da saca</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pesoSaca" placeholder="Ex.: 60" autocomplete="off">
+              <span class="input-affix__unit">kg</span>
+            </div>
+            <p class="help">Peso da saca da cultura. Padrão de 60 kg.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Converter</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Para que serve</h2>
+      <p>Este conversor passa a <strong>produtividade da lavoura</strong> entre sacas por hectare, quilos por hectare e toneladas por hectare.</p>
+
+      <h2>Como calcular</h2>
+      <p>O valor é convertido para kg/ha e, em seguida, para a unidade de destino. A conversão de sacas usa o peso da saca da cultura.</p>
+
+      <h2>Exemplo</h2>
+      <p>60 sacas/ha de 60 kg equivalem a 3.600 kg/ha, ou <strong>3,6 t/ha</strong>.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          O peso da saca importa
+        </div>
+        <p>Para grãos como soja e milho, a saca é de 60 kg. O arroz em casca é de 50 kg em RS e SC — usar o peso errado distorce a conversão de produtividade.</p>
+      </div>
+
+      <div class="related">
+        <h2>Outras calculadoras</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, kg e toneladas.</p></a>
+          <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por saca e equilíbrio.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire e mais.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  $('calc-example').addEventListener('click', function () {
+    $('valor').value = '60';
+    $('de').value = 'sacas_ha';
+    $('para').value = 't_ha';
+    $('pesoSaca').value = '60';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+  function readForm() {
+      var o = {};
+      o.valor = parseNum($('valor').value);
+      o.de = $('de').value;
+      o.para = $('para').value;
+      o.pesoSaca = parseNum($('pesoSaca').value);
+      return o;
+  }
+  function compute() {
+    clearError();
+    var r = Agro.produtividade(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Produtividade convertida</div>' +
+      '<div class="result__sub">Sacas/ha, kg/ha e t/ha</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + (Fmt.num(r.resultado, 2)) + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('A conversão depende do peso da saca da cultura — confirme o peso correto, sobretudo para o arroz (50 kg em RS e SC).') + '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

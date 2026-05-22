@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Consumo do Rebanho | Agro do Dia</title>
+<meta name="description" content="Calculadora de consumo do rebanho online e gratuita. Estime o consumo diário de matéria seca e de sal mineral do gado.">
+<link rel="canonical" href="https://agrododia.com.br/consumo-do-rebanho.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Calculadora de Consumo do Rebanho">
+<meta property="og:description" content="Calcule o consumo de matéria seca e de sal mineral do rebanho.">
+<meta property="og:url" content="https://agrododia.com.br/consumo-do-rebanho.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Consumo do Rebanho",
+  "url": "https://agrododia.com.br/consumo-do-rebanho.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "description": "Cálculo do consumo de matéria seca e sal mineral do rebanho."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Consumo do rebanho","item":"https://agrododia.com.br/consumo-do-rebanho.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Calculadoras</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="disclaimer-bar">
+  <strong>Estimativas.</strong> As calculadoras dão valores orientativos — confira sempre com o seu técnico ou agrônomo.
+</div>
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>Consumo do rebanho</li>
+        </ol>
+      </nav>
+      <h1>Calculadora de Consumo do Rebanho</h1>
+      <p class="lead">Estime quanto o rebanho consome de matéria seca e de sal mineral por dia — e quanto comprar para um período.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Calcular o consumo
+      </h2>
+      <p class="calculator__hint">Informe o rebanho e o tipo de criação.</p>
+
+      <fieldset class="field-group">
+        <legend>Rebanho</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="numAnimais">Número de animais</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="numAnimais" placeholder="Ex.: 80" autocomplete="off">
+              <span class="input-affix__unit">animais</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pesoMedio">Peso médio dos animais</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pesoMedio" placeholder="Ex.: 400" autocomplete="off">
+              <span class="input-affix__unit">kg</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="tipo">Tipo de criação</label>
+            <select class="input" id="tipo">
+              <option value="corte">Gado de corte</option>
+              <option value="leite">Gado de leite</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="diasEstoque">Dias de estoque</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="diasEstoque" placeholder="Ex.: 30" autocomplete="off">
+              <span class="input-affix__unit">dias</span>
+            </div>
+            <p class="help">Opcional — para estimar quanto comprar para o período.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Calcular consumo</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Para que serve</h2>
+      <p>Esta calculadora estima quanto o rebanho consome de <strong>matéria seca</strong> (volumoso e ração) e de <strong>sal mineral</strong>, para planejar a compra de alimento.</p>
+
+      <h2>Como calcular</h2>
+      <p>O consumo de matéria seca é calculado como uma porcentagem do peso vivo — cerca de 2,3% para gado de corte e 3,1% para gado de leite em lactação.</p>
+
+      <h2>Exemplo</h2>
+      <p>80 bovinos de corte de 400 kg consomem cerca de 9,2 kg de MS cada → <strong>736 kg de matéria seca por dia</strong>.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          A matéria seca não é o peso do alimento
+        </div>
+        <p>O capim verde e a silagem têm muita água. Para converter matéria seca em alimento fresco, divida pelo teor de MS do volumoso (a silagem de milho tem ~30% de MS, por exemplo).</p>
+      </div>
+
+      <div class="related">
+        <h2>Outras calculadoras</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/silagem.html"><h3>Silagem e silo</h3><p>Capacidade do silo.</p></a>
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>Taxa de lotação em UA/ha.</p></a>
+          <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  $('calc-example').addEventListener('click', function () {
+    $('numAnimais').value = '80';
+    $('pesoMedio').value = '400';
+    $('tipo').value = 'corte';
+    $('diasEstoque').value = '30';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+  function readForm() {
+      var o = {};
+      o.numAnimais = parseNum($('numAnimais').value);
+      o.pesoMedio = parseNum($('pesoMedio').value);
+      o.tipo = $('tipo').value;
+      o.diasEstoque = parseNum($('diasEstoque').value);
+      return o;
+  }
+  function compute() {
+    clearError();
+    var r = Agro.consumoRebanho(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Consumo do rebanho</div>' +
+      '<div class="result__sub">Matéria seca e sal mineral por dia</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + (Fmt.int(r.consumoMSDia) + ' <small>kg de matéria seca por dia</small>') + '</div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Consumo de MS por animal</div>' + '<div class="metric__value">' + (Fmt.num(r.consumoMSPorAnimal, 1) + ' kg/dia') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Sal mineral por dia</div>' + '<div class="metric__value">' + (Fmt.num(r.salDia, 1) + ' kg') + '</div>'  + '</div>' + ((r.estoqueMS !== undefined) ? ('<div class="metric"><div class="metric__label">Estoque de matéria seca para o período</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueMS) + ' kg') + '</div>'  + '</div>') : '') + ((r.estoqueSal !== undefined) ? ('<div class="metric"><div class="metric__label">Estoque de sal para o período</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueSal) + ' kg') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('O consumo de matéria seca foi estimado em ' + Fmt.num(r.pct, 1) + '% do peso vivo. Ajuste conforme a dieta e a categoria dos animais.') + '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

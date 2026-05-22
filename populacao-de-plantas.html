@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de População de Plantas | Agro do Dia</title>
+<meta name="description" content="Calculadora de população de plantas online e gratuita. Calcule plantas por hectare e sementes por metro pelo espaçamento de plantio.">
+<link rel="canonical" href="https://agrododia.com.br/populacao-de-plantas.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Calculadora de População de Plantas">
+<meta property="og:description" content="Calcule plantas por hectare e sementes por metro a partir do espaçamento.">
+<meta property="og:url" content="https://agrododia.com.br/populacao-de-plantas.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Populacao de Plantas",
+  "url": "https://agrododia.com.br/populacao-de-plantas.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "description": "Calculo de plantas por hectare e sementes por metro."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},
+    {"@type":"ListItem","position":2,"name":"População de plantas","item":"https://agrododia.com.br/populacao-de-plantas.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Calculadoras</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="disclaimer-bar">
+  <strong>Estimativas.</strong> As calculadoras dão valores orientativos — confira sempre com o seu técnico ou agrônomo.
+</div>
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>População de plantas</li>
+        </ol>
+      </nav>
+      <h1>Calculadora de População de Plantas</h1>
+      <p class="lead">Calcule a população de plantas por hectare e a taxa de semeadura (sementes por metro) a partir do espaçamento.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Calcular a população
+      </h2>
+      <p class="calculator__hint">Informe o espaçamento de plantio.</p>
+
+      <fieldset class="field-group">
+        <legend>Espaçamento de plantio</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="espacamentoLinhas">Espaçamento entre linhas</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="espacamentoLinhas" placeholder="Ex.: 0,5" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="espacamentoPlantas">Espaçamento entre plantas</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="espacamentoPlantas" placeholder="Ex.: 0,2" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+            <p class="help">Use para calcular as plantas por hectare.</p>
+          </div>
+        </div>
+          <div class="field">
+            <label for="populacaoDesejada">População desejada</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="populacaoDesejada" placeholder="Ex.: 70000" autocomplete="off">
+              <span class="input-affix__unit">plantas/ha</span>
+            </div>
+            <p class="help">Use para calcular as sementes por metro.</p>
+          </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Calcular</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Para que serve</h2>
+      <p>Esta calculadora relaciona o <strong>espaçamento de plantio</strong> com a <strong>população de plantas</strong> por hectare e a quantidade de sementes a semear por metro.</p>
+
+      <h2>Como calcular</h2>
+      <p>A população por hectare é 10.000 m² dividido pela área que cada planta ocupa. As sementes por metro vêm da população desejada e do espaçamento entre linhas.</p>
+      <div class="formula">Plantas/ha = 10.000 ÷ (espaçamento entre linhas × espaçamento entre plantas)</div>
+
+      <h2>Exemplo</h2>
+      <p>Linhas a 0,5 m e plantas a 0,2 m dão <strong>100.000 plantas/ha</strong>. Para 70.000 plantas/ha com linhas de 0,5 m, semeie 3,5 sementes por metro.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Ajuste pela germinação
+        </div>
+        <p>A taxa de semeadura aqui considera plantas, não sementes brutas. Para definir quantos quilos de semente comprar, ajuste pela germinação e pela pureza do lote.</p>
+      </div>
+
+      <div class="related">
+        <h2>Outras calculadoras</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Quantidade de sementes</h3><p>Sementes em kg/ha.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Da recomendação ao adubo.</p></a>
+          <a class="calc-card" href="/produtividade.html"><h3>Conversão de produtividade</h3><p>Sacas/ha, kg/ha e t/ha.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  $('calc-example').addEventListener('click', function () {
+    $('espacamentoLinhas').value = '0,5';
+    $('espacamentoPlantas').value = '0,2';
+    $('populacaoDesejada').value = '70000';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+  function readForm() {
+      var o = {};
+      o.espacamentoLinhas = parseNum($('espacamentoLinhas').value);
+      o.espacamentoPlantas = parseNum($('espacamentoPlantas').value);
+      o.populacaoDesejada = parseNum($('populacaoDesejada').value);
+      return o;
+  }
+  function compute() {
+    clearError();
+    var r = Agro.populacaoPlantas(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">População de plantas</div>' +
+      '<div class="result__sub">Plantas por hectare e sementes por metro</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + ((r.plantasPorHa !== undefined ? Fmt.int(r.plantasPorHa) + ' <small>plantas/ha</small>' : Fmt.num(r.sementesPorMetro, 2) + ' <small>sementes/m</small>')) + '</div>';
+      html += '<div class="result__metrics">' + ((r.sementesPorMetro !== undefined && r.plantasPorHa !== undefined) ? ('<div class="metric"><div class="metric__label">Sementes por metro linear</div>' + '<div class="metric__value">' + (Fmt.num(r.sementesPorMetro, 2) + ' sementes/m') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('A população ideal costuma vir recomendada pelo obtentor do híbrido ou da cultivar. Use o espaçamento entre linhas da sua semeadora.') + '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

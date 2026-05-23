@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agro do Dia — Calculadoras Agro e Cotações do Dia</title>
-<meta name="description" content="Calculadoras agropecuárias e cotações do agro atualizadas todo dia: lotação de pastagem, adubação, conversão de sacas, custo de produção, boi, soja, milho e café.">
+<title>Cotações do Agro Hoje — Boi, Soja, Milho e Café | Agro do Dia</title>
+<meta name="description" content="Cotações do agro atualizadas todo dia: boi, soja, milho, café e dólar pelo CEPEA e B3. Mais calculadoras agropecuárias para a fazenda e a lavoura.">
 <link rel="canonical" href="https://agrododia.com.br/">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Agro do Dia">
-<meta property="og:title" content="Agro do Dia — Calculadoras Agro e Cotações">
-<meta property="og:description" content="Calculadoras do agro e cotações atualizadas todo dia. Grátis e sem cadastro.">
+<meta property="og:title" content="Cotações do Agro Hoje — Boi, Soja, Milho e Café">
+<meta property="og:description" content="Cotações do agro atualizadas todo dia e calculadoras agropecuárias. Grátis.">
 <meta property="og:url" content="https://agrododia.com.br/">
 <meta property="og:image" content="https://agrododia.com.br/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   "name": "Agro do Dia",
   "url": "https://agrododia.com.br/",
   "inLanguage": "pt-BR",
-  "description": "Calculadoras agropecuárias e cotações do agro, atualizadas todo dia."
+  "description": "Cotações do agro atualizadas todo dia e calculadoras agropecuárias."
 }
 </script>
 </head>
@@ -43,6 +43,7 @@
         <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
       </svg>
       <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
     </a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -50,7 +51,7 @@
     </button>
     <nav class="main-nav" id="menu" aria-label="Menu principal">
       <ul>
-        <li><a href="/">Calculadoras</a></li>
+        <li><a href="/">Início</a></li>
         <li><a href="/cotacoes.html">Cotações</a></li>
         <li><a href="/futuros.html">Futuros</a></li>
         <li><a href="/sobre.html">Sobre</a></li>
@@ -59,12 +60,8 @@
   </div>
 </header>
 
-<div class="disclaimer-bar">
-  <strong>Estimativas.</strong> As calculadoras dão valores orientativos — confira sempre com o seu técnico ou agrônomo.
-</div>
-
 <div class="ticker-band">
-  <!-- Faixa de cotações (TradingView). Confirme/atualize o código em tradingview.com/widget/ -->
+  <!-- Faixa de cotações (TradingView). -->
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -89,63 +86,80 @@
 
   <section class="hero">
     <div class="container">
-      <span class="hero__eyebrow">Grátis · Sem cadastro · Atualizado todo dia</span>
-      <h1>Calculadoras do agro e cotações do dia</h1>
-      <p class="lead">Ferramentas para a fazenda e a lavoura, mais as cotações de boi, soja, milho, café e dólar — tudo em um lugar. Use a busca ou escolha uma calculadora.</p>
-      <div class="search-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="search" id="calc-search" placeholder="Buscar calculadora (ex.: lotação, adubo, sacas)..." aria-label="Buscar calculadora">
-      </div>
-      <p class="search-empty">Nenhuma calculadora encontrada para a sua busca.</p>
+      <span class="hero__eyebrow">Cotações atualizadas.</span>
+      <h1>Cotações do agro, todo dia.</h1>
+      <p class="lead">Boi, soja, milho, café e dólar atualizados todo dia útil. Acompanhe o mercado em um só lugar.</p>
     </div>
   </section>
 
+  <div class="container narrow">
+
+    <div class="widget-card">
+      <div class="widget-card__head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <span class="widget-card__title">Cotações do dia — principais</span>
+        <span class="widget-card__tag">CEPEA · Atualização diária</span>
+      </div>
+      <div class="widget-card__body">
+        <!-- WIDGET CEPEA (principais): gere um segundo widget no CEPEA com 4–6 indicadores (boi, soja, milho, café) e cole aqui. -->
+        <div class="widget-placeholder">
+          <p><strong>Widget de cotações principais</strong></p>
+          <p class="widget-placeholder__note">Gere um widget CEPEA reduzido (boi, soja, milho e café) e cole-o neste espaço.</p>
+        </div>
+      </div>
+      <div class="widget-card__source">Fonte: CEPEA/Esalq-USP — <a href="https://www.cepea.org.br/" target="_blank" rel="noopener nofollow">cepea.org.br</a></div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn--primary btn--lg" href="/cotacoes.html">Ver cotações completas →</a>
+      <a class="btn btn--ghost btn--lg" href="/futuros.html">Ver futuros do agro</a>
+    </div>
+
+  </div>
+
   <div class="container">
 
-    <section class="calc-category">
-      <h2>Mercado — cotações do agro</h2>
-      <div class="calc-grid">
-        <a class="calc-card" href="/cotacoes.html" data-keywords="cotações cotacao preço boi soja milho café dólar cepea"><h3>Cotações do dia</h3><p>Preços de boi, soja, milho, café e dólar, atualizados todo dia.</p></a>
-        <a class="calc-card" href="/futuros.html" data-keywords="futuros mercado futuro boi milho café b3 tradingview"><h3>Futuros</h3><p>Gráficos dos contratos futuros de boi, milho e café.</p></a>
-      </div>
-    </section>
+    <div class="section-intro">
+      <h2>Calculadoras agro</h2>
+      <p>Ferramentas extras para a fazenda e a lavoura.</p>
+    </div>
 
     <section class="calc-category">
       <h2>Pecuária</h2>
       <div class="calc-grid">
-        <a class="calc-card" href="/lotacao-pastagem.html" data-keywords="lotação pastagem ua hectare pasto rebanho unidade animal"><h3>Lotação de pastagem</h3><p>Taxa de lotação do pasto em UA por hectare.</p></a>
-        <a class="calc-card" href="/ganho-de-peso.html" data-keywords="ganho peso gmd ganho médio diário boi abate engorda"><h3>Ganho de peso (GMD)</h3><p>Ganho médio diário e previsão de abate.</p></a>
-        <a class="calc-card" href="/gestacao.html" data-keywords="gestação prenhez parto bovino vaca égua"><h3>Gestação e parto</h3><p>Data provável do parto por espécie.</p></a>
-        <a class="calc-card" href="/consumo-do-rebanho.html" data-keywords="consumo rebanho matéria seca ração sal mineral"><h3>Consumo do rebanho</h3><p>Matéria seca e sal mineral por dia.</p></a>
-        <a class="calc-card" href="/cocho.html" data-keywords="cocho bebedouro confinamento espaço linear"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho e do bebedouro.</p></a>
+        <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>Taxa de lotação do pasto em UA por hectare.</p></a>
+        <a class="calc-card" href="/ganho-de-peso.html"><h3>Ganho de peso (GMD)</h3><p>Ganho médio diário e previsão de abate.</p></a>
+        <a class="calc-card" href="/gestacao.html"><h3>Gestação e parto</h3><p>Data provável do parto por espécie.</p></a>
+        <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Consumo do rebanho</h3><p>Matéria seca e sal mineral por dia.</p></a>
+        <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho e do bebedouro.</p></a>
       </div>
     </section>
 
     <section class="calc-category">
       <h2>Lavoura</h2>
       <div class="calc-grid">
-        <a class="calc-card" href="/conversao-de-sacas.html" data-keywords="conversão sacas toneladas kg grãos café"><h3>Conversão de sacas</h3><p>Sacas, quilos e toneladas conforme a cultura.</p></a>
-        <a class="calc-card" href="/populacao-de-plantas.html" data-keywords="população plantas semeadura espaçamento sementes por metro"><h3>População de plantas</h3><p>Plantas por hectare e sementes por metro.</p></a>
-        <a class="calc-card" href="/adubacao-npk.html" data-keywords="adubação npk adubo fertilizante recomendação"><h3>Adubação NPK</h3><p>Da recomendação técnica ao adubo comercial.</p></a>
-        <a class="calc-card" href="/quantidade-de-sementes.html" data-keywords="quantidade sementes kg ha pms germinação"><h3>Quantidade de sementes</h3><p>Quilos de semente por hectare.</p></a>
-        <a class="calc-card" href="/calagem.html" data-keywords="calagem calcário saturação por bases solo prnt"><h3>Calagem</h3><p>Necessidade de calcário pelo método V%.</p></a>
-        <a class="calc-card" href="/produtividade.html" data-keywords="produtividade sacas por hectare t/ha kg/ha"><h3>Produtividade</h3><p>Converte sacas/ha, kg/ha e t/ha.</p></a>
+        <a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, quilos e toneladas conforme a cultura.</p></a>
+        <a class="calc-card" href="/populacao-de-plantas.html"><h3>População de plantas</h3><p>Plantas por hectare e sementes por metro.</p></a>
+        <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Da recomendação técnica ao adubo comercial.</p></a>
+        <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Quantidade de sementes</h3><p>Quilos de semente por hectare.</p></a>
+        <a class="calc-card" href="/calagem.html"><h3>Calagem</h3><p>Necessidade de calcário pelo método V%.</p></a>
+        <a class="calc-card" href="/produtividade.html"><h3>Produtividade</h3><p>Converte sacas/ha, kg/ha e t/ha.</p></a>
       </div>
     </section>
 
     <section class="calc-category">
       <h2>Insumos e armazenagem</h2>
       <div class="calc-grid">
-        <a class="calc-card" href="/calda-de-pulverizacao.html" data-keywords="calda pulverização defensivo tanque dose"><h3>Calda de pulverização</h3><p>Volume de calda e produto por tanque.</p></a>
-        <a class="calc-card" href="/silagem.html" data-keywords="silagem silo trincheira capacidade densidade"><h3>Silagem e silo</h3><p>Capacidade do silo e massa de silagem.</p></a>
+        <a class="calc-card" href="/calda-de-pulverizacao.html"><h3>Calda de pulverização</h3><p>Volume de calda e produto por tanque.</p></a>
+        <a class="calc-card" href="/silagem.html"><h3>Silagem e silo</h3><p>Capacidade do silo e massa de silagem.</p></a>
       </div>
     </section>
 
     <section class="calc-category">
       <h2>Medidas e gestão</h2>
       <div class="calc-grid">
-        <a class="calc-card" href="/conversao-de-area.html" data-keywords="conversão área hectare alqueire tarefa medidas"><h3>Conversão de área</h3><p>Hectare, alqueire, tarefa e metro quadrado.</p></a>
-        <a class="calc-card" href="/custo-de-producao.html" data-keywords="custo produção arroba saca litro ponto de equilíbrio"><h3>Custo de produção</h3><p>Custo por unidade e ponto de equilíbrio.</p></a>
+        <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire, tarefa e metro quadrado.</p></a>
+        <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por unidade e ponto de equilíbrio.</p></a>
       </div>
     </section>
 
@@ -155,7 +169,7 @@
     <div class="container narrow">
       <div class="disclaimer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <div><strong>Aviso.</strong> As calculadoras do Agro do Dia fornecem estimativas para planejamento. Confira sempre com o seu técnico ou agrônomo. As cotações são fornecidas por terceiros (CEPEA/Esalq e B3 via TradingView) e podem ter atraso.</div>
+        <div><strong>Aviso.</strong> As cotações são fornecidas por terceiros (CEPEA/Esalq e B3 via TradingView) e podem ter atraso. As calculadoras fornecem estimativas para planejamento — confira sempre com o seu técnico ou agrônomo.</div>
       </div>
     </div>
   </section>
@@ -175,7 +189,14 @@
           </svg>
           <span class="brand__name">Agro do Dia</span>
         </a>
-        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+        <p>Cotações do agro e calculadoras agropecuárias, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
       </div>
       <div>
         <h3>Calculadoras</h3>
@@ -184,13 +205,6 @@
           <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
           <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
           <li><a href="/conversao-de-area.html">Conversão de área</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Mercado</h3>
-        <ul>
-          <li><a href="/cotacoes.html">Cotações do dia</a></li>
-          <li><a href="/futuros.html">Futuros</a></li>
         </ul>
       </div>
       <div>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Futuros do Agro — Boi, Milho e Café (B3) | Agro do Dia</title>
-<meta name="description" content="Acompanhe os contratos futuros do agro na B3: boi gordo, milho e café. Gráficos dos preços futuros para apoiar decisões de venda e de hedge.">
+<title>Futuros do Agro — Boi, Soja, Milho e Café (B3) | Agro do Dia</title>
+<meta name="description" content="Acompanhe os contratos futuros do agro na B3: boi, milho, café, soja, açúcar e etanol. Gráficos dos preços futuros para apoiar decisões de venda e hedge.">
 <link rel="canonical" href="https://agrododia.com.br/futuros.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
@@ -33,6 +33,7 @@
         <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
       </svg>
       <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
     </a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -40,7 +41,7 @@
     </button>
     <nav class="main-nav" id="menu" aria-label="Menu principal">
       <ul>
-        <li><a href="/">Calculadoras</a></li>
+        <li><a href="/">Início</a></li>
         <li><a href="/cotacoes.html">Cotações</a></li>
         <li><a href="/futuros.html">Futuros</a></li>
         <li><a href="/sobre.html">Sobre</a></li>
@@ -49,9 +50,6 @@
   </div>
 </header>
 
-<div class="disclaimer-bar">
-  <strong>Estimativas.</strong> As calculadoras dão valores orientativos — confira sempre com o seu técnico ou agrônomo.
-</div>
 
 <main id="conteudo">
 
@@ -64,16 +62,20 @@
         </ol>
       </nav>
       <h1>Futuros do agro</h1>
-      <p class="lead">Os contratos futuros de boi gordo, milho e café na B3 — o preço que o mercado projeta para os próximos meses.</p>
+      <p class="lead">Os contratos futuros de boi, milho, café, soja, açúcar e etanol na B3 — o preço que o mercado projeta para os próximos meses.</p>
     </div>
   </div>
 
   <div class="container narrow">
 
+    <div class="cta-row">
+      <a class="btn btn--ghost" href="/cotacoes.html">← Ver cotações do dia (spot)</a>
+    </div>
+
     <div class="widget-card">
       <div class="widget-card__head">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
-        <span class="widget-card__title">Futuros — Boi Gordo, Milho e Café</span>
+        <span class="widget-card__title">Futuros — Boi, Milho, Café, Soja, Açúcar e Etanol</span>
         <span class="widget-card__tag">B3</span>
       </div>
       <div class="widget-card__body">
@@ -84,7 +86,10 @@
           "symbols": [
             [ "Boi Gordo", "BMFBOVESPA:BGI1!|6M" ],
             [ "Milho", "BMFBOVESPA:CCM1!|6M" ],
-            [ "Café Arábica", "BMFBOVESPA:ICF1!|6M" ]
+            [ "Café Arábica", "BMFBOVESPA:ICF1!|6M" ],
+            [ "Soja", "BMFBOVESPA:SJC1!|6M" ],
+            [ "Açúcar", "BMFBOVESPA:SCA1!|6M" ],
+            [ "Etanol", "BMFBOVESPA:ETN1!|6M" ]
           ],
           "chartOnly": false,
           "width": "100%",

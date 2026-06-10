@@ -232,6 +232,64 @@
     return { volume: volume, capacidadeKg: capacidadeKg, capacidadeT: capacidadeKg / 1000 };
   }
 
+  // 14. Correcao de umidade de graos
+  function umidadeGraos(o) {
+    var peso = o.pesoInicial, ui = o.umidadeInicial, uf = o.umidadeFinal;
+    if (!num(peso) || !num(ui) || !num(uf) || peso <= 0 || ui <= 0 || uf <= 0)
+      return { error: 'Informe o peso, a umidade inicial e a umidade final.' };
+    if (ui >= 100 || uf >= 100) return { error: 'As umidades devem ser menores que 100%.' };
+    if (ui <= uf) return { error: 'A umidade inicial deve ser maior que a umidade final desejada.' };
+    var pesoFinal = peso * (100 - ui) / (100 - uf);
+    var aguaRemovida = peso - pesoFinal;
+    return {
+      pesoFinal: pesoFinal,
+      aguaRemovida: aguaRemovida,
+      quebraPercentual: aguaRemovida / peso * 100
+    };
+  }
+
+  // 15. Perda na colheita por amostragem de massa no solo
+  function perdaColheita(o) {
+    var pesoAmostra = o.pesoAmostra, areaAmostra = o.areaAmostra;
+    if (!num(pesoAmostra) || !num(areaAmostra) || pesoAmostra < 0 || areaAmostra <= 0)
+      return { error: 'Informe o peso coletado na amostra e a area amostrada.' };
+    var ps = num(o.pesoSaca) && o.pesoSaca > 0 ? o.pesoSaca : 60;
+    var perdaKgHa = (pesoAmostra / areaAmostra) * 10; // g/m2 para kg/ha
+    var perdaSacasHa = perdaKgHa / ps;
+    var out = { perdaKgHa: perdaKgHa, perdaSacasHa: perdaSacasHa };
+    if (num(o.precoSaca) && o.precoSaca > 0) out.perdaReaisHa = perdaSacasHa * o.precoSaca;
+    if (num(o.areaTalhao) && o.areaTalhao > 0) {
+      out.perdaKgTotal = perdaKgHa * o.areaTalhao;
+      out.perdaSacasTotal = perdaSacasHa * o.areaTalhao;
+      if (out.perdaReaisHa !== undefined) out.perdaReaisTotal = out.perdaReaisHa * o.areaTalhao;
+    }
+    return out;
+  }
+
+  // 16. Custo de secagem
+  function custoSecagem(o) {
+    var pesoEntrada = o.pesoEntrada, ui = o.umidadeInicial, uf = o.umidadeFinal;
+    if (!num(pesoEntrada) || !num(ui) || !num(uf) || pesoEntrada <= 0 || ui <= 0 || uf <= 0)
+      return { error: 'Informe a quantidade de entrada e as umidades.' };
+    if (ui >= 100 || uf >= 100) return { error: 'As umidades devem ser menores que 100%.' };
+    if (ui <= uf) return { error: 'A umidade inicial deve ser maior que a umidade final.' };
+    var ps = num(o.pesoSaca) && o.pesoSaca > 0 ? o.pesoSaca : 60;
+    var entradaT = o.unidade === 'sacas' ? pesoEntrada * ps / 1000 : pesoEntrada;
+    var saidaT = entradaT * (100 - ui) / (100 - uf);
+    var aguaT = entradaT - saidaT;
+    var custoUnit = num(o.custoUnitario) && o.custoUnitario >= 0 ? o.custoUnitario : 0;
+    var modo = o.modoCusto || 'tonelada_entrada';
+    var custoTotal = modo === 'tonelada_agua' ? aguaT * custoUnit : entradaT * custoUnit;
+    return {
+      entradaT: entradaT,
+      saidaT: saidaT,
+      aguaRemovidaT: aguaT,
+      custoTotal: custoTotal,
+      custoPorTFinal: saidaT > 0 ? custoTotal / saidaT : 0,
+      custoPorSacaFinal: saidaT > 0 ? custoTotal / (saidaT * 1000 / ps) : 0
+    };
+  }
+
   /* ======================================================================
      MEDIDAS E GESTÃO
      ====================================================================== */
@@ -267,6 +325,103 @@
     return out;
   }
 
+  // 19. Frete agricola
+  function freteAgricola(o) {
+    var dist = o.distancia, carga = o.carga, valor = o.valorTonKm;
+    if (!num(dist) || !num(carga) || !num(valor) || dist <= 0 || carga <= 0 || valor < 0)
+      return { error: 'Informe a distancia, a carga e o valor do frete por tonelada-km.' };
+    var extras = 0;
+    if (num(o.pedagio)) extras += o.pedagio;
+    if (num(o.cargaDescarga)) extras += o.cargaDescarga;
+    if (num(o.outrosCustos)) extras += o.outrosCustos;
+    var total = dist * carga * valor + extras;
+    var ps = num(o.pesoSaca) && o.pesoSaca > 0 ? o.pesoSaca : 60;
+    return {
+      custoTotal: total,
+      custoPorT: total / carga,
+      custoPorSaca: total / (carga * 1000 / ps),
+      extras: extras
+    };
+  }
+
+  // 20. Margem bruta por hectare
+  function margemBruta(o) {
+    var prod = o.produtividade, preco = o.preco, custoVar = o.custoVariavel;
+    if (!num(prod) || !num(preco) || !num(custoVar) || prod <= 0 || preco <= 0 || custoVar < 0)
+      return { error: 'Informe a produtividade, o preco de venda e o custo variavel por hectare.' };
+    var receitaHa = prod * preco;
+    var margemHa = receitaHa - custoVar;
+    var custoFixo = num(o.custoFixo) && o.custoFixo >= 0 ? o.custoFixo : 0;
+    var lucroHa = margemHa - custoFixo;
+    var area = num(o.area) && o.area > 0 ? o.area : null;
+    var out = {
+      receitaHa: receitaHa,
+      margemBrutaHa: margemHa,
+      lucroHa: lucroHa,
+      margemPercentual: receitaHa > 0 ? margemHa / receitaHa * 100 : 0,
+      precoEquilibrioVariavel: custoVar / prod,
+      precoEquilibrioTotal: (custoVar + custoFixo) / prod
+    };
+    if (area) {
+      out.receitaTotal = receitaHa * area;
+      out.margemBrutaTotal = margemHa * area;
+      out.lucroTotal = lucroHa * area;
+    }
+    return out;
+  }
+
+  // 21. Custo de armazenagem
+  function custoArmazenagem(o) {
+    var q = o.quantidade, meses = o.meses, custoMes = o.custoMensal;
+    if (!num(q) || !num(meses) || !num(custoMes) || q <= 0 || meses <= 0 || custoMes < 0)
+      return { error: 'Informe a quantidade, o periodo e o custo mensal.' };
+    var ps = num(o.pesoSaca) && o.pesoSaca > 0 ? o.pesoSaca : 60;
+    var sacas = o.unidade === 't' ? q * 1000 / ps : q;
+    var toneladas = sacas * ps / 1000;
+    var custoBase = o.baseCusto === 't_mes' ? toneladas * meses * custoMes : sacas * meses * custoMes;
+    var custoFixo = num(o.custoFixo) && o.custoFixo >= 0 ? o.custoFixo : 0;
+    var custoTotal = custoBase + custoFixo;
+    var out = {
+      sacas: sacas,
+      toneladas: toneladas,
+      custoTotal: custoTotal,
+      custoPorSaca: custoTotal / sacas,
+      custoPorT: custoTotal / toneladas
+    };
+    if (num(o.precoSaca) && o.precoSaca > 0) {
+      out.percentualDoValor = custoTotal / (sacas * o.precoSaca) * 100;
+    }
+    return out;
+  }
+
+  // 22. Comparacao vender agora vs armazenar
+  function vendaArmazenagem(o) {
+    var q = o.quantidadeSacas, hoje = o.precoHoje, futuro = o.precoFuturo, meses = o.meses;
+    if (!num(q) || !num(hoje) || !num(futuro) || !num(meses) || q <= 0 || hoje <= 0 || futuro <= 0 || meses <= 0)
+      return { error: 'Informe quantidade, preco atual, preco futuro e periodo.' };
+    var custoMes = num(o.custoMensalSaca) && o.custoMensalSaca >= 0 ? o.custoMensalSaca : 0;
+    var juros = num(o.jurosMes) && o.jurosMes >= 0 ? o.jurosMes : 0;
+    var quebra = num(o.quebraPct) && o.quebraPct >= 0 ? o.quebraPct : 0;
+    if (quebra >= 100) return { error: 'A quebra deve ser menor que 100%.' };
+    var qFinal = q * (1 - quebra / 100);
+    var receitaHoje = q * hoje;
+    var custoArm = q * custoMes * meses;
+    var custoOportunidade = receitaHoje * (Math.pow(1 + juros / 100, meses) - 1);
+    var receitaFutura = qFinal * futuro;
+    var resultadoLiquido = receitaFutura - custoArm - custoOportunidade - receitaHoje;
+    var precoMinimoFuturo = (receitaHoje + custoArm + custoOportunidade) / qFinal;
+    return {
+      quantidadeFinal: qFinal,
+      receitaHoje: receitaHoje,
+      receitaFutura: receitaFutura,
+      custoArmazenagem: custoArm,
+      custoOportunidade: custoOportunidade,
+      resultadoLiquido: resultadoLiquido,
+      precoMinimoFuturo: precoMinimoFuturo,
+      diferencaPrecoNecessaria: precoMinimoFuturo - hoje
+    };
+  }
+
   /* ----------------------------------------------------------------------
      Exportação
      ---------------------------------------------------------------------- */
@@ -277,7 +432,11 @@
     adubacaoNPK: adubacaoNPK, quantidadeSementes: quantidadeSementes,
     calagem: calagem, produtividade: produtividade,
     caldaPulverizacao: caldaPulverizacao, silagem: silagem,
+    umidadeGraos: umidadeGraos, perdaColheita: perdaColheita,
+    custoSecagem: custoSecagem,
     conversaoArea: conversaoArea, custoProducao: custoProducao,
+    freteAgricola: freteAgricola, margemBruta: margemBruta,
+    custoArmazenagem: custoArmazenagem, vendaArmazenagem: vendaArmazenagem,
     GESTACAO: GESTACAO, AREA_M2: AREA_M2
   };
   global.Agro = Agro;

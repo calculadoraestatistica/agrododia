@@ -1,0 +1,42 @@
+name: Scrape CEPEA cotações
+
+# Roda a cada 30min em horário comercial BRT (11h-22h UTC = 8h-19h BRT), seg-sex.
+# Manual também via workflow_dispatch.
+on:
+  schedule:
+    # */30 minutos, das 11h às 22h UTC (= 8h-19h BRT), seg-sex
+    - cron: '*/30 11-22 * * 1-5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # pra commitar data/cotacoes.json
+
+concurrency:
+  group: scrape-cepea
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scrape CEPEA
+        run: python tools/scrape_cepea.py
+
+      - name: Commit + push se mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cotacoes.json
+          if git diff --staged --quiet; then
+            echo "Sem mudanças nos preços — skip commit."
+          else
+            git commit -m "cotacoes: atualiza CEPEA spot ($(TZ='America/Sao_Paulo' date +%Y-%m-%d_%Hh%M))"
+            git push
+          fi

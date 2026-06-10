@@ -84,53 +84,28 @@
         <span class="widget-card__title">Cotações do agro — CEPEA/Esalq</span>
         <span class="widget-card__tag">Atualização diária</span>
       </div>
-      <div class="widget-card__body">
-        <!-- Widget de cotações do CEPEA/Esalq -->
-        <!-- TradingView Symbol Overview: mostra cotacoes agro relevantes + grafico -->
-<div class="tradingview-widget-container" style="min-height:380px;">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
-    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotacoes pelo TradingView</a>
-  </div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-  {
-  "symbols": [
-    ["Soja CME","CBOT:ZS1!|3M"],
-    ["Milho CME","CBOT:ZC1!|3M"],
-    ["Cafe ICE","ICEUS:KC1!|3M"],
-    ["Boi Gordo BMF","BMFBOVESPA:BGI1!|3M"],
-    ["Dolar BRL","FX_IDC:USDBRL|3M"]
-  ],
-  "chartOnly": false,
-  "width": "100%",
-  "height": 380,
-  "locale": "br",
-  "colorTheme": "light",
-  "autosize": true,
-  "showVolume": false,
-  "showMA": false,
-  "hideDateRanges": false,
-  "hideMarketStatus": false,
-  "hideSymbolLogo": false,
-  "scalePosition": "right",
-  "scaleMode": "Normal",
-  "fontFamily": "Inter, system-ui, sans-serif",
-  "fontSize": "10",
-  "noTimeScale": false,
-  "valuesTracking": "1",
-  "changeMode": "price-and-percent",
-  "chartType": "area",
-  "maLineColor": "#2F6B3A",
-  "maLineWidth": 1,
-  "maLength": 9,
-  "backgroundColor": "rgba(255, 255, 255, 1)",
-  "lineWidth": 2,
-  "lineType": 0,
-  "dateRanges": ["1d|1","1m|30","3m|60","12m|1D"]
-  }
-  </script>
-</div>
+      <div class="widget-card__body" data-cotacoes-cepea>
+          <div class="cot-card cot-card--loading">Carregando cotações spot…</div>
+        </div>
       </div>
+      <div class="widget-card" style="margin-top:1.2rem">
+        <div class="widget-card__head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="widget-card__title">Futuros e câmbio — mercado vivo</span>
+          <span class="widget-card__tag">TradingView</span>
+        </div>
+        <div class="widget-card__body">
+          <!-- TradingView Symbol Overview: futuros internacionais + USD/BRL -->
+          <div class="tradingview-widget-container" style="min-height:380px;">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
+              <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotações pelo TradingView</a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+            {"symbols":[["Soja CME","CBOT:ZS1!|3M"],["Milho CME","CBOT:ZC1!|3M"],["Café ICE","ICEUS:KC1!|3M"],["Boi Gordo BMF","BMFBOVESPA:BGI1!|3M"],["Dólar BRL","FX_IDC:USDBRL|3M"]],"chartOnly":false,"width":"100%","height":380,"locale":"br","colorTheme":"light","autosize":true,"showVolume":false,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":false,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Inter, system-ui, sans-serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#2F6B3A","maLineWidth":1,"maLength":9,"backgroundColor":"rgba(255, 255, 255, 1)","lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D"]}
+            </script>
+          </div>
+        </div>
       <div class="widget-card__source">Fonte: CEPEA/Esalq-USP — <a href="https://www.cepea.org.br/" target="_blank" rel="noopener nofollow">cepea.org.br</a></div>
     </div>
 
@@ -226,5 +201,6 @@
 
 <script src="/js/config.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/cotacoes-cepea.js" defer></script>
 </body>
 </html>

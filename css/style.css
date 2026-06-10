@@ -1777,3 +1777,105 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 .widget-card__body th {
   padding: 0.4rem 0.6rem !important;
 }
+
+/* === Cotações spot CEPEA (widget proprio via JSON) === */
+.cot-card {
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.cot-card--loading,
+.cot-card--err {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--c-muted);
+}
+.cot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body, Inter, sans-serif);
+}
+.cot-table thead th {
+  background: var(--c-primary-soft);
+  color: var(--c-primary-darker);
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: .55rem .85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--c-line);
+}
+.cot-table tbody td {
+  padding: .8rem .85rem;
+  border-bottom: 1px solid var(--c-line);
+  font-size: .96rem;
+  vertical-align: middle;
+}
+.cot-table tbody tr:last-child td { border-bottom: none; }
+.cot-cell-prod {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  min-width: 160px;
+}
+.cot-cell-prod strong {
+  color: var(--c-ink);
+  font-weight: 700;
+  font-size: 1.0rem;
+}
+.cot-unit {
+  color: var(--c-muted);
+  font-size: .82rem;
+}
+.cot-cell-val {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-weight: 700;
+  color: var(--c-primary-darker);
+  font-size: 1.04rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.cot-cell-date {
+  color: var(--c-muted);
+  font-size: .9rem;
+  white-space: nowrap;
+  text-align: right;
+}
+.cot-icon {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-primary-soft);
+  color: var(--c-primary-darker);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.cot-icon svg { width: 18px; height: 18px; }
+.cot-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .7rem .85rem;
+  background: var(--c-softer, #F6F2E8);
+  font-size: .82rem;
+  color: var(--c-muted);
+  border-top: 1px solid var(--c-line);
+}
+.cot-footer a {
+  color: var(--c-primary-darker);
+  text-decoration: none;
+  font-weight: 600;
+}
+.cot-footer a:hover { text-decoration: underline; }
+@media (max-width: 540px) {
+  .cot-table thead th:last-child,
+  .cot-table tbody td.cot-cell-date { display: none; }
+  .cot-cell-prod { min-width: 0; }
+}

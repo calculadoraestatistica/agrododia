@@ -108,53 +108,28 @@
         <span class="widget-card__title">Cotações do dia — principais</span>
         <span class="widget-card__tag">CEPEA · Atualização diária</span>
       </div>
-      <div class="widget-card__body">
-        <!-- CEPEA widget: lazy-load via iframe pra nao bloquear render (servidor cepea.org.br as vezes lento) -->
-<!-- TradingView Symbol Overview: mostra cotacoes agro relevantes + grafico -->
-<div class="tradingview-widget-container" style="min-height:380px;">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
-    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotacoes pelo TradingView</a>
-  </div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-  {
-  "symbols": [
-    ["Soja CME","CBOT:ZS1!|3M"],
-    ["Milho CME","CBOT:ZC1!|3M"],
-    ["Cafe ICE","ICEUS:KC1!|3M"],
-    ["Boi Gordo BMF","BMFBOVESPA:BGI1!|3M"],
-    ["Dolar BRL","FX_IDC:USDBRL|3M"]
-  ],
-  "chartOnly": false,
-  "width": "100%",
-  "height": 380,
-  "locale": "br",
-  "colorTheme": "light",
-  "autosize": true,
-  "showVolume": false,
-  "showMA": false,
-  "hideDateRanges": false,
-  "hideMarketStatus": false,
-  "hideSymbolLogo": false,
-  "scalePosition": "right",
-  "scaleMode": "Normal",
-  "fontFamily": "Inter, system-ui, sans-serif",
-  "fontSize": "10",
-  "noTimeScale": false,
-  "valuesTracking": "1",
-  "changeMode": "price-and-percent",
-  "chartType": "area",
-  "maLineColor": "#2F6B3A",
-  "maLineWidth": 1,
-  "maLength": 9,
-  "backgroundColor": "rgba(255, 255, 255, 1)",
-  "lineWidth": 2,
-  "lineType": 0,
-  "dateRanges": ["1d|1","1m|30","3m|60","12m|1D"]
-  }
-  </script>
-</div>
+      <div class="widget-card__body" data-cotacoes-cepea>
+          <div class="cot-card cot-card--loading">Carregando cotações spot…</div>
+        </div>
       </div>
+      <div class="widget-card" style="margin-top:1.2rem">
+        <div class="widget-card__head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="widget-card__title">Futuros e câmbio — mercado vivo</span>
+          <span class="widget-card__tag">TradingView</span>
+        </div>
+        <div class="widget-card__body">
+          <!-- TradingView Symbol Overview: futuros internacionais + USD/BRL -->
+          <div class="tradingview-widget-container" style="min-height:380px;">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
+              <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotações pelo TradingView</a>
+            </div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+            {"symbols":[["Soja CME","CBOT:ZS1!|3M"],["Milho CME","CBOT:ZC1!|3M"],["Café ICE","ICEUS:KC1!|3M"],["Boi Gordo BMF","BMFBOVESPA:BGI1!|3M"],["Dólar BRL","FX_IDC:USDBRL|3M"]],"chartOnly":false,"width":"100%","height":380,"locale":"br","colorTheme":"light","autosize":true,"showVolume":false,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":false,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Inter, system-ui, sans-serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#2F6B3A","maLineWidth":1,"maLength":9,"backgroundColor":"rgba(255, 255, 255, 1)","lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D"]}
+            </script>
+          </div>
+        </div>
       <div class="widget-card__source">Fonte: CEPEA/Esalq-USP — <a href="https://www.cepea.org.br/" target="_blank" rel="noopener nofollow">cepea.org.br</a></div>
     </div>
 
@@ -192,6 +167,7 @@
         <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Quantidade de sementes</h3><p>Quilos de semente por hectare.</p></a>
         <a class="calc-card" href="/calagem.html"><h3>Calagem</h3><p>Necessidade de calcário pelo método V%.</p></a>
         <a class="calc-card" href="/produtividade.html"><h3>Produtividade</h3><p>Converte sacas/ha, kg/ha e t/ha.</p></a>
+        <a class="calc-card" href="/perda-colheita.html"><h3>Perda na colheita</h3><p>Perdas em kg/ha, sacas/ha e R$/ha.</p></a>
       </div>
     </section>
 
@@ -200,6 +176,9 @@
       <div class="calc-grid">
         <a class="calc-card" href="/calda-de-pulverizacao.html"><h3>Calda de pulverização</h3><p>Volume de calda e produto por tanque.</p></a>
         <a class="calc-card" href="/silagem.html"><h3>Silagem e silo</h3><p>Capacidade do silo e massa de silagem.</p></a>
+        <a class="calc-card" href="/umidade-graos.html"><h3>Umidade de grãos</h3><p>Peso corrigido, água removida e quebra.</p></a>
+        <a class="calc-card" href="/custo-secagem.html"><h3>Custo de secagem</h3><p>Custo por tonelada e por saca.</p></a>
+        <a class="calc-card" href="/custo-armazenagem.html"><h3>Custo de armazenagem</h3><p>Custo total, por saca e por tonelada.</p></a>
       </div>
     </section>
 
@@ -208,6 +187,9 @@
       <div class="calc-grid">
         <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire, tarefa e metro quadrado.</p></a>
         <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por unidade e ponto de equilíbrio.</p></a>
+        <a class="calc-card" href="/margem-bruta.html"><h3>Margem bruta</h3><p>Receita, margem e preço de equilíbrio.</p></a>
+        <a class="calc-card" href="/frete-agricola.html"><h3>Frete agrícola</h3><p>Custo por carga, tonelada e saca.</p></a>
+        <a class="calc-card" href="/vender-ou-armazenar.html"><h3>Vender ou armazenar</h3><p>Compare preço atual, futuro e custos.</p></a>
       </div>
     </section>
 
@@ -253,6 +235,8 @@
           <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
           <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
           <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+          <li><a href="/margem-bruta.html">Margem bruta</a></li>
+          <li><a href="/umidade-graos.html">Umidade de grãos</a></li>
         </ul>
       </div>
       <div>
@@ -275,5 +259,6 @@
 
 <script src="/js/config.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/cotacoes-cepea.js" defer></script>
 </body>
 </html>

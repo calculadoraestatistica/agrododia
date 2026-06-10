@@ -1,21 +1,30 @@
 """
-Scraper CEPEA/Esalq - baixa indicadores spot do widget oficial e salva em
-data/cotacoes.json. Roda via GH Actions de hora em hora 8h-19h BRT dias uteis.
+Scraper CEPEA/Esalq - baixa indicadores spot do widget oficial e salva em:
+  data/cotacoes.json            (set basico — 4 indicadores p/ hero da home)
+  data/cotacoes-completas.json  (set ampliado — 27 indicadores p/ pagina cotacoes.html)
 
-Indicadores fixados (mesmos do widget original):
-  2  = Boi Gordo CEPEA/B3 @
-  12 = Soja - PR CEPEA/Esalq sc 60kg
-  77 = Milho CEPEA/Esalq sc 60kg
-  23 = Cafe Arabica CEPEA/Esalq sc 60kg
+Roda via GH Actions de 30 em 30min, 8h-19h BRT dias uteis.
+
+Sets de indicadores:
+  basico (4):  2 (Boi Gordo), 12 (Soja PR), 77 (Milho), 23 (Cafe Arabica)
+  completo (27): conjunto historico do widget original — boi gordo SP/SE,
+                 leite, suino, algodao, etanol, trigo, arroz, etc.
 """
-import json, re, sys
+import argparse, json, re, sys
 import urllib.request as u
 import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parent.parent / "data" / "cotacoes.json"
-OUT.parent.mkdir(parents=True, exist_ok=True)
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+# Sets de indicadores CEPEA
+SET_BASICO = ["2", "12", "77", "23"]
+SET_COMPLETO = [
+    "2","8","3","12","77","178","179","23","24","leitep","91","54","50",
+    "149","35","53","308","208","75","211","101","104","209","119","76","100","103"
+]
 
 # Mapa para meta enriquecida no JSON final
 META = {
@@ -26,18 +35,16 @@ META = {
     "Café Arábica": {"slug": "cafe-arabica", "icon": "cafe"},
 }
 
-WIDGET_URL = (
-    "https://www.cepea.org.br/br/widgetproduto.js.php"
-    "?fonte=arial&tamanho=12&largura=680px"
-    "&corfundo=ffffff&cortexto=0f172a&corlinha=f1f5f9"
-    "&id_indicador%5B%5D=2"   # Boi Gordo
-    "&id_indicador%5B%5D=12"  # Soja PR
-    "&id_indicador%5B%5D=77"  # Milho
-    "&id_indicador%5B%5D=23"  # Cafe Arabica
-)
+def widget_url(ids):
+    base = (
+        "https://www.cepea.org.br/br/widgetproduto.js.php"
+        "?fonte=arial&tamanho=12&largura=680px"
+        "&corfundo=ffffff&cortexto=0f172a&corlinha=f1f5f9"
+    )
+    return base + "".join(f"&id_indicador%5B%5D={i}" for i in ids)
 
-def fetch_widget():
-    req = u.Request(WIDGET_URL, headers={
+def fetch_widget(ids):
+    req = u.Request(widget_url(ids), headers={
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
         "Referer": "https://agrododia.com.br/",
@@ -93,25 +100,33 @@ def parse_rows(body):
         })
     return items
 
+def scrape_and_save(ids, out_path, label):
+    body = fetch_widget(ids)
+    items = parse_rows(body)
+    if not items:
+        raise RuntimeError(f"zero items extraidos ({label})")
+    brt = timezone(timedelta(hours=-3))
+    out = {
+        "updated_at": datetime.now(brt).isoformat(timespec="seconds"),
+        "source": "CEPEA/Esalq",
+        "source_url": "https://www.cepea.org.br/",
+        "items": items,
+    }
+    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"OK ({label}): {len(items)} indicadores -> {out_path.name}")
+    for it in items:
+        print(f"  {it['name']:30s} {it['value_display']:>16s} / {it['unit']} ({it['date']})")
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--set", choices=["basico", "completo", "all"], default="all",
+                    help="basico=4 indicadores hero, completo=27 da pagina cotacoes, all=ambos")
+    args = ap.parse_args()
     try:
-        body = fetch_widget()
-        items = parse_rows(body)
-        if not items:
-            print("ERRO: zero items extraidos do widget CEPEA", file=sys.stderr)
-            sys.exit(1)
-        # Timezone BRT (-3)
-        brt = timezone(timedelta(hours=-3))
-        out = {
-            "updated_at": datetime.now(brt).isoformat(timespec="seconds"),
-            "source": "CEPEA/Esalq",
-            "source_url": "https://www.cepea.org.br/",
-            "items": items,
-        }
-        OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"OK: {len(items)} indicadores salvos em {OUT.name}")
-        for it in items:
-            print(f"  {it['name']:20s} {it['value_display']:>14s} / {it['unit']} ({it['date']})")
+        if args.set in ("basico", "all"):
+            scrape_and_save(SET_BASICO, DATA_DIR / "cotacoes.json", "basico")
+        if args.set in ("completo", "all"):
+            scrape_and_save(SET_COMPLETO, DATA_DIR / "cotacoes-completas.json", "completo")
     except urllib.error.URLError as e:
         print(f"ERRO conexao CEPEA: {e}", file=sys.stderr)
         sys.exit(1)

@@ -74,7 +74,9 @@
 
   function render(container) {
     container.innerHTML = '<div class="cot-card cot-card--loading">Carregando cotações…</div>';
-    fetch('/data/cotacoes.json', { cache: 'no-cache' })
+    var variant = container.getAttribute('data-cotacoes-cepea') || '';
+    var url = variant === 'completas' ? '/data/cotacoes-completas.json' : '/data/cotacoes.json';
+    fetch(url, { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
       .then(function (data) {
         if (!data || !data.items || !data.items.length) throw new Error('no items');

@@ -86,7 +86,46 @@
       </div>
       <div class="widget-card__body">
         <!-- Widget de cotações do CEPEA/Esalq -->
-        <script src="https://www.cepea.org.br/br/widgetproduto.js.php?fonte=arial&tamanho=12&largura=680px&corfundo=f0fdf4&cortexto=0f172a&corlinha=f1f5f9&id_indicador%5B%5D=2&id_indicador%5B%5D=8&id_indicador%5B%5D=3&id_indicador%5B%5D=12&id_indicador%5B%5D=77&id_indicador%5B%5D=178&id_indicador%5B%5D=179&id_indicador%5B%5D=23&id_indicador%5B%5D=24&id_indicador%5B%5D=leitep&id_indicador%5B%5D=91&id_indicador%5B%5D=54&id_indicador%5B%5D=50&id_indicador%5B%5D=149&id_indicador%5B%5D=35&id_indicador%5B%5D=53&id_indicador%5B%5D=308&id_indicador%5B%5D=208&id_indicador%5B%5D=75&id_indicador%5B%5D=211&id_indicador%5B%5D=101&id_indicador%5B%5D=104&id_indicador%5B%5D=209&id_indicador%5B%5D=119&id_indicador%5B%5D=76&id_indicador%5B%5D=100&id_indicador%5B%5D=103"></script>
+        <iframe
+  class="cepea-iframe"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Cotacoes CEPEA"
+  data-src=""
+  src="about:blank"
+  style="border:0; width:100%; min-height:240px; background:#fff;"
+></iframe>
+<script>
+(function(){
+  var iframes = document.querySelectorAll('iframe.cepea-iframe:not([data-init])');
+  if (!iframes.length) return;
+  var load = function(iframe){
+    iframe.setAttribute('data-init','1');
+    var url = iframe.getAttribute('data-src');
+    var html = '<!doctype html><html><head><meta charset="utf-8"><base href="https://www.cepea.org.br/"></head><body style="margin:0;font-family:Inter,system-ui,sans-serif;"><script src="'+url+'"><\/script></body></html>';
+    iframe.srcdoc = html;
+    var timer = setTimeout(function(){
+      iframe.style.display = 'none';
+      var p = document.createElement('p');
+      p.style.padding = '1rem';
+      p.style.color = '#475047';
+      p.innerHTML = 'Servidor CEPEA momentaneamente lento. <a href="https://www.cepea.org.br/" target="_blank" rel="noopener">Ver cotacoes no CEPEA</a>';
+      iframe.parentNode.insertBefore(p, iframe);
+    }, 8000);
+    iframe.addEventListener('load', function(){ clearTimeout(timer); });
+  };
+  if ('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ load(e.target); obs.unobserve(e.target); }
+      });
+    }, {rootMargin:'200px'});
+    iframes.forEach(function(f){ obs.observe(f); });
+  } else {
+    iframes.forEach(load);
+  }
+})();
+</script>
       </div>
       <div class="widget-card__source">Fonte: CEPEA/Esalq-USP — <a href="https://www.cepea.org.br/" target="_blank" rel="noopener nofollow">cepea.org.br</a></div>
     </div>

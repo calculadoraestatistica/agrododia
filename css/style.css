@@ -1757,3 +1757,23 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   .area-card__cta::after,
   .card__cta::after { transition: none; }
 }
+
+
+/* === Quick-fix: forcar renderizacao do widget CEPEA === */
+.widget-card__body {
+  min-height: 120px;
+  overflow: visible;
+}
+.widget-card__body > table,
+.widget-card__body > div {
+  width: 100% !important;
+  max-width: 100%;
+}
+.widget-card__body table {
+  background: transparent !important;
+  font-family: inherit !important;
+}
+.widget-card__body td,
+.widget-card__body th {
+  padding: 0.4rem 0.6rem !important;
+}

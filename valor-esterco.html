@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.cepea.org.br">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Calculadora do Valor de Esterco e Adubo Orgânico | Agro do Dia</title>
+<meta name="description" content="Calculadora do valor de esterco, dejeto e adubo orgânico online e gratuita. Estime os nutrientes entregues e o valor econômico por hectare.">
+<link rel="canonical" href="https://agrododia.com.br/valor-esterco.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Calculadora do Valor de Esterco e Adubo Orgânico">
+<meta property="og:description" content="Estime nutrientes entregues e o valor econômico de esterco, dejeto e composto.">
+<meta property="og:url" content="https://agrododia.com.br/valor-esterco.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora do Valor de Esterco e Adubo Organico",
+  "url": "https://agrododia.com.br/valor-esterco.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "description": "Estimativa de nutrientes entregues e valor economico de esterco, dejeto e composto."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Valor de Esterco","item":"https://agrododia.com.br/valor-esterco.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>Valor de Esterco</li>
+        </ol>
+      </nav>
+      <h1>Valor de esterco / dejeto / adubo orgânico</h1>
+      <p class="lead">Estime os nutrientes (N, P₂O₅ e K₂O) entregues por hectare e o valor econômico de uma aplicação de esterco, dejeto ou composto.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Calcular o valor do orgânico
+      </h2>
+      <p class="calculator__hint">Informe a quantidade aplicada, os teores e a eficiência de aproveitamento.</p>
+
+      <fieldset class="field-group">
+        <legend>Aplicação e tipo</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="quantidade">Quantidade aplicada</label>
+            <input class="input" type="text" inputmode="decimal" id="quantidade" placeholder="Ex.: 20" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="unidade">Unidade</label>
+            <select class="input" id="unidade">
+              <option value="t">t/ha</option>
+              <option value="m3">m³/ha</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="tipo">Tipo de orgânico</label>
+            <select class="input" id="tipo">
+              <option value="bovino">Esterco bovino curtido</option>
+              <option value="aviario">Cama de aviário</option>
+              <option value="suino">Esterco suíno (dejeto líquido)</option>
+              <option value="composto">Composto</option>
+              <option value="custom">Personalizado</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Teores no orgânico (% peso bruto)</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="pctN">Teor de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctN" placeholder="Ex.: 0,5" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pctP">Teor de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctP" placeholder="Ex.: 0,3" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="pctK">Teor de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctK" placeholder="Ex.: 0,4" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Eficiência de aproveitamento</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="efN">Aproveitamento do N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="efN" placeholder="50" value="50" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="efP">Aproveitamento do P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="efP" placeholder="80" value="80" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="efK">Aproveitamento do K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="efK" placeholder="100" value="100" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Preço do fertilizante mineral equivalente</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="precoN">Preço do kg de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="precoN" placeholder="6,00" value="6,00" autocomplete="off">
+              <span class="input-affix__unit">R$/kg</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="precoP">Preço do kg de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="precoP" placeholder="5,00" value="5,00" autocomplete="off">
+              <span class="input-affix__unit">R$/kg</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="precoK">Preço do kg de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="precoK" placeholder="4,50" value="4,50" autocomplete="off">
+              <span class="input-affix__unit">R$/kg</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Calcular valor</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Para que serve</h2>
+      <p>Esta calculadora estima quanto de <strong>N, P₂O₅ e K₂O</strong> uma aplicação de esterco, dejeto ou composto entrega por hectare e qual o <strong>valor econômico</strong> dessa adubação em relação ao fertilizante mineral equivalente. Útil para precificar o esterco gerado na propriedade, comparar alternativas e justificar transporte e aplicação.</p>
+
+      <h2>Como funciona</h2>
+      <p>A partir da quantidade aplicada e dos teores do orgânico, calculamos a massa de cada nutriente entregue. A eficiência de aproveitamento reduz essa massa ao que efetivamente fica disponível para a cultura no ciclo. O valor econômico é a soma dos nutrientes aproveitados multiplicados pelo preço do fertilizante mineral correspondente.</p>
+      <div class="formula">kg/ha de N = quantidade (t/ha) × 1000 × (%N ÷ 100) × (aproveitamento ÷ 100)</div>
+      <div class="formula">Valor (R$/ha) = kg N × preço N + kg P₂O₅ × preço P + kg K₂O × preço K</div>
+
+      <h2>Sobre o aproveitamento</h2>
+      <p>O <strong>N</strong> é o nutriente mais variável: parte volatiliza como amônia, parte é imobilizada pela microbiota e só uma fração mineraliza no ciclo. Em condições típicas de campo, o aproveitamento do N varia de <strong>30% a 70%</strong> conforme manejo, tipo de orgânico, incorporação e clima. O <strong>P₂O₅</strong> tem aproveitamento mais alto (cerca de 80%) por ser pouco perdido, e o <strong>K₂O</strong> chega perto de 100% por estar predominantemente na forma solúvel.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Os teores variam muito
+        </div>
+        <p>Os valores padrão por tipo de orgânico são médias de literatura. Os teores reais variam bastante conforme manejo, alimentação dos animais, tempo e forma de armazenamento e umidade. Para precisão, <strong>analise uma amostra</strong> do orgânico que você vai aplicar.</p>
+      </div>
+
+      <div class="related">
+        <h2>Outras calculadoras</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Da recomendação para o adubo comercial.</p></a>
+          <a class="calc-card" href="/calagem.html"><h3>Calagem</h3><p>Necessidade de calcário.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>População de plantas</h3><p>Plantas por hectare.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+          <li><a href="/apoiar.html">Apoiar o projeto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+
+  var DEFAULTS = {
+    bovino:   { n: '0,5', p: '0,3', k: '0,4' },
+    aviario:  { n: '3,0', p: '2,5', k: '2,0' },
+    suino:    { n: '0,4', p: '0,2', k: '0,3' },
+    composto: { n: '1,5', p: '1,0', k: '1,0' },
+    custom:   null
+  };
+
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+
+  function applyDefaults(tipo) {
+    var d = DEFAULTS[tipo];
+    if (!d) return;
+    $('pctN').value = d.n;
+    $('pctP').value = d.p;
+    $('pctK').value = d.k;
+  }
+
+  $('tipo').addEventListener('change', function () { applyDefaults(this.value); });
+  applyDefaults($('tipo').value);
+
+  $('calc-example').addEventListener('click', function () {
+    $('quantidade').value = '20';
+    $('unidade').value = 't';
+    $('tipo').value = 'bovino';
+    applyDefaults('bovino');
+    $('efN').value = '50';
+    $('efP').value = '80';
+    $('efK').value = '100';
+    $('precoN').value = '6,00';
+    $('precoP').value = '5,00';
+    $('precoK').value = '4,50';
+    compute();
+  });
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function readForm() {
+    return {
+      quantidade: parseNum($('quantidade').value),
+      unidade:    $('unidade').value,
+      tipo:       $('tipo').value,
+      pctN:       parseNum($('pctN').value),
+      pctP:       parseNum($('pctP').value),
+      pctK:       parseNum($('pctK').value),
+      efN:        parseNum($('efN').value),
+      efP:        parseNum($('efP').value),
+      efK:        parseNum($('efK').value),
+      precoN:     parseNum($('precoN').value),
+      precoP:     parseNum($('precoP').value),
+      precoK:     parseNum($('precoK').value)
+    };
+  }
+
+  function compute() {
+    clearError();
+    var f = readForm();
+
+    if (!(f.quantidade > 0)) { showError('Informe uma quantidade aplicada maior que zero.'); return; }
+    if (!(f.pctN >= 0) || !(f.pctP >= 0) || !(f.pctK >= 0)) { showError('Informe os teores de N, P₂O₅ e K₂O.'); return; }
+    if (f.pctN + f.pctP + f.pctK <= 0) { showError('Pelo menos um teor (N, P ou K) deve ser maior que zero.'); return; }
+    if (!(f.efN >= 0) || !(f.efP >= 0) || !(f.efK >= 0)) { showError('Informe a eficiência de aproveitamento.'); return; }
+    if (!(f.precoN >= 0) || !(f.precoP >= 0) || !(f.precoK >= 0)) { showError('Informe o preço por kg dos nutrientes.'); return; }
+
+    // Aproximamos 1 m³ ≈ 1 t para dejetos líquidos (densidade próxima a 1 t/m³)
+    var massa_t = f.quantidade;
+
+    var kgN_bruto = massa_t * 1000 * (f.pctN / 100);
+    var kgP_bruto = massa_t * 1000 * (f.pctP / 100);
+    var kgK_bruto = massa_t * 1000 * (f.pctK / 100);
+
+    var kgN = kgN_bruto * (f.efN / 100);
+    var kgP = kgP_bruto * (f.efP / 100);
+    var kgK = kgK_bruto * (f.efK / 100);
+
+    var valorN = kgN * f.precoN;
+    var valorP = kgP * f.precoP;
+    var valorK = kgK * f.precoK;
+    var valorTotal = valorN + valorP + valorK;
+
+    var valorPorUnidade = valorTotal / f.quantidade;
+
+    render({
+      unidade: f.unidade,
+      quantidade: f.quantidade,
+      kgN_bruto: kgN_bruto, kgP_bruto: kgP_bruto, kgK_bruto: kgK_bruto,
+      kgN: kgN, kgP: kgP, kgK: kgK,
+      valorN: valorN, valorP: valorP, valorK: valorK,
+      valorTotal: valorTotal,
+      valorPorUnidade: valorPorUnidade
+    });
+  }
+
+  function brl(v) {
+    return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function num1(v) {
+    return v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  }
+
+  function render(r) {
+    var unitLabel = r.unidade === 'm3' ? 'm³' : 't';
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Valor do orgânico aplicado</div>' +
+      '<div class="result__sub">Equivalente em fertilizante mineral</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + brl(r.valorTotal) + ' <small>/ha</small></div>';
+    html += '<div class="result__metrics">' +
+      '<div class="metric"><div class="metric__label">Valor por ' + unitLabel + ' aplicado</div>' +
+        '<div class="metric__value">' + brl(r.valorPorUnidade) + '/' + unitLabel + '</div></div>' +
+      '<div class="metric"><div class="metric__label">N aproveitado</div>' +
+        '<div class="metric__value">' + num1(r.kgN) + ' kg/ha</div></div>' +
+      '<div class="metric"><div class="metric__label">P₂O₅ aproveitado</div>' +
+        '<div class="metric__value">' + num1(r.kgP) + ' kg/ha</div></div>' +
+      '<div class="metric"><div class="metric__label">K₂O aproveitado</div>' +
+        '<div class="metric__value">' + num1(r.kgK) + ' kg/ha</div></div>' +
+      '</div>';
+    html += '<div class="result__interpretation">' +
+      '<p><strong>Nutrientes brutos entregues:</strong> ' +
+        num1(r.kgN_bruto) + ' kg/ha de N, ' +
+        num1(r.kgP_bruto) + ' kg/ha de P₂O₅ e ' +
+        num1(r.kgK_bruto) + ' kg/ha de K₂O. Após a eficiência de aproveitamento, sobra o que está listado acima.</p>' +
+      '<p><strong>Comparação com mineral:</strong> ' +
+        brl(r.valorN) + ' em N, ' +
+        brl(r.valorP) + ' em P₂O₅ e ' +
+        brl(r.valorK) + ' em K₂O. Esse é o valor que você economiza com o orgânico em vez de comprar fertilizante mineral.</p>' +
+      '</div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

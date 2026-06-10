@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.cepea.org.br">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Calculadora de Margem Alimentar | Agro do Dia</title>
+<meta name="description" content="Calculadora de margem sobre alimentação online e gratuita. Calcule a margem alimentar diária em leite, boi confinado, suíno e frango.">
+<link rel="canonical" href="https://agrododia.com.br/margem-alimentar.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Calculadora de Margem sobre Alimentação">
+<meta property="og:description" content="Margem alimentar por animal/dia em leite, boi, suíno e frango.">
+<meta property="og:url" content="https://agrododia.com.br/margem-alimentar.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Margem sobre Alimentacao",
+  "url": "https://agrododia.com.br/margem-alimentar.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "description": "Margem alimentar diaria em leite, boi confinado, suino e frango."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Margem alimentar","item":"https://agrododia.com.br/margem-alimentar.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>Margem alimentar</li>
+        </ol>
+      </nav>
+      <h1>Calculadora de Margem sobre Alimentação</h1>
+      <p class="lead">Calcule a margem alimentar diária (receita menos custo da ração e outros custos variáveis) para vacas de leite, boi confinado, suíno e frango.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Calcular a margem alimentar
+      </h2>
+      <p class="calculator__hint">Informe o tipo de animal, a produção e os custos diários.</p>
+
+      <fieldset class="field-group">
+        <legend>Animal e produção</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="tipo">Tipo de animal</label>
+            <select class="input" id="tipo">
+              <option value="leite">Vaca de leite</option>
+              <option value="boi">Boi (confinamento)</option>
+              <option value="suino">Suíno</option>
+              <option value="frango">Frango</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="prod" id="prodLabel">Produção (L/vaca/dia)</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="prod" placeholder="Ex.: 25" autocomplete="off">
+              <span class="input-affix__unit" id="prodUnit">L/dia</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="preco" id="precoLabel">Preço de venda</label>
+            <div class="input-affix">
+              <span class="input-affix__prefix">R$</span>
+              <input class="input" type="text" inputmode="decimal" id="preco" placeholder="Ex.: 2,40" autocomplete="off">
+              <span class="input-affix__unit" id="precoUnit">/L</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="consumo">Consumo de ração</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="Ex.: 20" autocomplete="off">
+              <span class="input-affix__unit">kg/dia</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Custos diários</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="precoRacao">Preço da ração</label>
+            <div class="input-affix">
+              <span class="input-affix__prefix">R$</span>
+              <input class="input" type="text" inputmode="decimal" id="precoRacao" placeholder="Ex.: 2000" autocomplete="off">
+              <span class="input-affix__unit">/t</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mineral">Mineral (opcional)</label>
+            <div class="input-affix">
+              <span class="input-affix__prefix">R$</span>
+              <input class="input" type="text" inputmode="decimal" id="mineral" placeholder="Ex.: 0,30" autocomplete="off">
+              <span class="input-affix__unit">/dia</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="medicamento">Medicamento (opcional)</label>
+            <div class="input-affix">
+              <span class="input-affix__prefix">R$</span>
+              <input class="input" type="text" inputmode="decimal" id="medicamento" placeholder="Ex.: 0,20" autocomplete="off">
+              <span class="input-affix__unit">/dia</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="maoObra">Mão de obra rateada (opcional)</label>
+            <div class="input-affix">
+              <span class="input-affix__prefix">R$</span>
+              <input class="input" type="text" inputmode="decimal" id="maoObra" placeholder="Ex.: 1,00" autocomplete="off">
+              <span class="input-affix__unit">/dia</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Calcular margem</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Para que serve</h2>
+      <p>A <strong>margem sobre alimentação</strong> (ou margem alimentar) é o KPI número 1 da pecuária intensiva. Como a ração responde por <strong>60% a 80%</strong> do custo de produção em leite, confinamento, suíno e frango, monitorar a margem alimentar por animal/dia é a forma mais rápida de saber se a atividade está pagando o que mais pesa no caixa.</p>
+
+      <h2>Como calcular</h2>
+      <p>A conta é simples: receita diária menos custo da ração menos demais custos variáveis ligados ao manejo do dia.</p>
+      <div class="formula">Margem alimentar = Receita diária − Custo da ração − Outros custos variáveis</div>
+      <p>O custo da ração usa o preço por tonelada (padrão de mercado) dividido por 1.000 para virar R$/kg, multiplicado pelo consumo diário em kg.</p>
+
+      <h2>Exemplo</h2>
+      <p>Uma vaca produzindo 25 L/dia, leite a R$ 2,40/L, comendo 20 kg de ração a R$ 2.000/t: receita de R$ 60,00, custo de ração de R$ 40,00, <strong>margem alimentar de R$ 20,00/vaca/dia</strong>.</p>
+
+      <h2>Como interpretar</h2>
+      <p>Margem alimentar positiva <strong>não é sinônimo de lucro</strong>. Falta descontar amortização de instalações, capital empatado em animais, mão de obra fixa, energia, impostos e morte. A margem alimentar serve para comparar dietas, lotes e fases — é um indicador <strong>relativo e tático</strong>, usado no dia a dia para ajustar formulação e decidir quando vender.</p>
+      <p>Como referência prática: em leite a margem precisa cobrir todos os custos fixos rateados por vaca/dia; em confinamento ela precisa pagar o custo do boi magro diluído no tempo de cocho; em suíno e frango, o piso é a integração não rejeitar o lote.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Esta é a margem PARCIAL
+        </div>
+        <p>Esta calculadora mostra a margem <strong>só sobre alimentação</strong> — não é lucro líquido. Não inclui depreciação de instalações, remuneração do capital, mão de obra fixa, energia, impostos, sanidade preventiva nem mortalidade. Use o resultado para comparar dietas e ajustar manejo, não como medida final de rentabilidade.</p>
+      </div>
+
+      <div class="related">
+        <h2>Outras calculadoras</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>UA/ha em pastagem.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, kg e toneladas.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Recomendação em adubo comercial.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+          <li><a href="/apoiar.html">Apoiar o projeto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+
+  // Configuração por tipo de animal
+  var TIPOS = {
+    leite:  { prodLabel: 'Produção (L/vaca/dia)',   prodUnit: 'L/dia',  precoLabel: 'Preço do leite',     precoUnit: '/L',   prodName: 'leite',  prodUnitOut: 'L' },
+    boi:    { prodLabel: 'Ganho de peso/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço da arroba (@)', precoUnit: '/@',   prodName: 'ganho',  prodUnitOut: 'kg' },
+    suino:  { prodLabel: 'Ganho de peso/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço do kg vivo',   precoUnit: '/kg',  prodName: 'ganho',  prodUnitOut: 'kg' },
+    frango: { prodLabel: 'Ganho de peso/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço do kg vivo',   precoUnit: '/kg',  prodName: 'ganho',  prodUnitOut: 'kg' }
+  };
+
+  function applyTipo() {
+    var t = TIPOS[$('tipo').value] || TIPOS.leite;
+    $('prodLabel').textContent = t.prodLabel;
+    $('prodUnit').textContent = t.prodUnit;
+    $('precoLabel').textContent = t.precoLabel;
+    $('precoUnit').textContent = t.precoUnit;
+  }
+  $('tipo').addEventListener('change', applyTipo);
+  applyTipo();
+
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+
+  $('calc-example').addEventListener('click', function () {
+    $('tipo').value = 'leite';
+    applyTipo();
+    $('prod').value = '25';
+    $('preco').value = '2,40';
+    $('consumo').value = '20';
+    $('precoRacao').value = '2000';
+    $('mineral').value = '';
+    $('medicamento').value = '';
+    $('maoObra').value = '';
+    compute();
+  });
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function parseNumOpt(v) {
+    if (v === '' || v === null || v === undefined) return 0;
+    var n = parseNum(v);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function readForm() {
+    return {
+      tipo: $('tipo').value,
+      prod: parseNum($('prod').value),
+      preco: parseNum($('preco').value),
+      consumo: parseNum($('consumo').value),
+      precoRacao: parseNum($('precoRacao').value),
+      mineral: parseNumOpt($('mineral').value),
+      medicamento: parseNumOpt($('medicamento').value),
+      maoObra: parseNumOpt($('maoObra').value)
+    };
+  }
+
+  function compute() {
+    clearError();
+    var f = readForm();
+
+    if (isNaN(f.prod) || f.prod <= 0) { showError('Informe a produção/ganho diário (maior que zero).'); return; }
+    if (isNaN(f.preco) || f.preco <= 0) { showError('Informe o preço de venda (maior que zero).'); return; }
+    if (isNaN(f.consumo) || f.consumo <= 0) { showError('Informe o consumo de ração (maior que zero).'); return; }
+    if (isNaN(f.precoRacao) || f.precoRacao <= 0) { showError('Informe o preço da ração em R$/t (maior que zero).'); return; }
+
+    // Receita: para boi, prod é kg/dia mas o preço é por arroba (@ = 15 kg de carcaça).
+    // Convenção prática: ganho vivo -> arroba via rendimento de carcaça ~50%, ou seja kg/30 ~ @.
+    // Usamos kg_vivo / 30 = arrobas equivalentes (15 kg carcaça com 50% rendimento).
+    var receita;
+    if (f.tipo === 'boi') {
+      receita = (f.prod / 30) * f.preco;
+    } else {
+      receita = f.prod * f.preco;
+    }
+
+    var custoRacao = f.consumo * (f.precoRacao / 1000);
+    var outros = f.mineral + f.medicamento + f.maoObra;
+    var margem = receita - custoRacao - outros;
+
+    var tcfg = TIPOS[f.tipo] || TIPOS.leite;
+    var margemPorUnid = margem / f.prod;
+    // Eficiência
+    var efic, eficLabel;
+    if (f.tipo === 'leite') {
+      // L de leite por kg de ração
+      efic = f.prod / f.consumo;
+      eficLabel = 'L leite / kg ração';
+    } else {
+      // kg ração por kg ganho
+      efic = f.consumo / f.prod;
+      eficLabel = 'kg ração / kg ganho';
+    }
+
+    render({
+      tipo: f.tipo,
+      tcfg: tcfg,
+      receita: receita,
+      custoRacao: custoRacao,
+      outros: outros,
+      margem: margem,
+      margemPorUnid: margemPorUnid,
+      efic: efic,
+      eficLabel: eficLabel
+    });
+  }
+
+  function fmtBRL(v) {
+    if (typeof Fmt !== 'undefined' && Fmt.brl) return Fmt.brl(v);
+    return 'R$ ' + (Math.round(v * 100) / 100).toFixed(2).replace('.', ',');
+  }
+  function fmtNum(v, casas) {
+    if (typeof Fmt !== 'undefined' && Fmt.dec) return Fmt.dec(v, casas);
+    return (Math.round(v * Math.pow(10, casas)) / Math.pow(10, casas)).toFixed(casas).replace('.', ',');
+  }
+
+  function render(r) {
+    var pos = r.margem >= 0;
+    result.className = 'result ' + (pos ? 'result--positive' : 'result--negative');
+    var animalLabel = ({ leite: 'vaca', boi: 'boi', suino: 'suíno', frango: 'frango' })[r.tipo] || 'animal';
+    var unidProd = r.tcfg.prodUnitOut;
+
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Margem alimentar</div>' +
+      '<div class="result__sub">Receita menos ração e custos variáveis</div></div></div>';
+
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + fmtBRL(r.margem) + ' <small>/' + animalLabel + '/dia</small></div>';
+    html += '<div class="result__metrics">' +
+      '<div class="metric"><div class="metric__label">Receita bruta</div><div class="metric__value">' + fmtBRL(r.receita) + '/dia</div></div>' +
+      '<div class="metric"><div class="metric__label">Custo da ração</div><div class="metric__value">' + fmtBRL(r.custoRacao) + '/dia</div></div>' +
+      '<div class="metric"><div class="metric__label">Outros custos</div><div class="metric__value">' + fmtBRL(r.outros) + '/dia</div></div>' +
+      '<div class="metric"><div class="metric__label">Margem por ' + unidProd + ' de ' + r.tcfg.prodName + '</div><div class="metric__value">' + fmtBRL(r.margemPorUnid) + '/' + unidProd + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Eficiência</div><div class="metric__value">' + fmtNum(r.efic, 2) + ' ' + r.eficLabel + '</div></div>' +
+      '</div>';
+
+    var interp;
+    if (pos) {
+      interp = 'Margem positiva: a receita do dia paga a ração e os custos variáveis informados. Lembre-se que isto ainda não cobre depreciação, capital, mão de obra fixa e mortalidade — compare com seu histórico para decidir se a margem está saudável.';
+    } else {
+      interp = 'Margem negativa: a receita não cobre nem a ração e os custos variáveis. Revise dieta (preço e conversão), preço de venda e custos antes de manter o lote.';
+    }
+    html += '<div class="result__interpretation"><p>' + interp + '</p></div>';
+    html += '</div>';
+
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

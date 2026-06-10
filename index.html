@@ -110,49 +110,50 @@
       </div>
       <div class="widget-card__body">
         <!-- CEPEA widget: lazy-load via iframe pra nao bloquear render (servidor cepea.org.br as vezes lento) -->
-<iframe
-  class="cepea-iframe"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade"
-  title="Cotacoes CEPEA"
-  data-src=""
-  src="about:blank"
-  style="border:0; width:100%; min-height:200px; background:#fff;"
-></iframe>
-<noscript><p style="padding:1rem;color:#475047;">Cotacoes disponiveis em <a href="https://www.cepea.org.br/" target="_blank" rel="noopener">cepea.org.br</a>.</p></noscript>
-<script>
-// Lazy load iframe via IntersectionObserver + timeout fallback
-(function(){
-  var iframes = document.querySelectorAll('iframe.cepea-iframe');
-  if (!iframes.length) return;
-  var load = function(iframe){
-    var url = iframe.getAttribute('data-src');
-    // CEPEA widget usa document.write — precisa de wrapper HTML pra iframe
-    var html = '<!doctype html><html><head><meta charset="utf-8"><base href="https://www.cepea.org.br/"></head><body style="margin:0;font-family:Inter,system-ui,sans-serif;"><script src="'+url+'"><'+'/script></body></html>';
-    iframe.srcdoc = html;
-    // Fallback se demorar mais de 8s
-    var timer = setTimeout(function(){
-      iframe.style.display = 'none';
-      var p = document.createElement('p');
-      p.style.padding = '1rem';
-      p.style.color = '#475047';
-      p.innerHTML = 'Servidor CEPEA momentaneamente lento. <a href="https://www.cepea.org.br/" target="_blank" rel="noopener">Ver cotacoes no CEPEA</a>';
-      iframe.parentNode.insertBefore(p, iframe);
-    }, 8000);
-    iframe.addEventListener('load', function(){ clearTimeout(timer); });
-  };
-  if ('IntersectionObserver' in window){
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ load(e.target); obs.unobserve(e.target); }
-      });
-    }, {rootMargin:'100px'});
-    iframes.forEach(function(f){ obs.observe(f); });
-  } else {
-    iframes.forEach(load);
+<!-- TradingView Symbol Overview: mostra cotacoes agro relevantes + grafico -->
+<div class="tradingview-widget-container" style="min-height:380px;">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
+    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotacoes pelo TradingView</a>
+  </div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+  {
+  "symbols": [
+    ["Soja CME","CBOT:ZS1!|3M"],
+    ["Milho CME","CBOT:ZC1!|3M"],
+    ["Cafe ICE","ICEUS:KC1!|3M"],
+    ["Boi Gordo BMF","BMFBOVESPA:BGI1!|3M"],
+    ["Dolar BRL","FX_IDC:USDBRL|3M"]
+  ],
+  "chartOnly": false,
+  "width": "100%",
+  "height": 380,
+  "locale": "br",
+  "colorTheme": "light",
+  "autosize": true,
+  "showVolume": false,
+  "showMA": false,
+  "hideDateRanges": false,
+  "hideMarketStatus": false,
+  "hideSymbolLogo": false,
+  "scalePosition": "right",
+  "scaleMode": "Normal",
+  "fontFamily": "Inter, system-ui, sans-serif",
+  "fontSize": "10",
+  "noTimeScale": false,
+  "valuesTracking": "1",
+  "changeMode": "price-and-percent",
+  "chartType": "area",
+  "maLineColor": "#2F6B3A",
+  "maLineWidth": 1,
+  "maLength": 9,
+  "backgroundColor": "rgba(255, 255, 255, 1)",
+  "lineWidth": 2,
+  "lineType": 0,
+  "dateRanges": ["1d|1","1m|30","3m|60","12m|1D"]
   }
-})();
-</script>
+  </script>
+</div>
       </div>
       <div class="widget-card__source">Fonte: CEPEA/Esalq-USP — <a href="https://www.cepea.org.br/" target="_blank" rel="noopener nofollow">cepea.org.br</a></div>
     </div>

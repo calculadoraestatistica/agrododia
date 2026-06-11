@@ -85,8 +85,8 @@
     <div class="widget-card">
       <div class="widget-card__head">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
-        <span class="widget-card__title">Futuros — Boi, Milho, Café, Soja, Açúcar e Etanol</span>
-        <span class="widget-card__tag">B3</span>
+        <span class="widget-card__title">Futuros — Milho, Café, Soja, Açúcar e USD/BRL</span>
+        <span class="widget-card__tag">CME/ICE via TradingView</span>
       </div>
       <div class="widget-card__body">
         <div class="tradingview-widget-container">
@@ -94,12 +94,11 @@
           <script src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
           {
           "symbols": [
-            [ "Boi Gordo", "BMFBOVESPA:BGI1!|6M" ],
-            [ "Milho", "BMFBOVESPA:CCM1!|6M" ],
-            [ "Café Arábica", "BMFBOVESPA:ICF1!|6M" ],
-            [ "Soja", "BMFBOVESPA:SJC1!|6M" ],
-            [ "Açúcar", "BMFBOVESPA:SCA1!|6M" ],
-            [ "Etanol", "BMFBOVESPA:ETN1!|6M" ]
+            [ "Milho (CBOT)", "OANDA:CORNUSD|6M" ],
+            [ "Café Arábica (ICE)", "OANDA:COFFEEUSD|6M" ],
+            [ "Soja (CBOT)", "OANDA:SOYBNUSD|6M" ],
+            [ "Açúcar (ICE)", "OANDA:SUGARUSD|6M" ],
+            [ "USD/BRL", "FX_IDC:USDBRL|6M" ]
           ],
           "chartOnly": false,
           "width": "100%",
@@ -113,7 +112,7 @@
           </script>
         </div>
       </div>
-      <div class="widget-card__source">Dados da B3, fornecidos pelo <a href="https://br.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>. Podem ter atraso.</div>
+      <div class="widget-card__source">Cotações internacionais (CBOT/Chicago e ICE) como referência, via <a href="https://br.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>. Podem ter atraso. Para B3 (Boi Gordo BGI), Etanol (ETN) e demais ativos brasileiros, consulte o site da <a href="https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/cotacoes-de-derivativos/" target="_blank" rel="noopener nofollow">B3</a>.</div>
     </div>
 
     <article class="prose">

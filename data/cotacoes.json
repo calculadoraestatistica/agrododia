@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T18:32:28-03:00",
+  "updated_at": "2026-06-12T08:55:32-03:00",
   "source": "CEPEA/Esalq",
   "source_url": "https://www.cepea.org.br/",
   "items": [
@@ -8,36 +8,36 @@
       "slug": "boi-gordo",
       "icon": "boi",
       "unit": "@",
-      "value": 353.15,
-      "value_display": "R$ 353,15",
-      "date": "2026-06-10"
+      "value": 353.8,
+      "value_display": "R$ 353,80",
+      "date": "2026-06-11"
     },
     {
       "name": "Soja - PR",
       "slug": "soja-pr",
       "icon": "soja",
       "unit": "sc de 60kg",
-      "value": 125.51,
-      "value_display": "R$ 125,51",
-      "date": "2026-06-10"
+      "value": 125.73,
+      "value_display": "R$ 125,73",
+      "date": "2026-06-11"
     },
     {
       "name": "Milho",
       "slug": "milho",
       "icon": "milho",
       "unit": "sc de 60kg",
-      "value": 64.09,
-      "value_display": "R$ 64,09",
-      "date": "2026-06-10"
+      "value": 64.03,
+      "value_display": "R$ 64,03",
+      "date": "2026-06-11"
     },
     {
       "name": "Café Arábica",
       "slug": "cafe-arabica",
       "icon": "cafe",
       "unit": "sc de 60kg",
-      "value": 1398.09,
-      "value_display": "R$ 1.398,09",
-      "date": "2026-06-10"
+      "value": 1412.22,
+      "value_display": "R$ 1.412,22",
+      "date": "2026-06-11"
     }
   ]
 }

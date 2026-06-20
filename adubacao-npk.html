@@ -261,9 +261,11 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  var exampleBtn = $('calc-example');
+  if (!form || !result || !errBox) return;
   function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
   function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
-  $('calc-example').addEventListener('click', function () {
+  function fillExample() {
     $('recN').value = '20';
     $('recP').value = '70';
     $('recK').value = '40';
@@ -271,7 +273,8 @@
     $('pctP').value = '14';
     $('pctK').value = '8';
     compute();
-  });
+  }
+  if (exampleBtn) exampleBtn.addEventListener('click', fillExample);
   form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
   function readForm() {
       var o = {};
@@ -285,7 +288,23 @@
   }
   function compute() {
     clearError();
-    var r = Agro.adubacaoNPK(readForm());
+    var data = readForm();
+    // Validação prévia: pelo menos uma recomendação e a fórmula completa.
+    var temRec = isFinite(data.recN) || isFinite(data.recP) || isFinite(data.recK);
+    var temFormula = isFinite(data.pctN) && isFinite(data.pctP) && isFinite(data.pctK);
+    if (!temRec && !temFormula) {
+      showError('Preencha todos os campos: a recomendação (N, P₂O₅ ou K₂O) e a fórmula do adubo (% de N, P₂O₅ e K₂O).');
+      return;
+    }
+    if (!temFormula) {
+      showError('Informe a fórmula completa do adubo: % de N, P₂O₅ e K₂O.');
+      return;
+    }
+    if (!temRec) {
+      showError('Informe pelo menos uma recomendação (kg/ha de N, P₂O₅ ou K₂O).');
+      return;
+    }
+    var r = Agro.adubacaoNPK(data);
     if (r.error) { showError(r.error); return; }
     render(r);
   }

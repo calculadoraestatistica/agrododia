@@ -110,4 +110,20 @@
   }
   window.Fmt = { parseNum: parseNum, num: fmtNum, int: fmtInt, radio: radioValue };
   window.parseNum = parseNum;
+
+  /* --- Validação visível: rola para o erro quando a calculadora reclama -- */
+  /* Cada calculadora tem <p class="field-error" id="calc-error"> que ganha
+     a classe `is-visible` quando o cálculo falha. Observamos a mudança e
+     rolamos para o erro para que o usuário veja o motivo do botão "silencioso". */
+  var errBox = document.getElementById('calc-error');
+  if (errBox && typeof MutationObserver === 'function') {
+    var lastShown = errBox.classList.contains('is-visible');
+    new MutationObserver(function () {
+      var isShown = errBox.classList.contains('is-visible');
+      if (isShown && !lastShown) {
+        try { errBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) {}
+      }
+      lastShown = isShown;
+    }).observe(errBox, { attributes: true, attributeFilter: ['class'] });
+  }
 })();

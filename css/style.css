@@ -1048,11 +1048,43 @@ select.input {
 .field-error {
   display: none;
   color: var(--c-danger);
-  font-size: .9rem;
+  font-size: .92rem;
   font-weight: 600;
-  margin-top: .25rem;
+  margin-top: var(--sp-3);
+  padding: .65rem .85rem;
+  border: 1px solid color-mix(in srgb, var(--c-danger) 40%, transparent);
+  background: color-mix(in srgb, var(--c-danger) 8%, #fff);
+  border-radius: 8px;
+  line-height: 1.35;
 }
-.field-error.is-visible { display: block; }
+.field-error.is-visible {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  animation: field-error-pop .18s ease-out;
+}
+.field-error.is-visible::before {
+  content: '!';
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--c-danger);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1;
+}
+@keyframes field-error-pop {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .field-error.is-visible { animation: none; }
+}
 .input[aria-invalid='true'] { border-color: var(--c-danger); }
 .input[aria-invalid='true']:focus {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-danger) 30%, transparent);
@@ -1590,6 +1622,46 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 }
 .widget-card__body iframe { display: block; width: 100%; border: 0; }
 .widget-card__body .tradingview-widget-container { width: 100%; }
+
+/* Skeleton placeholder enquanto o widget do TradingView carrega.
+   Mostra a mensagem "Carregando cotações…" antes do iframe injetar conteúdo;
+   o ::before some assim que o widget filho passa a ter tamanho. */
+.tv-skeleton {
+  position: relative;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--c-soft) 65%, transparent) 0%,
+                            color-mix(in srgb, var(--c-soft) 30%, transparent) 50%,
+                            color-mix(in srgb, var(--c-soft) 65%, transparent) 100%);
+  background-size: 200% 100%;
+  animation: tv-skeleton-pulse 1.6s ease-in-out infinite;
+}
+.tv-skeleton::before {
+  content: 'Carregando cotações…';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  letter-spacing: .02em;
+  pointer-events: none;
+  z-index: 0;
+}
+.tv-skeleton--ticker::before { font-size: .75rem; }
+.tv-skeleton--quote::before { font-size: .8rem; }
+/* Quando o widget já injetou conteúdo (iframe), tira o esqueleto. */
+.tv-skeleton:has(iframe) { background: transparent; animation: none; }
+.tv-skeleton:has(iframe)::before { display: none; }
+.tv-skeleton > .tradingview-widget-container__widget { position: relative; z-index: 1; }
+@keyframes tv-skeleton-pulse {
+  0%   { background-position: 0% 0; }
+  100% { background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tv-skeleton { animation: none; }
+}
 .widget-card__source {
   padding: .6rem 1.15rem;
   border-top: 1px solid var(--c-line);

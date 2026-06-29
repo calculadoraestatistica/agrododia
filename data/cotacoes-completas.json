@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T11:48:31-03:00",
+  "updated_at": "2026-06-29T12:00:32-03:00",
   "source": "CEPEA/Esalq",
   "source_url": "https://www.cepea.org.br/",
   "items": [
@@ -85,8 +85,8 @@
       "date": "2026-06-26"
     },
     {
-      "name": "Arroz",
-      "slug": "arroz",
+      "name": "ARROZ EM CASCA CEPEA/IRGA-RS",
+      "slug": "arroz-em-casca-cepea-irga-rs",
       "icon": "",
       "unit": "sc de 50kg",
       "value": 59.91,

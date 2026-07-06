@@ -27,6 +27,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de Umidade de Grãos","url":"https://agrododia.com.br/umidade-graos.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"description":"Correção de umidade de grãos."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que é a quebra por umidade?","acceptedAnswer":{"@type":"Answer","text":"É a redução percentual de peso causada pela retirada de água quando o grão é levado da umidade de entrada para a umidade final. Ela é calculada pela regra da matéria seca constante."}},{"@type":"Question","name":"Qual a umidade padrão de comercialização no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Para soja e milho, o padrão comercial usual é 14% de umidade. Armazéns e contratos podem adotar valores próprios, e a armazenagem prolongada costuma usar 13% ou menos."}},{"@type":"Question","name":"Posso usar qualquer unidade de peso?","acceptedAnswer":{"@type":"Answer","text":"Sim. O resultado sai na mesma unidade informada: kg, toneladas ou sacas, desde que todo o cálculo use uma única unidade."}},{"@type":"Question","name":"A quebra calculada é igual ao desconto do armazém?","acceptedAnswer":{"@type":"Answer","text":"Nem sempre. A conta mostra a quebra física teórica pela retirada de água. Tabelas comerciais podem incluir taxa de secagem, impurezas, avarias e regras específicas do contrato."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -44,12 +45,36 @@
     </form>
     <div class="ad-slot" data-ad-slot=""></div>
     <article class="prose">
-      <h2>Como calcular</h2>
+      <h2>Para que serve</h2>
+      <p>Esta calculadora faz a <strong>correção de umidade de grãos</strong>: a partir do peso de entrada e das umidades inicial e final, ela estima o peso corrigido, a água removida e a quebra percentual. É a conta usada quando o produtor entrega grãos mais úmidos do que o padrão do contrato e precisa entender quanto peso será descontado, ou quando planeja a secagem e quer saber quanto produto sairá do secador. Serve para soja, milho, trigo, arroz e outros grãos — a regra física é a mesma, mudam apenas os percentuais envolvidos em cada produto.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>O peso inicial pode ser lançado em <strong>kg, toneladas ou sacas</strong>, desde que uma única unidade seja usada — o resultado sai na mesma unidade (10.000 kg = 10 t ≈ 166,7 sacas de 60 kg). As umidades entram em % base úmida, como lidas no determinador. Como referência, o padrão comercial usual de <strong>soja e milho no Brasil é 14%</strong>, e a armazenagem prolongada costuma trabalhar com 13% ou menos.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
       <p>A matéria seca permanece constante. Por isso, o peso corrigido é calculado pela relação entre a umidade de entrada e a umidade final desejada.</p>
       <div class="formula">Peso final = peso inicial × (100 - umidade inicial) ÷ (100 - umidade final)</div>
-      <h2>Uso no Brasil</h2>
-      <p>A conta é útil para soja, milho, trigo, arroz e outros grãos. O padrão comercial de umidade varia por produto, armazém e contrato.</p>
+      <div class="formula">Quebra (%) = 100 × (peso inicial − peso final) ÷ peso inicial</div>
+      <p>Exemplo do botão "Preencher com exemplo": 10.000 kg de grãos a 18% de umidade, corrigidos para 13%. Substituindo: 10.000 × (100 − 18) ÷ (100 − 13) = 10.000 × 82 ÷ 87 ≈ <strong>9.425 kg</strong>. A água removida é 10.000 − 9.425 = <strong>575 kg</strong>, e a quebra por umidade fica em 575 ÷ 10.000 = <strong>5,75%</strong>. Note que reduzir 5 pontos de umidade não desconta 5% do peso: a quebra real é um pouco maior, porque o percentual final incide sobre um peso menor.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Referências gerais citadas em boletins públicos (ex.: Embrapa, CONAB, MAPA), com variação por produto, região e contrato:</p>
+      <ul>
+        <li><strong>Padrão comercial</strong>: 14% de umidade é o valor usual para soja e milho no Brasil.</li>
+        <li><strong>Armazenagem prolongada</strong>: publicações técnicas indicam 13% ou menos para guarda segura de soja e milho.</li>
+        <li><strong>Colheita</strong>: milho é frequentemente colhido entre 16% e 22%; soja, entre 14% e 18%.</li>
+        <li><strong>Quebra por ponto</strong>: perto da faixa comercial, cada ponto de umidade removido reduz o peso em torno de 1,15% a 1,2%.</li>
+      </ul>
+      <h2>Limitações</h2>
+      <p>A conta considera apenas a retirada de água, com matéria seca constante. Descontos comerciais reais podem somar taxa de secagem, impurezas, grãos avariados e regras próprias de cada armazém ou contrato, e a leitura do determinador de umidade tem margem de erro. O resultado é uma estimativa informativa para conferência e planejamento, não um laudo de classificação.</p>
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é a quebra por umidade?</h3>
+      <p>É a redução percentual de peso causada pela retirada de água ao levar o grão da umidade de entrada à umidade final, calculada pela regra da matéria seca constante.</p>
+      <h3>Qual a umidade padrão de comercialização?</h3>
+      <p>Para soja e milho, o padrão usual no Brasil é 14%. Armazéns e contratos podem adotar valores próprios.</p>
+      <h3>Posso usar qualquer unidade de peso?</h3>
+      <p>Sim. O resultado sai na mesma unidade informada — kg, toneladas ou sacas — desde que todo o cálculo use uma única unidade.</p>
+      <h3>A quebra calculada é igual ao desconto do armazém?</h3>
+      <p>Nem sempre. A conta mostra a quebra física teórica; tabelas comerciais podem incluir taxa de secagem, impurezas e avarias.</p>
       <div class="related"><h2>Outras calculadoras</h2><div class="calc-grid"><a class="calc-card" href="/custo-secagem.html"><h3>Custo de secagem</h3><p>Estime água removida e custo.</p></a><a class="calc-card" href="/custo-armazenagem.html"><h3>Custo de armazenagem</h3><p>Custo por saca ou tonelada.</p></a><a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, kg e toneladas.</p></a></div></div>
+      <p><em>Conteúdo educacional e informativo, com faixas de referência aproximadas atribuídas a boletins públicos. Não substitui profissional habilitado nem classificação oficial. Veja as <a href="/fontes.html">fontes e referências</a>. Última revisão: 2026-07-06.</em></p>
     </article>
   </div>
 </main>

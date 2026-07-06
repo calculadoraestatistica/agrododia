@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que significa 1 mm de lâmina?","acceptedAnswer":{"@type":"Answer","text":"Uma camada de água de 1 mm de altura sobre toda a área: 1 litro por m², ou 10.000 L (10 m³) por hectare. É a mesma unidade usada para chuva."}},
+    {"@type":"Question","name":"Como sei qual lâmina aplicar?","acceptedAnswer":{"@type":"Answer","text":"Pelo manejo de irrigação: balanço hídrico com dados de evapotranspiração, sensores de umidade do solo ou tensiômetros. A página não recomenda lâminas — ela só converte a lâmina escolhida em volume, tempo e custo."}},
+    {"@type":"Question","name":"Por que o volume bruto é maior que o líquido?","acceptedAnswer":{"@type":"Answer","text":"Porque parte da água bombeada se perde por evaporação, deriva e distribuição desuniforme antes de chegar à zona radicular. A eficiência do sistema corrige essa diferença."}},
+    {"@type":"Question","name":"Irrigar de madrugada reduz o custo?","acceptedAnswer":{"@type":"Answer","text":"Em geral sim: além de menos vento e evaporação, irrigantes podem ter tarifa noturna com desconto. Consulte a distribuidora e simule com o preço de kWh do seu contrato."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -197,28 +209,44 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima o <strong>volume de água</strong>, o <strong>tempo de bombeamento</strong>, a <strong>energia elétrica</strong> e o <strong>custo</strong> de uma irrigação a partir da lâmina (mm) e da área (ha). É útil para planejar turnos de rega, dimensionar contas de luz e comparar sistemas.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Esta calculadora estima o <strong>volume de água</strong>, o <strong>tempo de bombeamento</strong>, a <strong>energia elétrica</strong> e o <strong>custo</strong> de uma irrigação a partir da lâmina (mm) e da área (ha). No manejo, ela serve para planejar turnos de rega dentro da capacidade do sistema, verificar se o conjunto motobomba dá conta da lâmina no intervalo disponível, antecipar a conta de luz do mês e comparar cenários — por exemplo, quanto muda o custo ao migrar de aspersão para gotejamento ou ao concentrar o bombeamento no horário reservado, com tarifa reduzida para irrigantes.</p>
 
-      <h2>Como calcular</h2>
-      <p>A regra de ouro é: <strong>1 mm aplicado em 1 ha equivale a 10 m³ de água</strong>. A partir daí, divide-se pelo rendimento do sistema, pela vazão e pela eficiência da bomba.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>A chave é a equivalência <strong>1 mm de lâmina em 1 ha = 10 m³ de água</strong>. As entradas:</p>
+      <ul>
+        <li><strong>Lâmina (mm)</strong> — altura de água a aplicar, definida pelo manejo de irrigação.</li>
+        <li><strong>Área (ha)</strong> e <strong>eficiência do sistema (%)</strong>.</li>
+        <li><strong>Vazão</strong> em m³/h ou L/s (1 L/s = 3,6 m³/h).</li>
+        <li><strong>Pressão (mca)</strong>, <strong>rendimento da bomba (%)</strong> e <strong>preço do kWh</strong>, para a parte de energia.</li>
+      </ul>
+
+      <h2>Fórmulas e exemplo passo a passo</h2>
       <div class="formula">volume líquido (m³) = lâmina (mm) × área (ha) × 10</div>
       <div class="formula">volume bruto (m³) = volume líquido ÷ (eficiência do sistema ÷ 100)</div>
       <div class="formula">horas de irrigação = volume bruto ÷ vazão (m³/h)</div>
       <div class="formula">potência (kW) = (vazão em m³/s × pressão em mca × 9,81) ÷ (rendimento da bomba ÷ 100)</div>
       <div class="formula">energia (kWh) = potência × horas &nbsp;·&nbsp; custo = energia × preço do kWh</div>
+      <p>Exemplo: aplicar 30 mm em 10 ha com aspersão (85%), vazão de 100 m³/h, pressão de 30 mca, bomba de 75% e energia a R$ 0,75/kWh:</p>
+      <ol>
+        <li>Volume líquido: 30 × 10 × 10 = 3.000 m³.</li>
+        <li>Volume bruto: 3.000 ÷ 0,85 ≈ <strong>3.529 m³</strong>.</li>
+        <li>Tempo: 3.529 ÷ 100 ≈ <strong>35 h</strong> de bombeamento.</li>
+        <li>Energia: ≈ <strong>382 kWh</strong>, custando cerca de <strong>R$ 286</strong>.</li>
+      </ol>
 
-      <h2>Eficiência por sistema</h2>
-      <p>A eficiência indica quanto da água bombeada vira água útil para a planta. Os valores típicos:</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa), as eficiências de aplicação típicas por sistema são:</p>
       <ul>
-        <li><strong>Gotejamento</strong>: 90% — menor perda por evaporação e deriva.</li>
-        <li><strong>Pivô central</strong>: 85% — bom controle, depende do vento.</li>
-        <li><strong>Aspersão convencional</strong>: 75% — perdas por vento e evaporação.</li>
-        <li><strong>Sulcos</strong>: 60% — depende muito do solo e do manejo.</li>
+        <li><strong>Gotejamento</strong>: ~90% — menor perda por evaporação e deriva.</li>
+        <li><strong>Pivô central</strong>: ~85% — bom controle, sensível ao vento.</li>
+        <li><strong>Aspersão convencional</strong>: 75-85% — perdas por vento e evaporação.</li>
+        <li><strong>Sulcos</strong>: 60-70% — depende muito do solo e do manejo.</li>
       </ul>
+      <p>Lâminas por evento em grandes culturas costumam ficar na faixa de poucos milímetros a algumas dezenas (frequentemente 5-30 mm), definidas pela evapotranspiração da cultura (ETc) e pela capacidade de retenção do solo — valores que variam fortemente por região, clima e fase da cultura.</p>
 
-      <h2>Exemplo</h2>
-      <p>Para aplicar 30 mm em 10 ha com aspersão (85% de eficiência), vazão de 100 m³/h, pressão de 30 mca, bomba com 75% de rendimento e energia a R$ 0,75/kWh: serão necessários cerca de <strong>3.529 m³</strong> de água bombeada em <strong>~35 h</strong>, consumindo <strong>~382 kWh</strong> de energia, com custo aproximado de <strong>R$ 286</strong>.</p>
+      <h2>Limitações</h2>
+      <p>A página faz a conta hidráulica e energética — <strong>ela não define quanto irrigar</strong>. A lâmina correta sai do manejo de irrigação (balanço hídrico, sensores de solo ou ETc) orientado por um engenheiro agrônomo ou agrícola. O modelo também assume vazão e pressão constantes e não inclui perdas de carga na adutora, tarifas de demanda, outorga de água nem manutenção.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -228,6 +256,16 @@
         <p>Esta calculadora considera apenas a <strong>energia elétrica</strong> de bombeamento e a <strong>lâmina aplicada</strong>. Não inclui custo de mão de obra, amortização do sistema, manutenção, água outorgada ou tarifas de demanda contratada. Para um custo real total, some essas parcelas ao resultado.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O que significa 1 mm de lâmina?</h3>
+      <p>Uma camada de água de 1 mm de altura sobre toda a área: 1 litro por m², ou 10.000 L (10 m³) por hectare. É a mesma unidade usada para chuva.</p>
+      <h3>Como sei qual lâmina aplicar?</h3>
+      <p>Pelo manejo de irrigação: balanço hídrico com dados de evapotranspiração, sensores de umidade do solo ou tensiômetros. Esta página não recomenda lâminas — ela só converte a lâmina escolhida em volume, tempo e custo.</p>
+      <h3>Por que o volume bruto é maior que o líquido?</h3>
+      <p>Porque parte da água bombeada se perde por evaporação, deriva e distribuição desuniforme antes de chegar à zona radicular. A eficiência do sistema corrige essa diferença.</p>
+      <h3>Irrigar de madrugada reduz o custo?</h3>
+      <p>Em geral sim: além de menos vento e evaporação, irrigantes podem ter tarifa noturna com desconto. Consulte a distribuidora e simule com o preço de kWh do seu contrato.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -236,6 +274,9 @@
           <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>ha, alqueire, m².</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

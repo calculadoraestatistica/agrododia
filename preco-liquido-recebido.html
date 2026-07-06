@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Por que meu líquido veio diferente do romaneio da cooperativa?","acceptedAnswer":{"@type":"Answer","text":"Provavelmente há descontos de qualidade (umidade acima do padrão, impurezas, avariados) ou taxas específicas da casa que não foram lançados aqui. Reproduza o romaneio linha a linha para achar a diferença."}},
+    {"@type":"Question","name":"O Funrural é sempre 1,5%?","acceptedAnswer":{"@type":"Answer","text":"Para pessoa física, a alíquota usual sobre a receita bruta da venda é 1,5% (incluindo Senar). Pessoa jurídica e situações especiais têm tratamento diferente — confirme com seu contador."}},
+    {"@type":"Question","name":"Como converto um frete cotado em R$/km?","acceptedAnswer":{"@type":"Answer","text":"A calculadora faz isso: multiplica o R$/km pela distância, divide pela carga do caminhão em toneladas e converte para a unidade do preço bruto (saca ou tonelada)."}},
+    {"@type":"Question","name":"Vale aceitar preço maior de um comprador mais distante?","acceptedAnswer":{"@type":"Answer","text":"Só se a diferença de preço superar a diferença de frete e demais custos. Calcule o líquido dos dois cenários e compare."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -245,34 +257,39 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Quando o comprador (cooperativa, trader, corretora) faz uma oferta, o preço cotado é o <strong>preço bruto</strong>. O que efetivamente cai na conta do produtor é o <strong>preço líquido</strong>, depois de descontados frete, armazenagem, comissão, secagem, quebra técnica e impostos. Esta calculadora permite comparar a oferta com a cotação de referência (<a href="/cotacoes.html">CEPEA/Esalq</a>) e decidir se vale fechar negócio.</p>
+      <h2>Para que serve na gestão da fazenda</h2>
+      <p>Quando o comprador — cooperativa, trader ou corretora — faz uma oferta, o preço cotado é o <strong>preço bruto</strong>. O que efetivamente cai na conta do produtor é o <strong>preço líquido</strong>, depois de descontados frete, armazenagem, comissão, secagem, quebra técnica e impostos. Comparar ofertas pelo bruto é um erro clássico de comercialização: um comprador que paga R$ 2 a mais na saca pode render menos se estiver 300 km mais longe. Esta calculadora coloca todas as ofertas na mesma régua — o valor líquido por saca, tonelada e quilo — e permite confrontá-las com a cotação de referência (<a href="/cotacoes.html">CEPEA/Esalq</a>) antes de fechar negócio.</p>
 
-      <h2>Custos típicos descontados</h2>
+      <h2>Entradas e unidades</h2>
+      <p>O preço bruto entra em <strong>R$/sc (saca de 60 kg)</strong> ou <strong>R$/t</strong>. Cada desconto aceita a unidade em que costuma ser cotado: frete em R$/sc, R$/t ou <strong>R$/km</strong> (nesse caso informe distância e carga do caminhão em toneladas); armazenagem e secagem em R$ por unidade ou em % do bruto; comissão, quebra técnica e impostos sempre em <strong>% do preço bruto</strong>. A calculadora converte tudo para a unidade de referência antes de somar.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <p>Cada custo é convertido para a mesma unidade do preço bruto (saca ou tonelada). Os percentuais incidem sobre o <strong>bruto</strong> — não sobre o líquido:</p>
+      <div class="formula">líquido = bruto − (frete + armazenagem + comissão + secagem + quebra + impostos)</div>
+      <p>Soja a R$ 130/sc, frete R$ 8/sc, armazenagem 1%, comissão 1%, secagem R$ 0,80/sc, quebra 0,5%, Funrural 1,5%:</p>
       <ul>
-        <li><strong>Frete</strong> — rodoviário, do armazém da fazenda até o destino (porto, indústria, esmagadora). Cotado por saca, por tonelada ou por km × carga.</li>
-        <li><strong>Armazenagem</strong> — taxa fixa por período ou percentual do bruto, cobrada pela cooperativa/armazém.</li>
-        <li><strong>Comissão</strong> — corretor ou trader, geralmente 1% do bruto.</li>
-        <li><strong>Secagem</strong> — desconto por umidade acima da padrão (~14% para soja/milho). Pode ser R$ fixo ou % do bruto.</li>
-        <li><strong>Quebra técnica</strong> — perda durante o transporte/limpeza, tipicamente 0,5% a 1%.</li>
-        <li><strong>Impostos e taxas</strong> — Funrural (1,5% para pessoa física), Senar, ICMS dependendo da operação.</li>
+        <li><strong>Passo 1 — percentuais em R$:</strong> armazenagem 1% = R$ 1,30; comissão 1% = R$ 1,30; quebra 0,5% = R$ 0,65; Funrural 1,5% = R$ 1,95;</li>
+        <li><strong>Passo 2 — soma dos descontos:</strong> 8,00 + 1,30 + 1,30 + 0,80 + 0,65 + 1,95 = <strong>R$ 14,00/sc</strong> (10,8% do bruto);</li>
+        <li><strong>Passo 3 — líquido:</strong> 130 − 14 = <strong>R$ 116/sc</strong>.</li>
       </ul>
 
-      <h2>Como calcula</h2>
-      <p>Cada custo é convertido para a mesma unidade do preço bruto (saca ou tonelada). Os percentuais incidem sobre o <strong>bruto</strong> — não sobre o líquido. Depois soma tudo e desconta:</p>
-      <div class="formula">líquido = bruto − (frete + armazenagem + comissão + secagem + quebra + impostos)</div>
+      <h2>Referências práticas</h2>
+      <p>Em levantamentos públicos e na prática de mercado (ex.: CONAB, IMEA, Sifreca/Esalq-Log para fretes), os descontos totais sobre o bruto costumam ficar entre <strong>5% e 15%</strong>, puxados principalmente pelo frete: em rotas curtas (até 200 km) o transporte consome tipicamente 2% a 5% do valor da carga de grãos; em rotas longas do interior ao porto (1.000 km ou mais) pode passar de 10% a 20%. Comissão de corretagem gira em torno de 0,5% a 1%; quebra técnica, 0,25% a 1%; Funrural, 1,5% do bruto para pessoa física (1,2% INSS + 0,1% RAT + 0,2% Senar). A variação regional e entre parceiros comerciais é forte — cada cooperativa e trader tem sua própria tabela.</p>
 
-      <h2>Exemplo</h2>
-      <p>Soja a R$ 130/sc, frete R$ 8/sc, armazenagem 1%, comissão 1%, secagem R$ 0,80/sc, quebra 0,5%, Funrural 1,5%:</p>
-      <p>Descontos somam R$ 8,00 + R$ 1,30 + R$ 1,30 + R$ 0,80 + R$ 0,65 + R$ 1,95 = R$ 14,00/sc. Líquido ≈ <strong>R$ 116/sc</strong>.</p>
+      <h2>Limitações</h2>
+      <p>A calculadora não contempla deságios de qualidade (impureza, ardidos, avariados), diferenças de padrão de contrato, prazos de pagamento nem ICMS em operações interestaduais específicas — e o tratamento tributário depende do enquadramento do produtor. Confirme cada linha de desconto com o comprador antes de fechar: uma diferença de 0,5% na comissão ou R$ 1/sc no frete muda o resultado na ponta do lápis. O valor líquido também não é lucro; dele ainda sai o custo de produção.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Cada cooperativa/trader tem sua tabela
-        </div>
-        <p>Os percentuais e valores cobrados variam por região, parceiro comercial e safra. Confirme cada linha de desconto com o comprador <strong>antes de fechar negócio</strong> — uma diferença de 0,5% em comissão ou R$ 1/sc em frete muda o resultado final na ponta do lápis.</p>
-      </div>
+      <h2>Perguntas frequentes</h2>
+      <h3>Por que meu líquido veio diferente do romaneio da cooperativa?</h3>
+      <p>Provavelmente há descontos de qualidade (umidade acima do padrão, impurezas, avariados) ou taxas específicas da casa que não foram lançados aqui. Reproduza o romaneio linha a linha para achar a diferença.</p>
+      <h3>O Funrural é sempre 1,5%?</h3>
+      <p>Para pessoa física, a alíquota usual sobre a receita bruta da venda é 1,5% (incluindo Senar). Pessoa jurídica e situações especiais têm tratamento diferente — confirme com seu contador.</p>
+      <h3>Como converto um frete cotado em R$/km?</h3>
+      <p>A calculadora faz isso: multiplica o R$/km pela distância, divide pela carga do caminhão em toneladas e converte para a unidade do preço bruto (saca ou tonelada).</p>
+      <h3>Vale aceitar preço maior de um comprador mais distante?</h3>
+      <p>Só se a diferença de preço superar a diferença de frete e demais custos. Calcule o líquido dos dois cenários e compare — é exatamente para isso que a página existe.</p>
+
+      <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>

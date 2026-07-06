@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Por que comparar fertilizantes pelo custo do kg de nutriente?","acceptedAnswer":{"@type":"Answer","text":"Porque o que a lavoura recebe é o nutriente, não o saco. Um adubo barato com teor baixo pode custar mais por kg de N, P2O5 ou K2O do que outro mais concentrado e de preço maior por tonelada."}},
+    {"@type":"Question","name":"A ureia é sempre a fonte de N mais barata?","acceptedAnswer":{"@type":"Answer","text":"Frequentemente o custo por kg de N da ureia (45% de N) é competitivo, mas o resultado depende dos preços do dia e das perdas por volatilização em cobertura sem incorporação, que a literatura técnica descreve como relevantes em certas condições de clima e manejo."}},
+    {"@type":"Question","name":"E os nutrientes que não entram na conta, como enxofre e cálcio?","acceptedAnswer":{"@type":"Answer","text":"A comparação por N-P2O5-K2O ignora nutrientes acompanhantes. O sulfato de amônio traz enxofre e o superfosfato simples traz cálcio e enxofre — se a área precisa deles, esse valor adicional deve ser considerado fora da calculadora."}},
+    {"@type":"Question","name":"Posso comparar preços por saca de 50 kg com preços por tonelada?","acceptedAnswer":{"@type":"Answer","text":"Sim. A calculadora converte tudo para R$/kg antes de dividir pelo teor: saca de 50 kg divide por 50, saca de 60 kg por 60 e tonelada por 1.000. Assim fontes cotadas em unidades diferentes ficam na mesma base."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -216,15 +228,40 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora compara fertilizantes pelo <strong>custo por kg de nutriente</strong> (N, P₂O₅ e K₂O) — e não pelo preço do saco. É a forma correta de avaliar o que sai realmente mais barato.</p>
+      <h2>Para que serve na compra</h2>
+      <p>Esta calculadora compara fertilizantes pelo <strong>custo por kg de nutriente</strong> (N, P₂O₅ e K₂O) — e não pelo preço do saco. É a forma usual de avaliar o que sai realmente mais barato, porque o que a lavoura recebe é o nutriente, não a embalagem. Ela ajuda em decisões recorrentes de compra: escolher entre <strong>ureia e sulfato de amônio</strong> como fonte de N, comparar <strong>formulados NPK de teores diferentes</strong> (um 04-14-08 contra um 08-20-20, por exemplo), avaliar propostas de revendas que cotam em unidades distintas e decidir se vale substituir um formulado por adubos simples misturados na fazenda.</p>
 
-      <h2>Como calcular</h2>
-      <p>Primeiro, converte-se o preço para R$/kg de adubo. Depois, divide-se pelo teor decimal de cada nutriente para descobrir quanto custa o kg puro de N, P₂O₅ ou K₂O.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>Para cada fertilizante, informe o <strong>preço</strong> e a unidade de cotação — R$/kg, R$/saca de 50 kg, R$/saca de 60 kg ou R$/tonelada — e os <strong>teores garantidos</strong> de N, P₂O₅ e K₂O em %, lidos no rótulo (a fórmula 04-14-08 significa 4% de N, 14% de P₂O₅ e 8% de K₂O). A calculadora converte tudo para R$/kg de adubo (saca de 50 kg ÷ 50; tonelada ÷ 1.000) e devolve o <strong>custo por kg de cada nutriente</strong>, permitindo comparar fontes cotadas em bases diferentes.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">R$/kg de nutriente = (R$/kg do adubo) ÷ (% do nutriente ÷ 100)</div>
+      <p>Exemplo comparando duas fontes de fósforo e nitrogênio:</p>
+      <ol>
+        <li>Adubo 04-14-08 a R$ 4,50/kg: N a 4,50 ÷ 0,04 = <strong>R$ 112,50/kg</strong>; P₂O₅ a 4,50 ÷ 0,14 = <strong>R$ 32,14/kg</strong>; K₂O a 4,50 ÷ 0,08 = <strong>R$ 56,25/kg</strong>;</li>
+        <li>Ureia a R$ 3.000/t: 3.000 ÷ 1.000 = R$ 3,00/kg; N a 3,00 ÷ 0,45 = <strong>R$ 6,67/kg</strong>;</li>
+        <li>Conclusão do exemplo: como fonte de N puro, a ureia custa uma fração do N embutido no formulado — por isso a comparação por nutriente muda decisões de compra.</li>
+      </ol>
 
-      <h2>Exemplo</h2>
-      <p>Um adubo 04-14-08 a <strong>R$ 4,50/kg</strong> tem: N a R$ 112,50/kg (4,50 ÷ 0,04), P₂O₅ a R$ 32,14/kg (4,50 ÷ 0,14) e K₂O a R$ 56,25/kg (4,50 ÷ 0,08).</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) listam os teores típicos dos fertilizantes mais comuns no mercado brasileiro:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Fertilizante</th><th>Teores típicos</th></tr></thead>
+        <tbody>
+          <tr><td>Ureia</td><td>45% N</td></tr>
+          <tr><td>Sulfato de amônio</td><td>21% N (+ ~23% S)</td></tr>
+          <tr><td>MAP</td><td>11% N, 52% P₂O₅</td></tr>
+          <tr><td>Superfosfato simples</td><td>18% P₂O₅ (+ Ca e S)</td></tr>
+          <tr><td>Superfosfato triplo</td><td>41 a 46% P₂O₅</td></tr>
+          <tr><td>Cloreto de potássio (KCl)</td><td>60% K₂O</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Os preços relativos entre fontes variam com o câmbio, o frete e a região — a hierarquia de custo por nutriente pode mudar de uma safra para outra.</p>
+
+      <h2>Limitações</h2>
+      <p>A comparação considera apenas N, P₂O₅ e K₂O: nutrientes acompanhantes (enxofre do sulfato de amônio, cálcio do superfosfato simples), micronutrientes e diferenças de eficiência agronômica — como a volatilização da ureia em cobertura — ficam fora da conta. Frete, prazo de pagamento e qualidade física do produto também não entram. O resultado orienta a comparação econômica; a escolha da fonte e da dose cabe à recomendação agronômica da área.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -234,6 +271,16 @@
         <p>Compare adubos pelo custo por nutriente — não pelo preço do saco. Um adubo barato com baixo teor pode sair mais caro por kg de N, P₂O₅ ou K₂O do que outro mais concentrado.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Por que comparar pelo custo do kg de nutriente?</h3>
+      <p>Porque o que a lavoura recebe é o nutriente, não o saco. Um adubo barato com teor baixo pode custar mais por kg de N, P₂O₅ ou K₂O do que outro mais concentrado e de preço maior por tonelada.</p>
+      <h3>A ureia é sempre a fonte de N mais barata?</h3>
+      <p>Frequentemente o custo por kg de N da ureia (45% de N) é competitivo, mas o resultado depende dos preços do dia e das perdas por volatilização em cobertura sem incorporação, descritas na literatura técnica como relevantes em certas condições.</p>
+      <h3>E os nutrientes que não entram na conta, como enxofre e cálcio?</h3>
+      <p>A comparação por N-P₂O₅-K₂O ignora nutrientes acompanhantes. O sulfato de amônio traz enxofre e o superfosfato simples traz cálcio e enxofre — se a área precisa deles, esse valor adicional deve ser pesado fora da calculadora.</p>
+      <h3>Posso comparar preço por saca de 50 kg com preço por tonelada?</h3>
+      <p>Sim. A calculadora converte tudo para R$/kg antes de dividir pelo teor: saca de 50 kg divide por 50, saca de 60 kg por 60 e tonelada por 1.000, colocando as fontes na mesma base.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -241,6 +288,10 @@
           <a class="calc-card" href="/mistura-npk.html"><h3>Mistura NPK</h3><p>Monte uma fórmula com adubos simples.</p></a>
           <a class="calc-card" href="/calagem.html"><h3>Calagem</h3><p>Necessidade de calcário.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

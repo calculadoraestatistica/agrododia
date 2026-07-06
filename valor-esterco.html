@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O esterco substitui o adubo mineral?","acceptedAnswer":{"@type":"Answer","text":"Pode substituir parte da adubação, conforme a quantidade aplicada, os teores e o aproveitamento no ciclo. A literatura técnica trata os orgânicos como complemento ou substituto parcial, com a recomendação final saindo da análise de solo interpretada por um profissional habilitado."}},
+    {"@type":"Question","name":"Por que o nitrogênio do esterco aproveita só uma parte?","acceptedAnswer":{"@type":"Answer","text":"Parte do N volatiliza como amônia, parte é imobilizada pela microbiota e só uma fração mineraliza durante o ciclo da cultura. Boletins técnicos citam aproveitamentos de 30% a 70% no primeiro ano, conforme o tipo de orgânico, a incorporação e o clima."}},
+    {"@type":"Question","name":"Vale a pena transportar esterco para longe?","acceptedAnswer":{"@type":"Answer","text":"Como os orgânicos têm baixa concentração de nutrientes por tonelada, o frete pesa muito. Comparar o valor NPK equivalente por hectare com o custo de transporte e aplicação é justamente o uso típico desta calculadora."}},
+    {"@type":"Question","name":"Preciso analisar o esterco antes de aplicar?","acceptedAnswer":{"@type":"Answer","text":"É o recomendado. Os teores variam com a alimentação dos animais, o tempo e a forma de armazenamento e a umidade. Os valores padrão por tipo são médias de literatura e servem como ponto de partida, não como retrato do seu material."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -239,13 +251,40 @@
       <h2>Para que serve</h2>
       <p>Esta calculadora estima quanto de <strong>N, P₂O₅ e K₂O</strong> uma aplicação de esterco, dejeto ou composto entrega por hectare e qual o <strong>valor econômico</strong> dessa adubação em relação ao fertilizante mineral equivalente. Útil para precificar o esterco gerado na propriedade, comparar alternativas e justificar transporte e aplicação.</p>
 
-      <h2>Como funciona</h2>
-      <p>A partir da quantidade aplicada e dos teores do orgânico, calculamos a massa de cada nutriente entregue. A eficiência de aproveitamento reduz essa massa ao que efetivamente fica disponível para a cultura no ciclo. O valor econômico é a soma dos nutrientes aproveitados multiplicados pelo preço do fertilizante mineral correspondente.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são: a <strong>quantidade aplicada</strong> em t/ha (sólidos) ou m³/ha (dejetos líquidos), o <strong>tipo de orgânico</strong> (que preenche teores típicos, editáveis), os <strong>teores de N, P₂O₅ e K₂O</strong> em % do peso bruto, a <strong>eficiência de aproveitamento</strong> de cada nutriente no ciclo (%) e o <strong>preço do kg de nutriente</strong> no fertilizante mineral equivalente, em R$/kg — o mesmo custo por kg de nutriente calculado no comparador de fertilizantes. O resultado sai em kg/ha de cada nutriente aproveitado e em R$/ha de valor equivalente.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">kg/ha de N = quantidade (t/ha) × 1000 × (%N ÷ 100) × (aproveitamento ÷ 100)</div>
       <div class="formula">Valor (R$/ha) = kg N × preço N + kg P₂O₅ × preço P + kg K₂O × preço K</div>
+      <p>Exemplo com 20 t/ha de esterco bovino curtido (0,5% N; 0,3% P₂O₅; 0,4% K₂O), aproveitamentos de 50/80/100% e nutrientes a R$ 6,00, R$ 5,00 e R$ 4,50/kg:</p>
+      <ol>
+        <li>N: 20 × 1.000 × 0,005 × 0,50 = <strong>50 kg/ha</strong> → R$ 300;</li>
+        <li>P₂O₅: 20 × 1.000 × 0,003 × 0,80 = <strong>48 kg/ha</strong> → R$ 240;</li>
+        <li>K₂O: 20 × 1.000 × 0,004 × 1,00 = <strong>80 kg/ha</strong> → R$ 360;</li>
+        <li>Valor equivalente total: <strong>R$ 900/ha</strong> em adubo mineral.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) citam teores médios no material bruto — com forte variação conforme manejo, dieta dos animais e umidade:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Orgânico</th><th>N – P₂O₅ – K₂O típicos (% do peso bruto)</th></tr></thead>
+        <tbody>
+          <tr><td>Esterco bovino curtido</td><td>≈ 0,4–0,6 · 0,2–0,4 · 0,3–0,5</td></tr>
+          <tr><td>Cama de aviário</td><td>≈ 2,5–3,5 · 2,5–3,5 · 1,5–2,5</td></tr>
+          <tr><td>Dejeto líquido de suínos</td><td>≈ 0,2–0,5 · 0,1–0,4 · 0,1–0,3 (por m³, varia com a diluição)</td></tr>
+          <tr><td>Composto orgânico</td><td>≈ 1,0–1,5 · 0,5–1,0 · 0,5–1,0</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Esses números mudam entre regiões e sistemas de criação; a análise laboratorial do material é a referência definitiva.</p>
 
       <h2>Sobre o aproveitamento</h2>
       <p>O <strong>N</strong> é o nutriente mais variável: parte volatiliza como amônia, parte é imobilizada pela microbiota e só uma fração mineraliza no ciclo. Em condições típicas de campo, o aproveitamento do N varia de <strong>30% a 70%</strong> conforme manejo, tipo de orgânico, incorporação e clima. O <strong>P₂O₅</strong> tem aproveitamento mais alto (cerca de 80%) por ser pouco perdido, e o <strong>K₂O</strong> chega perto de 100% por estar predominantemente na forma solúvel.</p>
+
+      <h2>Limitações</h2>
+      <p>O valor calculado é uma <strong>equivalência econômica</strong>, não uma recomendação de adubação. Ele não considera o efeito residual dos nutrientes em safras seguintes, a melhoria de matéria orgânica e estrutura do solo, nem eventuais riscos de excesso (salinidade, contaminação por metais ou patógenos). Os teores e as eficiências são médias sujeitas a grande variação. A dose a aplicar deve sair da análise de solo e da recomendação de um engenheiro agrônomo, respeitando a legislação ambiental local para uso de dejetos.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -255,6 +294,16 @@
         <p>Os valores padrão por tipo de orgânico são médias de literatura. Os teores reais variam bastante conforme manejo, alimentação dos animais, tempo e forma de armazenamento e umidade. Para precisão, <strong>analise uma amostra</strong> do orgânico que você vai aplicar.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O esterco substitui o adubo mineral?</h3>
+      <p>Pode substituir parte da adubação, conforme a quantidade aplicada, os teores e o aproveitamento no ciclo. A literatura trata os orgânicos como complemento ou substituto parcial, com a recomendação final saindo da análise de solo interpretada por um profissional.</p>
+      <h3>Por que o nitrogênio aproveita só uma parte?</h3>
+      <p>Parte do N volatiliza como amônia, parte é imobilizada pela microbiota e só uma fração mineraliza durante o ciclo. Boletins citam aproveitamentos de 30% a 70% no primeiro ano, conforme o tipo de orgânico, a incorporação e o clima.</p>
+      <h3>Vale a pena transportar esterco para longe?</h3>
+      <p>Como os orgânicos têm baixa concentração de nutrientes por tonelada, o frete pesa muito. Comparar o valor NPK equivalente por hectare com o custo de transporte e aplicação é justamente o uso típico desta calculadora.</p>
+      <h3>Preciso analisar o esterco antes de aplicar?</h3>
+      <p>É o recomendado. Os teores variam com a dieta dos animais, o armazenamento e a umidade. Os valores padrão por tipo são médias de literatura e servem como ponto de partida, não como retrato do seu material.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -262,6 +311,10 @@
           <a class="calc-card" href="/calagem.html"><h3>Calagem</h3><p>Necessidade de calcário.</p></a>
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>População de plantas</h3><p>Plantas por hectare.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

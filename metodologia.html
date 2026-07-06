@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.cepea.org.br">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-7516029395999799">
+<title>Metodologia — como construímos as calculadoras e as cotações | Agro do Dia</title>
+<meta name="description" content="Como o Agro do Dia constrói as calculadoras agropecuárias, de onde vêm as cotações, como validamos os resultados e o que o site não faz.">
+<link rel="canonical" href="https://agrododia.com.br/metodologia.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Metodologia do Agro do Dia">
+<meta property="og:description" content="Como construímos as calculadoras, de onde vêm as cotações e como validamos os resultados.">
+<meta property="og:url" content="https://agrododia.com.br/metodologia.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},{"@type":"ListItem","position":2,"name":"Metodologia","item":"https://agrododia.com.br/metodologia.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Metodologia do Agro do Dia","description":"Como o Agro do Dia constrói as calculadoras agropecuárias, de onde vêm as cotações e como os resultados são validados.","inLanguage":"pt-BR","mainEntityOfPage":"https://agrododia.com.br/metodologia.html","image":"https://agrododia.com.br/og-image.png","datePublished":"2026-07-05","dateModified":"2026-07-05","author":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/"},"publisher":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/","logo":{"@type":"ImageObject","url":"https://agrododia.com.br/favicon-512.png","width":512,"height":512}}}</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li>Metodologia</li>
+        </ol>
+      </nav>
+      <h1>Metodologia</h1>
+      <p class="lead">Como as calculadoras são construídas, de onde vêm as cotações e o que fazemos — e não fazemos — com esses números.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+    <article class="prose">
+
+      <h2>Como as calculadoras são construídas</h2>
+      <p>Cada calculadora do Agro do Dia parte de <strong>fórmulas clássicas da agronomia e da zootecnia</strong>, publicadas em literatura técnica de acesso público: boletins e circulares técnicas da <strong>Embrapa</strong>, boletins de recomendação de adubação e calagem de institutos estaduais (como o IAC e a CQFS-RS/SC), manuais de custos da <strong>Conab</strong> e material didático de universidades públicas. Não inventamos coeficientes: quando uma fórmula exige um parâmetro (por exemplo, o consumo de matéria seca como percentual do peso vivo, ou o peso de uma unidade animal), usamos os valores de referência mais difundidos nessa literatura e indicamos, na própria página da calculadora, o que cada campo significa.</p>
+      <p>As contas rodam <strong>inteiramente no seu navegador</strong>, em JavaScript. Nada do que você digita é enviado a servidores — o que também significa que os resultados dependem apenas dos números que você informa.</p>
+
+      <h2>De onde vêm as cotações</h2>
+      <p>O Agro do Dia <strong>não produz cotações próprias</strong>. Os preços exibidos vêm de fontes públicas e amplamente usadas pelo mercado:</p>
+      <ul>
+        <li>Os indicadores à vista de boi gordo, soja, milho, café e etanol são os <strong>indicadores CEPEA/Esalq-USP</strong>, divulgados a cada dia útil no site do CEPEA;</li>
+        <li>Os gráficos de futuros e de câmbio usam widgets do <strong>TradingView</strong>, com dados de bolsas internacionais (CBOT/Chicago e ICE) e referência à <strong>B3</strong> para os contratos brasileiros.</li>
+      </ul>
+      <p>Cada widget ou tabela indica a fonte e o link oficial. Os dados podem ter <strong>atraso ou defasagem</strong> em relação à divulgação original — por isso, para qualquer negociação, o valor que vale é o da fonte oficial e o efetivamente praticado na sua praça. A lista completa de referências está na página de <a href="/fontes.html">fontes</a>.</p>
+
+      <h2>Como validamos</h2>
+      <p>Antes de publicar uma calculadora, verificamos o núcleo de cálculo contra <strong>exemplos numéricos de referência</strong> — em geral, os exemplos resolvidos que aparecem nos próprios boletins técnicos ou em material didático público. Também testamos casos-limite (valores zerados, unidades trocadas, números muito grandes) e conferimos as conversões de unidade — hectare e alqueire, saca e tonelada, arroba e quilo — que são a fonte mais comum de erro nesse tipo de conta.</p>
+      <p>Isso não elimina a possibilidade de erro. Se um resultado parecer estranho, desconfie, refaça a conta e <a href="mailto:calculadoraestatistica@gmail.com">avise a gente</a> — correções são publicadas assim que confirmadas. Como as calculadoras rodam a partir do mesmo código para todos, uma correção vale imediatamente para todos os usuários.</p>
+
+      <h2>O que o site não faz</h2>
+      <p>É importante deixar claro o limite das ferramentas:</p>
+      <ul>
+        <li><strong>Não recomendamos doses</strong> de fertilizante, calcário ou defensivo. As calculadoras apenas transformam uma recomendação técnica já existente (feita por um profissional, com base em análise de solo) em quantidades de produto comercial.</li>
+        <li><strong>Não recomendamos manejo</strong> sanitário, nutricional ou reprodutivo. Os resultados são estimativas de planejamento, não prescrições.</li>
+        <li><strong>Não recomendamos investimento</strong> nem operações de mercado. As páginas de cotações e futuros são de acompanhamento informativo; decisões de venda, compra ou hedge devem ser tomadas com corretora, cooperativa ou consultoria habilitada.</li>
+      </ul>
+      <p>Em resumo: o Agro do Dia ajuda a fazer a conta, não a tomar a decisão. A decisão pede o contexto da sua propriedade — e isso quem tem é você e o profissional que a acompanha.</p>
+
+      <h2>Atualização e revisão</h2>
+      <p>As cotações se atualizam automaticamente conforme a divulgação das fontes. As calculadoras passam por uma <strong>revisão anual</strong>: conferimos se os coeficientes de referência continuam atuais na literatura, se os links de fonte seguem no ar e se há correções pendentes reportadas por leitores. Ajustes relevantes são registrados na própria página da ferramenta. Erros apontados por e-mail têm prioridade e são corrigidos fora do ciclo anual.</p>
+
+      <div class="disclaimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div><strong>Aviso.</strong> Todo o conteúdo do site tem finalidade informativa e educacional. Ele não substitui a orientação de agrônomo, técnico agrícola, veterinário ou consultor financeiro. Veja também a nossa <a href="/politica-editorial.html">política editorial</a>.</div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#16a34a"/>
+            <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+            <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+          </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/metodologia.html">Metodologia</a></li>
+          <li><a href="/politica-editorial.html">Política editorial</a></li>
+          <li><a href="/fontes.html">Fontes</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+          <li><a href="/apoiar.html">Apoiar o projeto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

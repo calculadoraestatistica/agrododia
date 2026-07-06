@@ -50,6 +50,7 @@
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantos hectares tem um alqueire?","acceptedAnswer":{"@type":"Answer","text":"Depende da região: o alqueire paulista tem 2,42 ha (24.200 m²), o mineiro e o goiano têm 4,84 ha (48.400 m²) e o baiano, 9,68 ha (96.800 m²)."}},{"@type":"Question","name":"Quantos metros quadrados tem um hectare?","acceptedAnswer":{"@type":"Answer","text":"Um hectare tem 10.000 m², o equivalente a um quadrado de 100 m por 100 m. Cem hectares formam 1 km²."}},{"@type":"Question","name":"O que é uma tarefa e quanto vale?","acceptedAnswer":{"@type":"Answer","text":"A tarefa é uma medida tradicional do Nordeste. Na Bahia, o valor usual é de 4.356 m² (0,4356 ha), mas há variações locais em outros estados."}},{"@type":"Question","name":"Qual medida vale em documentos oficiais?","acceptedAnswer":{"@type":"Answer","text":"Registros de imóveis, CAR e cadastros oficiais usam o hectare e o metro quadrado. Medidas regionais como alqueire e tarefa são usuais em negociação, mas conferem à custa da conversão correta."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -162,13 +163,41 @@
     <article class="prose">
 
       <h2>Para que serve</h2>
-      <p>Este conversor passa medidas de <strong>área rural</strong> entre hectare, alqueire, tarefa, are e metro quadrado — respeitando as variações regionais.</p>
+      <p>Este conversor passa medidas de <strong>área rural</strong> entre hectare, alqueire, tarefa, are e metro quadrado — respeitando as variações regionais de cada unidade. No campo brasileiro, o tamanho de uma propriedade pode ser dito em alqueires numa conversa em São Paulo ou Minas, em tarefas na Bahia e em hectares no registro do imóvel ou no CAR. Converter corretamente evita mal-entendidos em compra e venda de terra, arrendamento, financiamento e planejamento de plantio, em que uma confusão entre alqueire paulista e mineiro pode dobrar (ou reduzir à metade) a área negociada.</p>
 
-      <h2>Como calcular</h2>
-      <p>Cada unidade é convertida para metros quadrados e, depois, para a unidade de destino. O alqueire tem valores diferentes conforme o estado.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>Informe o valor, a unidade de origem e a de destino. A âncora de tudo é o <strong>hectare, com 10.000 m²</strong> (um quadrado de 100 × 100 m; 100 ha = 1 km²). As demais unidades são múltiplos ou frações dele: o are tem 100 m² (1 ha = 100 ares) e os alqueires e tarefas variam por região, como listado abaixo. Áreas agrícolas também aparecem combinadas com produtividade — por exemplo, sc/ha — o que exige a área na unidade certa antes de qualquer conta de produção.</p>
 
-      <h2>Exemplo</h2>
-      <p>1 alqueire paulista equivale a 24.200 m², ou seja, <strong>2,42 hectares</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <p>Cada unidade é convertida primeiro para metros quadrados e, depois, para a unidade de destino:</p>
+      <div class="formula">m² = valor × fator da unidade de origem</div>
+      <div class="formula">resultado = m² ÷ fator da unidade de destino</div>
+      <p>Exemplo do botão "Preencher com exemplo": converter 1 alqueire paulista para hectares. Primeiro passo: 1 × 24.200 = <strong>24.200 m²</strong>. Segundo passo: 24.200 ÷ 10.000 = <strong>2,42 hectares</strong>. Outro caso comum: uma fazenda de 50 alqueires mineiros tem 50 × 48.400 = 2.420.000 m², ou seja, <strong>242 ha</strong>. Se a mesma conversa fosse em alqueires paulistas, seriam apenas 121 ha — metade da área, o que ilustra o risco de não conferir a unidade regional.</p>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Equivalências usuais citadas em publicações públicas (ex.: Embrapa, MAPA e institutos estaduais), com possíveis variações locais de uso:</p>
+      <ul>
+        <li><strong>Hectare (ha)</strong>: 10.000 m² — unidade oficial de cadastros rurais.</li>
+        <li><strong>Alqueire paulista</strong>: 24.200 m² = 2,42 ha.</li>
+        <li><strong>Alqueire mineiro/goiano</strong>: 48.400 m² = 4,84 ha.</li>
+        <li><strong>Alqueire baiano</strong>: 96.800 m² = 9,68 ha.</li>
+        <li><strong>Alqueire do Norte</strong>: 27.225 m² ≈ 2,72 ha, em usos regionais.</li>
+        <li><strong>Tarefa (BA)</strong>: 4.356 m² ≈ 0,44 ha, com variações em outros estados.</li>
+        <li><strong>Are</strong>: 100 m²; <strong>1 km²</strong> = 100 ha.</li>
+      </ul>
+
+      <h2>Limitações</h2>
+      <p>Medidas tradicionais como alqueire e tarefa não são padronizadas em lei federal: o valor efetivo pode variar por município e pelo costume local, e escrituras antigas às vezes usam fatores próprios. Para fins legais, prevalece a área em hectares ou m² constante da matrícula do imóvel e do georreferenciamento. Trate a conversão como apoio informativo e confirme a medida usada na sua região antes de fechar negócio.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quantos hectares tem um alqueire?</h3>
+      <p>Depende da região: paulista 2,42 ha, mineiro e goiano 4,84 ha, baiano 9,68 ha.</p>
+      <h3>Quantos metros quadrados tem um hectare?</h3>
+      <p>10.000 m² — um quadrado de 100 m por 100 m. Cem hectares formam 1 km².</p>
+      <h3>O que é uma tarefa e quanto vale?</h3>
+      <p>Medida tradicional do Nordeste. Na Bahia, o valor usual é 4.356 m² (0,4356 ha), com variações locais em outros estados.</p>
+      <h3>Qual medida vale em documentos oficiais?</h3>
+      <p>Registros de imóveis, CAR e cadastros oficiais usam hectare e metro quadrado; medidas regionais servem à negociação, desde que convertidas corretamente.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -186,6 +215,8 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por unidade e equilíbrio.</p></a>
         </div>
       </div>
+
+      <p><em>Conteúdo educacional e informativo, com equivalências de referência atribuídas a publicações públicas. Não substitui profissional habilitado nem a matrícula do imóvel. Veja as <a href="/fontes.html">fontes e referências</a>. Última revisão: 2026-07-06.</em></p>
 
     </article>
   </div>

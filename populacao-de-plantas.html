@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"População de plantas e taxa de semeadura são a mesma coisa?","acceptedAnswer":{"@type":"Answer","text":"Não. A população é o estande final de plantas estabelecidas; a taxa de semeadura é maior, pois inclui folga para germinação, vigor e falhas de emergência."}},
+    {"@type":"Question","name":"Como confiro o estande depois da emergência?","acceptedAnswer":{"@type":"Answer","text":"Conte as plantas em vários trechos de 1 metro (ou 5 metros) de linha em pontos diferentes do talhão, tire a média e multiplique pelos metros lineares por hectare."}},
+    {"@type":"Question","name":"Reduzir o espaçamento entre linhas aumenta a população?","acceptedAnswer":{"@type":"Answer","text":"Só se a distância entre plantas na linha for mantida. Para manter a mesma população com linhas mais estreitas, aumenta-se a distância entre plantas na linha."}},
+    {"@type":"Question","name":"Qual população devo usar na minha lavoura?","acceptedAnswer":{"@type":"Answer","text":"Depende de cultivar, região, fertilidade e época. Consulte a recomendação do obtentor da semente e a assistência agronômica — as faixas da página são apenas referência educacional."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -149,15 +161,37 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora relaciona o <strong>espaçamento de plantio</strong> com a <strong>população de plantas</strong> por hectare e a quantidade de sementes a semear por metro.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>A <strong>população de plantas</strong> — quantas plantas por hectare a lavoura terá — é uma das decisões que mais pesam na produtividade: população baixa desperdiça área e favorece daninhas; população alta gera competição, acamamento e gasto desnecessário com semente. Esta calculadora relaciona o <strong>espaçamento de plantio</strong> com a população por hectare e com a taxa de semeadura em sementes por metro linear. Na prática, ela serve para regular a plantadeira antes do plantio, conferir o estande após a emergência (contando plantas por metro) e simular cenários de espaçamento para a mesma população-alvo.</p>
 
-      <h2>Como calcular</h2>
-      <p>A população por hectare é 10.000 m² dividido pela área que cada planta ocupa. As sementes por metro vêm da população desejada e do espaçamento entre linhas.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <ul>
+        <li><strong>Espaçamento entre linhas</strong> em metros (ex.: 0,45 ou 0,50 m; digite 45 cm como 0,45).</li>
+        <li><strong>Espaçamento entre plantas</strong> em metros, para obter plantas/ha.</li>
+        <li><strong>População desejada</strong> em plantas/ha, para obter as sementes por metro linear.</li>
+      </ul>
+      <p>Lembrete útil: 1 hectare = 10.000 m², e o número de metros lineares por hectare é 10.000 ÷ espaçamento entre linhas.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">Plantas/ha = 10.000 ÷ (espaçamento entre linhas × espaçamento entre plantas)</div>
+      <div class="formula">Sementes por metro = população desejada × espaçamento entre linhas ÷ 10.000</div>
+      <ol>
+        <li>Linhas a 0,5 m e plantas a 0,2 m: cada planta ocupa 0,1 m², logo 10.000 ÷ 0,1 = <strong>100.000 plantas/ha</strong>.</li>
+        <li>Para 70.000 plantas/ha com linhas de 0,5 m: 70.000 × 0,5 ÷ 10.000 = <strong>3,5 plantas por metro</strong>.</li>
+        <li>Para virar taxa de semeadura, acrescente uma folga pela germinação e por falhas de campo (ver limitações).</li>
+      </ol>
 
-      <h2>Exemplo</h2>
-      <p>Linhas a 0,5 m e plantas a 0,2 m dão <strong>100.000 plantas/ha</strong>. Para 70.000 plantas/ha com linhas de 0,5 m, semeie 3,5 sementes por metro.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa), as faixas de população usadas como referência geral são:</p>
+      <ul>
+        <li><strong>Soja:</strong> cerca de 220 a 360 mil plantas/ha, variando com cultivar, região e época de semeadura.</li>
+        <li><strong>Milho:</strong> cerca de 55 a 75 mil plantas/ha em lavouras de alta tecnologia; menos em sequeiro de risco.</li>
+        <li><strong>Feijão:</strong> frequentemente 200 a 300 mil plantas/ha, conforme o grupo comercial.</li>
+      </ul>
+      <p>Essas faixas mudam entre estados, safras (verão × safrinha) e materiais genéticos — o número certo para a sua área é o indicado pelo obtentor da cultivar e pela assistência técnica regional.</p>
+
+      <h2>Limitações</h2>
+      <p>A calculadora trabalha com <strong>plantas estabelecidas</strong>, não com sementes brutas: ela não desconta germinação, vigor, pureza nem falhas de plantio. Também não recomenda a população ideal — essa escolha depende de cultivar, fertilidade, clima e época, definidos com apoio de um engenheiro agrônomo. Use-a junto com a calculadora de quantidade de sementes para fechar a compra.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -167,6 +201,16 @@
         <p>A taxa de semeadura aqui considera plantas, não sementes brutas. Para definir quantos quilos de semente comprar, ajuste pela germinação e pela pureza do lote.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>População de plantas e taxa de semeadura são a mesma coisa?</h3>
+      <p>Não. A população é o estande final de plantas estabelecidas; a taxa de semeadura é maior, pois inclui folga para germinação, vigor e falhas de emergência.</p>
+      <h3>Como confiro o estande depois da emergência?</h3>
+      <p>Conte as plantas em vários trechos de 1 metro (ou 5 metros) de linha em pontos diferentes do talhão, tire a média e multiplique pelos metros lineares por hectare.</p>
+      <h3>Reduzir o espaçamento entre linhas aumenta a população?</h3>
+      <p>Só se a distância entre plantas na linha for mantida. Para manter a mesma população com linhas mais estreitas, aumenta-se a distância entre plantas na linha.</p>
+      <h3>Qual população devo usar na minha lavoura?</h3>
+      <p>Depende de cultivar, região, fertilidade e época. Consulte a recomendação do obtentor da semente e a assistência agronômica — as faixas desta página são apenas referência educacional.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -175,6 +219,9 @@
           <a class="calc-card" href="/produtividade.html"><h3>Conversão de produtividade</h3><p>Sacas/ha, kg/ha e t/ha.</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

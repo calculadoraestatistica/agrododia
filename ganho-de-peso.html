@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é considerado um bom GMD?","acceptedAnswer":{"@type":"Answer","text":"Depende do sistema. Boletins técnicos descrevem faixas típicas de 0,4 a 0,8 kg/dia em pasto na época das águas e de 1,2 a 1,6 kg/dia em confinamento. O valor economicamente interessante depende do custo da dieta e do preço da arroba."}},
+    {"@type":"Question","name":"Por que pesar os animais em condições padronizadas?","acceptedAnswer":{"@type":"Answer","text":"O conteúdo do trato digestivo pode representar vários quilos e variar ao longo do dia. Pesagens no mesmo horário e nas mesmas condições (por exemplo, após jejum de sólidos) reduzem esse ruído e tornam o GMD comparável entre datas."}},
+    {"@type":"Question","name":"Como o GMD se relaciona com arrobas?","acceptedAnswer":{"@type":"Answer","text":"Uma arroba equivale a 15 kg de carcaça. Com rendimento de carcaça de 50%, cada 30 kg de ganho de peso vivo correspondem a cerca de 1 arroba. Um GMD de 0,9 kg/dia representa aproximadamente 0,9 arroba de peso vivo a cada 30 dias."}},
+    {"@type":"Question","name":"A projeção de dias até o abate é confiável?","acceptedAnswer":{"@type":"Answer","text":"É uma extrapolação que assume ganho constante. Na prática o GMD muda com a estação, a dieta e a fase de crescimento do animal, então a projeção serve como ordem de grandeza e tende a ficar mais precisa com pesagens frequentes."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -157,23 +169,58 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>O <strong>ganho médio diário (GMD)</strong> mede quanto peso o animal ganha por dia. É o principal indicador de desempenho da engorda.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>O <strong>ganho médio diário (GMD)</strong> é o indicador central da fase de engorda: ele resume, em um único número, o efeito da dieta, da genética, da sanidade e do clima sobre o desempenho do animal. No dia a dia da fazenda, o GMD é usado para comparar lotes e pastos, avaliar se uma mudança de dieta surtiu efeito, identificar animais que ficam para trás (refugo de lote) e projetar a época provável de venda ou abate. Como depende só de duas pesagens e de um calendário, é uma das métricas mais baratas de acompanhar — o custo real está em manter uma rotina de pesagens consistente.</p>
 
-      <h2>Como calcular</h2>
-      <p>Divide-se o peso ganho (peso final menos o inicial) pelo número de dias entre as pesagens. Com o peso de abate, estima-se quantos dias ainda faltam.</p>
-      <div class="formula">GMD = (peso final − peso inicial) ÷ dias</div>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são o <strong>peso inicial</strong> e o <strong>peso final</strong> em kg de peso vivo, o <strong>intervalo em dias</strong> entre as pesagens e, opcionalmente, o <strong>peso de abate desejado</strong> em kg. Para relacionar com o mercado: 1 arroba (@) = 15 kg de carcaça; com rendimento de carcaça de 50%, cada 30 kg de peso vivo correspondem a cerca de 1 @. Assim, um ganho de 90 kg vivos equivale a aproximadamente 3 arrobas.</p>
 
-      <h2>Exemplo</h2>
-      <p>Um animal que sai de 300 kg e chega a 380 kg em 90 dias tem GMD de <strong>0,889 kg/dia</strong>; para chegar a 480 kg, faltam cerca de 112 dias.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">GMD (kg/dia) = (peso final − peso inicial) ÷ dias entre as pesagens</div>
+      <p>Exemplo com um animal pesado em duas datas:</p>
+      <ol>
+        <li>Ganho no período: 380 − 300 = <strong>80 kg</strong>;</li>
+        <li>GMD: 80 ÷ 90 dias = <strong>0,889 kg/dia</strong>;</li>
+        <li>Falta até o abate: 480 − 380 = 100 kg;</li>
+        <li>Dias estimados: 100 ÷ 0,889 ≈ <strong>112 dias</strong>, mantido o mesmo ritmo de ganho.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) descrevem faixas típicas de GMD para bovinos de corte no Brasil. Os números variam bastante entre regiões, raças e anos.</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Sistema</th><th>Faixa citada de GMD (kg/dia)</th></tr></thead>
+        <tbody>
+          <tr><td>Pasto na seca, sem suplemento</td><td>−0,2 a +0,3 (pode haver perda)</td></tr>
+          <tr><td>Pasto nas águas</td><td>0,4 a 0,8</td></tr>
+          <tr><td>Pasto com suplementação</td><td>0,6 a 1,0</td></tr>
+          <tr><td>Semiconfinamento</td><td>0,7 a 1,1</td></tr>
+          <tr><td>Confinamento</td><td>1,2 a 1,6</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Animais jovens em crescimento e cruzamentos com raças de maior porte tendem ao teto das faixas; a seca prolongada e pastagens degradadas puxam os valores para baixo.</p>
+
+      <h2>Limitações</h2>
+      <p>O GMD é uma média entre duas datas: ele não mostra oscilações dentro do período nem garante que o ritmo continue. A projeção de abate assume ganho constante, o que raramente ocorre — o desempenho muda com a estação e com o peso do animal. Além disso, o enchimento do trato digestivo pode mascarar vários quilos entre pesagens feitas em condições diferentes.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Pese sempre nas mesmas condições
+          Pesagens em condições padronizadas
         </div>
-        <p>Para um GMD confiável, pese os animais sempre no mesmo horário e em condições parecidas (jejum, hidratação). O peso vivo varia ao longo do dia.</p>
+        <p>A literatura técnica recomenda comparar apenas pesagens feitas em condições semelhantes (mesmo horário, mesmo protocolo de jejum), porque o peso vivo varia ao longo do dia com água e alimento no trato digestivo.</p>
       </div>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é considerado um bom GMD?</h3>
+      <p>Depende do sistema: as faixas descritas em boletins vão de 0,4–0,8 kg/dia em pasto nas águas a 1,2–1,6 kg/dia em confinamento. O que torna um GMD "bom" economicamente é a relação entre o custo da dieta e o valor da arroba produzida.</p>
+      <h3>Por que pesar em condições padronizadas?</h3>
+      <p>Porque o conteúdo do rúmen e do intestino pode somar dezenas de quilos e varia ao longo do dia. Pesagens no mesmo horário, com o mesmo protocolo, reduzem esse ruído e tornam o GMD comparável entre datas.</p>
+      <h3>Como o GMD vira arrobas?</h3>
+<p>Com rendimento de carcaça de 50%, cada 30 kg de ganho vivo equivalem a cerca de 1 @. Um GMD de 0,9 kg/dia representa, portanto, aproximadamente 0,9 @ por mês em peso vivo equivalente.</p>
+      <h3>A projeção de dias até o abate é confiável?</h3>
+      <p>É uma extrapolação útil como ordem de grandeza, não como promessa. Quanto mais curtos os intervalos entre pesagens e mais estável o sistema (ex.: confinamento), mais próxima da realidade a projeção tende a ficar.</p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>
@@ -182,6 +229,10 @@
           <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Consumo do rebanho</h3><p>Matéria seca e sal mineral.</p></a>
           <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por arroba e equilíbrio.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-05. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

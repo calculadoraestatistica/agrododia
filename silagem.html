@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Qual densidade usar se eu não pesei a silagem?","acceptedAnswer":{"@type":"Answer","text":"Boletins técnicos públicos citam cerca de 600 kg/m³ como referência para silagem de milho bem compactada, com faixa usual de 500 a 700 kg/m³. Silos com compactação fraca ou material muito seco tendem ao piso da faixa."}},
+    {"@type":"Question","name":"Como converter a massa de silagem em matéria seca?","acceptedAnswer":{"@type":"Answer","text":"Multiplica-se a massa fresca pelo teor de matéria seca. A silagem de milho no ponto costuma ter 30% a 35% de MS: 132 t de silagem a 33% de MS equivalem a cerca de 43,6 t de MS."}},
+    {"@type":"Question","name":"Quantos animais o silo alimenta?","acceptedAnswer":{"@type":"Answer","text":"Depende do consumo diário do rebanho em matéria seca. Convertendo a capacidade do silo em MS e dividindo pelo consumo diário do lote, obtém-se os dias de estoque. A calculadora de consumo do rebanho ajuda nessa etapa."}},
+    {"@type":"Question","name":"Um silo mal compactado perde muita silagem?","acceptedAnswer":{"@type":"Answer","text":"A literatura técnica descreve perdas totais de 10% a mais de 30% entre fermentação, topo e painel, conforme compactação, vedação e velocidade de retirada. Boa compactação e retirada de fatias adequadas do painel reduzem essas perdas."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -165,15 +177,40 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima a <strong>capacidade do silo</strong> — o volume e a massa de silagem que ele armazena — a partir das dimensões.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Esta calculadora estima a <strong>capacidade do silo</strong> — o volume e a massa de silagem que ele armazena — a partir das dimensões. É uma conta que aparece em três momentos do ano: no <strong>planejamento da safra de silagem</strong>, para saber se o silo existente comporta a produção esperada da lavoura; no <strong>dimensionamento de um silo novo</strong>, partindo da demanda do rebanho para chegar às medidas; e na <strong>conferência do estoque</strong> antes da seca, medindo o que resta no silo para estimar quantos dias de alimentação ainda estão garantidos. O mesmo raciocínio aparece em orçamentos forrageiros descritos em boletins técnicos públicos.</p>
 
-      <h2>Como calcular</h2>
-      <p>O volume é o produto das dimensões (usando a largura média, no caso do silo trincheira). A massa é o volume multiplicado pela densidade da silagem.</p>
-      <div class="formula">Massa = volume × densidade da silagem</div>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são as <strong>dimensões do silo em metros</strong>: comprimento, largura no topo, largura na base (opcional, para silo trincheira de paredes inclinadas) e altura. A <strong>densidade</strong> entra em kg/m³ — o padrão é 600 kg/m³, típico de silagem de milho bem compactada. O resultado sai em m³, kg e toneladas de silagem fresca. Para converter em <strong>matéria seca (MS)</strong>, multiplica-se pela fração de MS: a silagem de milho no ponto costuma ficar entre 30% e 35% de MS.</p>
 
-      <h2>Exemplo</h2>
-      <p>Um silo de 20 m × 5,5 m (média) × 2 m tem 220 m³ → a 600 kg/m³, armazena <strong>132 toneladas</strong> de silagem.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">Volume (m³) = comprimento × largura média × altura<br>Massa (kg) = volume × densidade (kg/m³)</div>
+      <p>Exemplo com um silo trincheira de 20 m de comprimento, 6 m no topo, 5 m na base e 2 m de altura:</p>
+      <ol>
+        <li>Largura média: (6 + 5) ÷ 2 = <strong>5,5 m</strong>;</li>
+        <li>Volume: 20 × 5,5 × 2 = <strong>220 m³</strong>;</li>
+        <li>Massa a 600 kg/m³: 220 × 600 = 132.000 kg = <strong>132 t de silagem</strong>;</li>
+        <li>Em matéria seca, a 33% de MS: 132 × 0,33 ≈ <strong>43,6 t de MS</strong>.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) descrevem faixas típicas de densidade, que variam com a cultura, o teor de MS, o tamanho de partícula e a compactação:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Situação</th><th>Faixa citada</th></tr></thead>
+        <tbody>
+          <tr><td>Silagem de milho bem compactada</td><td>600 a 700 kg/m³</td></tr>
+          <tr><td>Silagem de milho com compactação média</td><td>500 a 600 kg/m³</td></tr>
+          <tr><td>Silagem de sorgo</td><td>500 a 650 kg/m³</td></tr>
+          <tr><td>Silagem de capim</td><td>450 a 650 kg/m³</td></tr>
+          <tr><td>Densidade de MS recomendada</td><td>≥ 200 a 250 kg de MS/m³</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Também é comum a recomendação de retirar fatias de <strong>15 a 30 cm por dia</strong> do painel para reduzir perdas por aquecimento. Os números variam por região, máquina de compactação e manejo de enchimento.</p>
+
+      <h2>Limitações</h2>
+      <p>A conta assume um silo de formato regular e densidade uniforme — na prática, as camadas superiores costumam ser menos compactadas que as inferiores. Ela não desconta perdas de topo, painel e efluentes, nem o abatimento natural da massa nas primeiras semanas. A densidade real só é conhecida pesando cargas e medindo o volume ocupado. O dimensionamento definitivo de um silo e o ajuste da dieta cabem ao técnico responsável.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -183,6 +220,16 @@
         <p>A densidade varia de 500 a 700 kg/m³ conforme a compactação. Boa compactação evita perdas, melhora a fermentação e aumenta a quantidade de silagem armazenada no mesmo espaço.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Qual densidade usar se eu não pesei a silagem?</h3>
+      <p>Boletins técnicos citam cerca de 600 kg/m³ como referência para silagem de milho bem compactada, com faixa usual de 500 a 700 kg/m³. Compactação fraca ou material muito seco puxam o valor para o piso da faixa.</p>
+      <h3>Como converter a massa de silagem em matéria seca?</h3>
+      <p>Multiplicando a massa fresca pelo teor de MS. A silagem de milho no ponto costuma ter 30% a 35% de MS: as 132 t do exemplo, a 33%, equivalem a cerca de 43,6 t de MS.</p>
+      <h3>Quantos animais o silo alimenta?</h3>
+      <p>Depende do consumo diário do rebanho em matéria seca. Convertendo a capacidade do silo em MS e dividindo pelo consumo diário do lote, chega-se aos dias de estoque — a calculadora de consumo do rebanho ajuda nessa etapa.</p>
+      <h3>Um silo mal compactado perde muita silagem?</h3>
+      <p>A literatura técnica descreve perdas totais de 10% a mais de 30% entre fermentação, topo e painel, conforme a compactação, a vedação e a velocidade de retirada. Compactar bem e retirar fatias adequadas do painel reduz essas perdas.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -190,6 +237,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>Taxa de lotação em UA/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

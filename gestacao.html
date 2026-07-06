@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"A data prevista do parto é exata?","acceptedAnswer":{"@type":"Answer","text":"Não. A calculadora usa a duração média da gestação de cada espécie, mas boletins técnicos descrevem variação de vários dias entre raças e indivíduos — em bovinos, por exemplo, a faixa citada vai de cerca de 280 a 290 dias. A data serve como referência de planejamento."}},
+    {"@type":"Question","name":"Na monta natural, qual data de cobertura usar?","acceptedAnswer":{"@type":"Answer","text":"Quando o touro permanece semanas com as fêmeas, a data exata da concepção é incerta. Nesses casos, o intervalo possível de partos é calculado a partir do período em que o touro esteve no lote; o diagnóstico de gestação por um veterinário ajuda a estreitar a janela."}},
+    {"@type":"Question","name":"Por que gestações de zebuínos tendem a ser mais longas?","acceptedAnswer":{"@type":"Answer","text":"A literatura técnica descreve que raças zebuínas, como a Nelore, apresentam gestações em média alguns dias mais longas que as de raças taurinas, além de variação individual e efeito do sexo da cria."}},
+    {"@type":"Question","name":"Para que serve saber a data provável do parto?","acceptedAnswer":{"@type":"Answer","text":"Para organizar a estação de parição: concentrar nascimentos na época mais favorável, programar piquete maternidade, planejar a secagem de vacas leiteiras e intensificar a observação das fêmeas nas semanas próximas ao parto."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -142,22 +154,50 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima a <strong>data provável do parto</strong> somando a duração média da gestação à data da cobertura ou inseminação.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Saber a <strong>data provável do parto</strong> é o que permite transformar a estação de monta em um calendário de trabalho. Com ela, a fazenda consegue concentrar as parições na época mais favorável (em geral no início das águas, quando há pasto para a lactação), separar as fêmeas para o piquete maternidade com antecedência, programar a secagem de vacas leiteiras — a literatura descreve períodos secos de cerca de 60 dias antes do parto — e reforçar a observação nas semanas finais da gestação, quando a maior parte dos problemas de parto acontece. Esta calculadora soma a duração média da gestação de cada espécie à data da cobertura ou inseminação.</p>
 
-      <h2>Como calcular</h2>
-      <p>Cada espécie tem um período de gestação característico: bovinos cerca de 285 dias, búfalos 310, equinos 340, ovinos e caprinos 150, e suínos 114.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são apenas duas: a <strong>espécie</strong> (bovino, búfalo, equino, ovino, caprino ou suíno) e a <strong>data da cobertura ou inseminação artificial</strong>. O resultado é uma data de calendário. Como referência de conversão: a gestação bovina de ~283–285 dias corresponde a cerca de 9,5 meses; a suína, de ~114 dias, é lembrada pela regra popular dos "3 meses, 3 semanas e 3 dias".</p>
 
-      <h2>Exemplo</h2>
-      <p>Uma vaca coberta em 15 de março, com gestação de 285 dias, deve parir por volta de 25 de dezembro do mesmo ano.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">Data provável do parto = data da cobertura + duração média da gestação (dias)</div>
+      <p>Exemplo com uma vaca coberta em 15 de março, usando 285 dias:</p>
+      <ol>
+        <li>De 15/03 até 31/12 há 291 dias no calendário;</li>
+        <li>Somando 285 dias a 15/03, chega-se a <strong>25 de dezembro</strong> do mesmo ano;</li>
+        <li>Considerando a variação biológica de ± alguns dias, a janela prática de atenção vai aproximadamente do meio de dezembro ao início de janeiro.</li>
+      </ol>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          É uma estimativa
-        </div>
-        <p>A duração da gestação varia entre raças e indivíduos — bovinos zebuínos, por exemplo, tendem a gestações um pouco mais longas que os taurinos. Use a data como referência de planejamento.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>As durações abaixo são amplamente citadas em boletins técnicos públicos (ex.: Embrapa) e manuais de zootecnia. Há variação entre raças, indivíduos e até com o sexo da cria.</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Espécie</th><th>Faixa citada (dias)</th><th>Média usual</th></tr></thead>
+        <tbody>
+          <tr><td>Bovina</td><td>280 a 290</td><td>~283–285</td></tr>
+          <tr><td>Bubalina</td><td>300 a 320</td><td>~310</td></tr>
+          <tr><td>Equina</td><td>320 a 360</td><td>~340</td></tr>
+          <tr><td>Ovina</td><td>145 a 155</td><td>~150</td></tr>
+          <tr><td>Caprina</td><td>145 a 155</td><td>~150</td></tr>
+          <tr><td>Suína</td><td>112 a 116</td><td>~114</td></tr>
+        </tbody>
+      </table>
       </div>
+      <p>Em bovinos, materiais técnicos descrevem gestações em média um pouco mais longas em zebuínos (ex.: Nelore) do que em taurinos, e ligeiramente mais longas quando a cria é macho.</p>
+
+      <h2>Limitações</h2>
+      <p>A data é uma estimativa baseada na média da espécie, não uma previsão individual. Ela não considera a raça específica, o estado nutricional, o sexo ou o número de fetos, nem confirma a prenhez — isso depende de diagnóstico de gestação. Na monta natural, quando o touro fica semanas com o lote, a data de concepção é incerta e o resultado deve ser lido como uma janela. Erros na data de cobertura se propagam direto para o resultado, e o acompanhamento clínico das semanas finais cabe ao médico-veterinário.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>A data prevista do parto é exata?</h3>
+      <p>Não. A calculadora usa a duração média da gestação de cada espécie, mas boletins técnicos descrevem variação de vários dias entre raças e indivíduos — em bovinos, a faixa citada vai de cerca de 280 a 290 dias. A data serve como referência de planejamento.</p>
+      <h3>Na monta natural, qual data de cobertura usar?</h3>
+      <p>Quando o touro permanece semanas com as fêmeas, a data exata da concepção é incerta. Nesses casos, o intervalo possível de partos é calculado a partir do período em que o touro esteve no lote; o diagnóstico de gestação por um veterinário ajuda a estreitar a janela.</p>
+      <h3>Por que gestações de zebuínos tendem a ser mais longas?</h3>
+      <p>A literatura técnica descreve que raças zebuínas, como a Nelore, apresentam gestações em média alguns dias mais longas que as de raças taurinas, além de variação individual e efeito do sexo da cria.</p>
+      <h3>Para que serve saber a data provável do parto?</h3>
+      <p>Para organizar a estação de parição: concentrar nascimentos na época mais favorável, programar o piquete maternidade, planejar a secagem de vacas leiteiras e intensificar a observação das fêmeas nas semanas próximas ao parto.</p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>
@@ -166,6 +206,10 @@
           <a class="calc-card" href="/ganho-de-peso.html"><h3>Ganho de peso (GMD)</h3><p>Ganho médio diário e abate.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-05. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

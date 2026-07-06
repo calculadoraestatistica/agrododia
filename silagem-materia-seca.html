@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Por que comparar volumosos pelo kg de matéria seca e não pela tonelada?","acceptedAnswer":{"@type":"Answer","text":"Porque a tonelada bruta inclui água, que não alimenta o animal. Uma silagem a 32% de MS entrega 320 kg de MS por tonelada; um feno a 88% entrega 880 kg. Só o custo por kg de MS coloca os dois na mesma base."}},
+    {"@type":"Question","name":"Qual é o teor de matéria seca típico da silagem de milho?","acceptedAnswer":{"@type":"Answer","text":"Boletins técnicos públicos citam 30% a 35% de MS como faixa típica da silagem de milho colhida no ponto. Valores fora dessa faixa indicam colheita precoce ou tardia e afetam fermentação, consumo e custo por kg de MS."}},
+    {"@type":"Question","name":"O que entra nas perdas de conservação?","acceptedAnswer":{"@type":"Answer","text":"Perdas de fermentação, deterioração no topo e no painel do silo, efluentes e sobras de cocho. A literatura técnica descreve perdas totais frequentes de 10% a 20%, podendo superar 30% em silos mal compactados ou mal vedados."}},
+    {"@type":"Question","name":"Um feno caro pode sair mais barato que uma silagem barata?","acceptedAnswer":{"@type":"Answer","text":"Pode. Como o feno tem quase três vezes mais MS por tonelada que a silagem, um preço por tonelada bem maior ainda pode resultar em custo por kg de MS menor. A conta precisa ser feita caso a caso, incluindo perdas e fornecimento."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -176,15 +188,40 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora compara volumosos pelo que <strong>de fato entregam ao animal</strong>: o quilo de matéria seca (MS). Preço por tonelada bruta engana — silagem é praticamente dois terços de água, feno é quase tudo MS. O que importa, na nutrição, é o custo do kg de MS efetivo.</p>
+      <h2>Para que serve na nutrição</h2>
+      <p>Esta calculadora compara volumosos pelo que <strong>de fato entregam ao animal</strong>: o quilo de matéria seca (MS). Preço por tonelada bruta engana — silagem é praticamente dois terços de água, feno é quase tudo MS. Na hora de decidir entre <strong>comprar silagem, feno, pré-secado ou cana</strong>, ou de precificar a silagem produzida na própria fazenda, o custo do kg de MS efetivo é a régua comum usada em orçamentos forrageiros descritos em boletins técnicos públicos. A conta também revela quanto as perdas de conservação e o custo de fornecimento encarecem o alimento que realmente chega ao cocho.</p>
 
-      <h2>Como calcular</h2>
-      <p>Primeiro convertem-se os quilos brutos em quilos de MS pela porcentagem de matéria seca. Depois descontam-se as perdas de fermentação e conservação. O custo total (preço + fornecimento) é dividido pelo MS efetivo entregue.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são: o <strong>tipo de volumoso</strong> (que preenche um teor de MS típico, editável), o <strong>preço em R$ por tonelada bruta</strong> — incluindo a água —, o <strong>% de MS</strong> do alimento (ideal: o da análise bromatológica do seu lote), as <strong>perdas de fermentação e conservação</strong> em % (padrão de 10%) e o <strong>custo de fornecimento</strong> opcional em R$/t (transporte interno, tratoreio, mão de obra). O resultado sai em R$ por kg de MS efetivamente entregue.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">kg de MS por t = 1.000 × (% MS ÷ 100)<br>kg de MS efetivo = kg de MS × (1 − perdas ÷ 100)<br>R$/kg de MS = (preço + custo de fornecimento) ÷ kg de MS efetivo</div>
+      <p>Exemplo com silagem de milho a R$ 280/t, 32% de MS e 10% de perdas:</p>
+      <ol>
+        <li>MS por tonelada: 1.000 × 0,32 = <strong>320 kg de MS</strong>;</li>
+        <li>Descontando as perdas: 320 × 0,90 = <strong>288 kg de MS efetivos</strong>;</li>
+        <li>Custo: 280 ÷ 288 ≈ <strong>R$ 0,97 por kg de MS</strong>;</li>
+        <li>Com R$ 20/t de fornecimento: (280 + 20) ÷ 288 ≈ <strong>R$ 1,04 por kg de MS</strong>.</li>
+      </ol>
 
-      <h2>Exemplo</h2>
-      <p>Silagem de milho a R$ 280/t, 32% de MS, 10% de perdas: 320 kg de MS por t → 288 kg de MS efetivos → <strong>R$ 0,97 por kg de MS</strong>.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) citam teores de MS típicos dos volumosos mais usados — os valores reais variam com o ponto de colheita, o clima e o armazenamento:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Volumoso</th><th>MS típica citada</th></tr></thead>
+        <tbody>
+          <tr><td>Silagem de milho</td><td>30 a 35%</td></tr>
+          <tr><td>Silagem de sorgo</td><td>28 a 32%</td></tr>
+          <tr><td>Cana-de-açúcar in natura</td><td>28 a 30%</td></tr>
+          <tr><td>Pré-secado</td><td>40 a 60%</td></tr>
+          <tr><td>Feno (tifton, alfafa)</td><td>85 a 90%</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Para as perdas de conservação, a literatura descreve faixas frequentes de 10% a 20%, chegando a mais de 30% em silos mal compactados ou mal vedados. Os números variam por região e manejo.</p>
+
+      <h2>Limitações</h2>
+      <p>O custo por kg de MS iguala os volumosos apenas na quantidade, não na qualidade: energia, proteína e digestibilidade diferem muito entre silagem de milho, cana e palha, e um kg de MS barato pode exigir mais concentrado na dieta. A conta também depende do teor de MS informado — sem análise bromatológica, o valor típico é só uma aproximação. A formulação da dieta e a escolha do volumoso cabem ao zootecnista ou nutricionista responsável.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -194,6 +231,16 @@
         <p>Volumosos com mesma cara podem ter preços por kg de MS muito diferentes. É o que importa pra nutrição animal — silagem barata com pouca MS pode sair mais cara que feno aparentemente caro.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Por que comparar pelo kg de MS e não pela tonelada?</h3>
+      <p>Porque a tonelada bruta inclui água, que não alimenta o animal. Uma silagem a 32% de MS entrega 320 kg de MS por tonelada; um feno a 88% entrega 880 kg. Só o custo por kg de MS coloca os dois na mesma base.</p>
+      <h3>Qual é o teor de MS típico da silagem de milho?</h3>
+      <p>Boletins técnicos citam 30% a 35% de MS como faixa típica da silagem de milho colhida no ponto. Valores fora dessa faixa indicam colheita precoce ou tardia e afetam fermentação, consumo e custo.</p>
+      <h3>O que entra nas perdas de conservação?</h3>
+      <p>Perdas de fermentação, deterioração no topo e no painel do silo, efluentes e sobras de cocho. A literatura descreve perdas totais frequentes de 10% a 20%, podendo superar 30% em silos mal manejados.</p>
+      <h3>Um feno caro pode sair mais barato que uma silagem barata?</h3>
+      <p>Pode. Como o feno tem quase três vezes mais MS por tonelada, um preço maior por tonelada ainda pode resultar em custo menor por kg de MS. A conta precisa ser feita caso a caso, incluindo perdas e fornecimento.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -201,6 +248,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>Taxa de lotação em UA/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Margem alimentar é o mesmo que lucro?","acceptedAnswer":{"@type":"Answer","text":"Não. A margem alimentar desconta da receita apenas a ração e os custos variáveis do dia. Falta abater depreciação de instalações, remuneração do capital, mão de obra fixa, energia, impostos e mortalidade. É um indicador tático, não a rentabilidade final."}},
+    {"@type":"Question","name":"Por que a alimentação é o custo mais monitorado?","acceptedAnswer":{"@type":"Answer","text":"Porque, na pecuária intensiva, a ração costuma responder por 60% a 80% do custo de produção em leite, confinamento, suínos e frangos. Pequenas variações no preço da ração ou na conversão alimentar movem muito o resultado."}},
+    {"@type":"Question","name":"Como uso a margem alimentar no dia a dia?","acceptedAnswer":{"@type":"Answer","text":"Serve para comparar dietas, lotes e fases na mesma régua e para decidir ajustes de formulação ou o momento de venda. Como é um indicador relativo, o mais útil é acompanhar sua evolução ao longo do tempo, não um valor isolado."}},
+    {"@type":"Question","name":"Que preço de ração devo usar?","acceptedAnswer":{"@type":"Answer","text":"O custo real da ração posta no cocho, incluindo ingredientes, mistura e eventual frete. A calculadora aceita o preço por tonelada e converte para R$/kg; usar o preço só dos ingredientes subestima o custo diário."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -202,17 +214,40 @@
       <h2>Para que serve</h2>
       <p>A <strong>margem sobre alimentação</strong> (ou margem alimentar) é o KPI número 1 da pecuária intensiva. Como a ração responde por <strong>60% a 80%</strong> do custo de produção em leite, confinamento, suíno e frango, monitorar a margem alimentar por animal/dia é a forma mais rápida de saber se a atividade está pagando o que mais pesa no caixa.</p>
 
-      <h2>Como calcular</h2>
-      <p>A conta é simples: receita diária menos custo da ração menos demais custos variáveis ligados ao manejo do dia.</p>
-      <div class="formula">Margem alimentar = Receita diária − Custo da ração − Outros custos variáveis</div>
-      <p>O custo da ração usa o preço por tonelada (padrão de mercado) dividido por 1.000 para virar R$/kg, multiplicado pelo consumo diário em kg.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são: o <strong>tipo de animal</strong> (leite, confinamento, suíno ou frango, que ajusta os rótulos), a <strong>produção diária</strong> (litros de leite, kg de ganho ou kg de peso), o <strong>preço de venda</strong> na unidade correspondente, o <strong>consumo de ração</strong> em kg/dia e os <strong>custos diários</strong> — ração em R$/t (padrão de mercado), mais mineral, medicamento e mão de obra rateada em R$/dia. O preço da ração por tonelada é dividido por 1.000 para virar R$/kg e multiplicado pelo consumo. O resultado sai por animal/dia.</p>
 
-      <h2>Exemplo</h2>
-      <p>Uma vaca produzindo 25 L/dia, leite a R$ 2,40/L, comendo 20 kg de ração a R$ 2.000/t: receita de R$ 60,00, custo de ração de R$ 40,00, <strong>margem alimentar de R$ 20,00/vaca/dia</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">Margem alimentar = Receita diária − Custo da ração − Outros custos variáveis</div>
+      <p>Exemplo com uma vaca de 25 L/dia, leite a R$ 2,40/L, comendo 20 kg de ração a R$ 2.000/t:</p>
+      <ol>
+        <li>Receita diária: 25 × 2,40 = <strong>R$ 60,00</strong>;</li>
+        <li>Custo da ração: (2.000 ÷ 1.000) × 20 = 2,00 × 20 = <strong>R$ 40,00</strong>;</li>
+        <li>Margem alimentar: 60,00 − 40,00 = <strong>R$ 20,00/vaca/dia</strong>;</li>
+        <li>Com R$ 0,30 de mineral e R$ 0,20 de medicamento: 20,00 − 0,50 = <strong>R$ 19,50/vaca/dia</strong>.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) e publicações de custos citam que a alimentação responde pela maior fatia do custo de produção na pecuária intensiva:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Sistema</th><th>Participação típica da alimentação no custo</th></tr></thead>
+        <tbody>
+          <tr><td>Leite</td><td>≈ 50 a 70%</td></tr>
+          <tr><td>Confinamento de bovinos</td><td>≈ 70 a 85%</td></tr>
+          <tr><td>Suínos</td><td>≈ 70 a 80%</td></tr>
+          <tr><td>Frangos de corte</td><td>≈ 65 a 75%</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Os percentuais variam com o preço dos grãos, a conversão alimentar do lote e a escala. Em anos de ração cara, a fatia sobe e a margem alimentar fica mais sensível.</p>
 
       <h2>Como interpretar</h2>
       <p>Margem alimentar positiva <strong>não é sinônimo de lucro</strong>. Falta descontar amortização de instalações, capital empatado em animais, mão de obra fixa, energia, impostos e morte. A margem alimentar serve para comparar dietas, lotes e fases — é um indicador <strong>relativo e tático</strong>, usado no dia a dia para ajustar formulação e decidir quando vender.</p>
       <p>Como referência prática: em leite a margem precisa cobrir todos os custos fixos rateados por vaca/dia; em confinamento ela precisa pagar o custo do boi magro diluído no tempo de cocho; em suíno e frango, o piso é a integração não rejeitar o lote.</p>
+
+      <h2>Limitações</h2>
+      <p>A conta cobre apenas o dia analisado e os custos variáveis informados: não projeta o ciclo inteiro, não inclui custos fixos nem eventos como mortalidade, descarte e variação de preço ao longo do período. Ela também depende da qualidade dos dados — um consumo de ração subestimado ou um preço de ração incompleto distorce o resultado. Decisões de dieta e de comercialização devem considerar a análise completa de custos e a orientação do zootecnista ou nutricionista responsável.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -222,6 +257,16 @@
         <p>Esta calculadora mostra a margem <strong>só sobre alimentação</strong> — não é lucro líquido. Não inclui depreciação de instalações, remuneração do capital, mão de obra fixa, energia, impostos, sanidade preventiva nem mortalidade. Use o resultado para comparar dietas e ajustar manejo, não como medida final de rentabilidade.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Margem alimentar é o mesmo que lucro?</h3>
+      <p>Não. Ela desconta da receita apenas a ração e os custos variáveis do dia. Falta abater depreciação, remuneração do capital, mão de obra fixa, energia, impostos e mortalidade. É um indicador tático, não a rentabilidade final.</p>
+      <h3>Por que a alimentação é o custo mais monitorado?</h3>
+      <p>Porque, na pecuária intensiva, a ração costuma responder por 60% a 80% do custo de produção em leite, confinamento, suínos e frangos. Pequenas variações no preço da ração ou na conversão alimentar movem muito o resultado.</p>
+      <h3>Como uso a margem alimentar no dia a dia?</h3>
+      <p>Para comparar dietas, lotes e fases na mesma régua e decidir ajustes de formulação ou o momento de venda. Como é um indicador relativo, o mais útil é acompanhar sua evolução ao longo do tempo, não um valor isolado.</p>
+      <h3>Que preço de ração devo usar?</h3>
+      <p>O custo real da ração posta no cocho, incluindo ingredientes, mistura e eventual frete. A calculadora aceita o preço por tonelada e converte para R$/kg; usar só o preço dos ingredientes subestima o custo diário.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -229,6 +274,10 @@
           <a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, kg e toneladas.</p></a>
           <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Recomendação em adubo comercial.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

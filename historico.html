@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.cepea.org.br">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-7516029395999799">
+<title>Histórico de Cotações do Agro — Boi, Soja, Milho, Café | Agro do Dia</title>
+<meta name="description" content="Histórico das cotações do agro: veja a variação de 7 e 30 dias do boi gordo, soja, milho, café e outros indicadores CEPEA, com minigráficos diários.">
+<link rel="canonical" href="https://agrododia.com.br/historico.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agro do Dia">
+<meta property="og:title" content="Histórico de Cotações do Agro — Boi, Soja, Milho, Café">
+<meta property="og:description" content="Variação de 7 e 30 dias dos indicadores CEPEA, com minigráficos diários.">
+<meta property="og:url" content="https://agrododia.com.br/historico.html">
+<meta property="og:image" content="https://agrododia.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Histórico de cotações do agro","description":"Histórico diário dos indicadores CEPEA/Esalq: boi gordo, soja, milho, café e outros, com variação de 7 e 30 dias.","url":"https://agrododia.com.br/historico.html","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Agro do Dia","url":"https://agrododia.com.br/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},{"@type":"ListItem","position":2,"name":"Cotações","item":"https://agrododia.com.br/cotacoes.html"},{"@type":"ListItem","position":3,"name":"Histórico","item":"https://agrododia.com.br/historico.html"}]}</script>
+<style>
+.hist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:.9rem;margin:1.2rem 0 1.6rem}
+.hist-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem}
+.hist-card__name{font-weight:600;font-size:.92rem;color:#0f172a}
+.hist-card__unit{font-size:.76rem;color:#64748b}
+.hist-card__value{font-size:1.28rem;font-weight:700;color:#0f172a}
+.hist-card__deltas{display:flex;gap:.9rem;font-size:.8rem;color:#475569;flex-wrap:wrap}
+.hist-delta strong{display:block;font-size:.7rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.03em}
+.hist-delta--up{color:#15803d}
+.hist-delta--down{color:#b91c1c}
+.hist-card__spark{margin-top:.25rem}
+.hist-card__spark svg{width:100%;height:40px;display:block}
+.hist-card__building{font-size:.78rem;color:#92700c;background:#fef9c3;border-radius:8px;padding:.35rem .55rem}
+.hist-card__date{font-size:.72rem;color:#94a3b8}
+.hist-empty{background:#fef9c3;border:1px solid #fde68a;border-radius:12px;padding:1rem 1.2rem;color:#713f12;margin:1.2rem 0}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Agro do Dia — página inicial">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Agro <span>do Dia</span></span>
+      <span class="brand__tagline">Cotações do dia e Calculadoras Agro</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cotacoes.html">Cotações</a></li>
+        <li><a href="/futuros.html">Futuros</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li><a href="/cotacoes.html">Cotações</a></li>
+          <li>Histórico</li>
+        </ol>
+      </nav>
+      <h1>Histórico de cotações do agro</h1>
+      <p class="lead">A evolução diária dos indicadores CEPEA/Esalq — boi gordo, soja, milho, café e mais — com a variação de 7 e 30 dias e um minigráfico por produto.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <div id="hist-root">
+      <div class="hist-empty" id="hist-loading">Carregando histórico…</div>
+    </div>
+
+    <article class="prose">
+      <h2>Para que serve acompanhar o histórico</h2>
+      <p>Uma cotação isolada diz pouco. É o <strong>histórico</strong> que mostra se o preço de hoje está alto ou baixo em relação às últimas semanas — e é essa comparação que ajuda o produtor a decidir entre <a href="/vender-ou-armazenar.html">vender ou armazenar</a>, travar preço com a cooperativa ou esperar. Esta página guarda um registro diário dos indicadores CEPEA/Esalq exibidos na página de <a href="/cotacoes.html">cotações</a> e resume, para cada produto, a variação dos últimos 7 e 30 dias.</p>
+
+      <h2>Como ler a variação</h2>
+      <p>A <strong>variação de 7 dias</strong> capta o movimento curto: notícias de safra, clima, câmbio e escalas de abate mexem no preço de uma semana para outra. A <strong>variação de 30 dias</strong> filtra parte desse ruído e indica a tendência do mês. Antes de concluir que "o preço subiu", vale separar o movimento de mercado da <strong>sazonalidade</strong>: boi gordo costuma se firmar na entressafra do pasto (meio do ano), milho e soja pressionam na colheita, e café oscila com o ciclo bienal e o risco de geada. Uma alta de 3% em plena colheita conta uma história diferente de uma alta de 3% na entressafra.</p>
+
+      <h2>Indicador não é preço na sua região</h2>
+      <p>Os valores aqui são <strong>indicadores de referência</strong> — médias calculadas pelo CEPEA/Esalq em praças específicas (por exemplo, boi gordo em São Paulo e soja no Paraná). O preço efetivamente pago na sua região depende de frete, funrural, prazo de pagamento, qualidade do lote e da negociação com o comprador. Use o histórico para entender a direção do mercado, e a sua cooperativa, corretora ou frigorífico para saber o preço real do dia.</p>
+
+      <div class="disclaimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div><strong>Aviso importante.</strong> Este histórico tem finalidade exclusivamente informativa e educacional. Os dados são do CEPEA/Esalq-USP, podem ter atraso ou lacunas (fins de semana e feriados não têm divulgação) e não constituem recomendação de compra ou venda. Confirme sempre os valores na fonte oficial antes de qualquer decisão.</div>
+      </div>
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#16a34a"/>
+            <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+            <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+          </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Calculadoras agropecuárias e cotações do agro, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/historico.html">Histórico de cotações</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+          <li><a href="/apoiar.html">Apoiar o projeto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  "use strict";
+  var root = document.getElementById("hist-root");
+  var DAY = 86400000;
+
+  function parseDate(s) { return Date.parse(s + "T00:00:00Z"); }
+
+  function fmtBRL(v) {
+    var frac = v < 10 ? 4 : 2;
+    return "R$ " + v.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: frac });
+  }
+
+  function fmtDateBR(iso) {
+    var p = iso.split("-");
+    return p[2] + "/" + p[1] + "/" + p[0];
+  }
+
+  function delta(series, days) {
+    // baseline: entrada mais recente com pelo menos `days` dias antes da última
+    var last = series[series.length - 1];
+    var lastT = parseDate(last.d);
+    var base = null;
+    for (var i = series.length - 2; i >= 0; i--) {
+      if ((lastT - parseDate(series[i].d)) / DAY >= days) { base = series[i]; break; }
+    }
+    if (!base || !base.v) return null;
+    var abs = last.v - base.v;
+    return { abs: abs, pct: (abs / base.v) * 100 };
+  }
+
+  function deltaHTML(label, d) {
+    if (!d) return '<span class="hist-delta"><strong>' + label + "</strong>—</span>";
+    var cls = d.abs > 0 ? "hist-delta--up" : (d.abs < 0 ? "hist-delta--down" : "");
+    var sign = d.abs > 0 ? "+" : "";
+    var absTxt = sign + d.abs.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var pctTxt = sign + d.pct.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "%";
+    return '<span class="hist-delta ' + cls + '"><strong>' + label + "</strong>" + absTxt + " (" + pctTxt + ")</span>";
+  }
+
+  function sparkline(series) {
+    var pts = series.slice(-30);
+    var w = 130, h = 36, pad = 2;
+    if (pts.length < 2) {
+      return '<svg viewBox="0 0 130 36" preserveAspectRatio="none" aria-hidden="true"><circle cx="65" cy="18" r="2.5" fill="#16a34a"/></svg>';
+    }
+    var vals = pts.map(function (p) { return p.v; });
+    var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+    var span = (max - min) || 1;
+    var coords = pts.map(function (p, i) {
+      var x = pad + (i / (pts.length - 1)) * (w - 2 * pad);
+      var y = h - pad - ((p.v - min) / span) * (h - 2 * pad);
+      return x.toFixed(1) + "," + y.toFixed(1);
+    });
+    var up = pts[pts.length - 1].v >= pts[0].v;
+    var color = up ? "#16a34a" : "#dc2626";
+    return '<svg viewBox="0 0 130 36" preserveAspectRatio="none" aria-hidden="true">' +
+      '<polyline points="' + coords.join(" ") + '" fill="none" stroke="' + color + '" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>';
+  }
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function prettify(slug) {
+    return slug.replace(/-/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function render(history, meta) {
+    var keys = [];
+    (meta.order || []).forEach(function (k) { if (history[k]) keys.push(k); });
+    Object.keys(history).sort().forEach(function (k) { if (keys.indexOf(k) === -1) keys.push(k); });
+
+    if (!keys.length) {
+      root.innerHTML = '<div class="hist-empty"><strong>Histórico em construção</strong> — o registro diário começou há pouco. Volte em alguns dias para ver os primeiros gráficos.</div>';
+      return;
+    }
+
+    var anyShort = false;
+    var html = '<div class="hist-grid">';
+    keys.forEach(function (k) {
+      var series = history[k].slice().sort(function (a, b) { return a.d < b.d ? -1 : 1; });
+      var info = meta.bySlug[k] || {};
+      var name = info.name || prettify(k);
+      var unit = info.unit ? " / " + info.unit : "";
+      var last = series[series.length - 1];
+      var d7 = null, d30 = null, building = series.length < 7;
+      if (building) { anyShort = true; } else { d7 = delta(series, 7); d30 = delta(series, 30); }
+      html += '<div class="hist-card">' +
+        '<div class="hist-card__name">' + escapeHTML(name) + '</div>' +
+        '<div class="hist-card__value">' + fmtBRL(last.v) + '<span class="hist-card__unit">' + escapeHTML(unit) + "</span></div>" +
+        '<div class="hist-card__date">Último dado: ' + fmtDateBR(last.d) + "</div>" +
+        (building
+          ? '<div class="hist-card__building">Histórico em construção — volte em alguns dias.</div>'
+          : '<div class="hist-card__deltas">' + deltaHTML("Δ 7 dias", d7) + deltaHTML("Δ 30 dias", d30) + "</div>") +
+        '<div class="hist-card__spark">' + sparkline(series) + "</div>" +
+        "</div>";
+    });
+    html += "</div>";
+    if (anyShort) {
+      html = '<div class="hist-empty">O registro diário automático começou recentemente: alguns indicadores ainda têm poucos pontos. As variações de 7 e 30 dias aparecem conforme o histórico cresce.</div>' + html;
+    }
+    root.innerHTML = html;
+  }
+
+  function loadMeta() {
+    return fetch("/data/cotacoes-completas.json")
+      .then(function (r) { return r.ok ? r.json() : { items: [] }; })
+      .catch(function () { return { items: [] }; })
+      .then(function (data) {
+        var bySlug = {}, order = [];
+        (data.items || []).forEach(function (it) {
+          if (it.slug) { bySlug[it.slug] = it; order.push(it.slug); }
+        });
+        return { bySlug: bySlug, order: order };
+      });
+  }
+
+  Promise.all([
+    fetch("/data/cotacoes-historico.json").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+    loadMeta()
+  ]).then(function (res) {
+    var history = res[0], meta = res[1];
+    if (!history || typeof history !== "object") {
+      root.innerHTML = '<div class="hist-empty"><strong>Histórico em construção</strong> — o registro diário começou há pouco. Volte em alguns dias para ver os primeiros gráficos.</div>';
+      return;
+    }
+    render(history, meta);
+  });
+})();
+</script>
+</body>
+</html>

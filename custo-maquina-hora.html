@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Por que incluir juros se a máquina foi comprada à vista?","acceptedAnswer":{"@type":"Answer","text":"Porque o capital imobilizado tem custo de oportunidade: aplicado em outra atividade, ele renderia. Os juros sobre o capital médio capturam esse custo, mesmo sem financiamento."}},
+    {"@type":"Question","name":"Quantas horas por ano minha máquina precisa trabalhar?","acceptedAnswer":{"@type":"Answer","text":"Quanto mais horas, menor o custo fixo por hora. Se o uso anual é baixo, compare o custo calculado com o preço de contratar o serviço de terceiros — muitas vezes contratar sai mais barato."}},
+    {"@type":"Question","name":"Uso o rendimento de catálogo ou o medido?","acceptedAnswer":{"@type":"Answer","text":"O medido a campo. Manobras, abastecimento e regulagens reduzem 15% a 30% da capacidade teórica; usar o catálogo subestima o custo por hectare."}},
+    {"@type":"Question","name":"O custo por hora muda se eu alterar o rendimento?","acceptedAnswer":{"@type":"Answer","text":"Não — o rendimento (ha/h) só converte o custo horário em custo por hectare. Para reduzir o R$/h é preciso atuar em consumo, manutenção, uso anual ou valor da máquina."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -208,28 +220,38 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima o <strong>custo operacional de uma máquina agrícola</strong> em reais por hora trabalhada e em reais por hectare. Ela é útil para precificar serviços terceirizados, decidir entre comprar e alugar, comparar máquinas e construir o custo de produção da lavoura.</p>
+      <h2>Para que serve na gestão da fazenda</h2>
+      <p>Máquinas respondem por uma fatia relevante do custo de produção, mas boa parte desse custo é invisível no dia a dia: a depreciação e os juros sobre o capital não aparecem em nenhuma nota fiscal. Esta calculadora estima o <strong>custo operacional completo de uma máquina agrícola</strong> em reais por hora trabalhada e por hectare, somando seis componentes. O número serve para precificar serviços a terceiros, comparar comprar versus alugar versus contratar, decidir a hora de trocar de máquina, ratear o custo entre talhões e culturas e construir o custo de produção da lavoura com base realista, não apenas com o desembolso de diesel.</p>
 
-      <h2>Como calcular</h2>
-      <p>O custo total é a soma de seis componentes: depreciação, juros sobre o capital médio, combustível, manutenção, operador e lubrificantes. As fórmulas usadas:</p>
+      <h2>Entradas e unidades</h2>
+      <p>Informe o <strong>valor da máquina nova em R$</strong>, o <strong>valor residual</strong> estimado ao fim da vida útil (padrão: 20% do valor), a vida útil em <strong>anos</strong> e o uso em <strong>horas/ano</strong>. Nos custos variáveis entram o consumo em <strong>L/h</strong>, o diesel em <strong>R$/L</strong>, a manutenção como <strong>% do valor ao ano</strong>, o operador em <strong>R$/h</strong> com encargos e os lubrificantes como <strong>% do gasto com combustível</strong>. O rendimento em <strong>ha/h</strong> converte o custo horário para custo por hectare.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">Depreciação (R$/h) = (valor − residual) ÷ (vida útil × horas/ano)</div>
       <div class="formula">Juros (R$/h) = ((valor + residual) ÷ 2) × 6% ÷ horas/ano</div>
       <div class="formula">Combustível (R$/h) = consumo × preço do diesel</div>
       <div class="formula">Manutenção (R$/h) = (valor × % manutenção) ÷ horas/ano</div>
       <div class="formula">Lubrificantes (R$/h) = combustível × % lubrificantes</div>
       <div class="formula">Custo R$/ha = custo R$/h ÷ rendimento (ha/h)</div>
+      <p>Trator de R$ 350.000, residual R$ 70.000, 10 anos, 1.000 h/ano, 15 L/h, diesel R$ 6,80, manutenção 8%, operador R$ 25/h, rendimento 2 ha/h: depreciação R$ 28/h, juros R$ 12,60/h, combustível R$ 102/h, manutenção R$ 28/h, operador R$ 25/h e lubrificantes R$ 15,30/h — total da ordem de <strong>R$ 215/h</strong> ou <strong>R$ 107/ha</strong>.</p>
 
-      <h2>Exemplo</h2>
-      <p>Trator de R$ 350.000, residual de R$ 70.000, vida útil 10 anos, 1.000 h/ano, 15 L/h, diesel a R$ 6,80, manutenção 8%, operador R$ 25/h, rendimento 2 ha/h: custo total da ordem de <strong>R$ 215/h</strong> ou <strong>R$ 107/ha</strong>.</p>
+      <h2>Referências práticas</h2>
+      <p>Como ordem de grandeza usada em levantamentos públicos de custo e boletins de administração rural (ex.: CONAB, IMEA): tratores costumam trabalhar <strong>600 a 1.000 h/ano</strong> e colhedoras 300 a 600 h/ano; o valor residual fica tipicamente entre <strong>20% e 30%</strong> do valor de novo; a manutenção acumulada ao longo da vida útil soma de 60% a 100% do valor da máquina (na prática, 6% a 10% ao ano); e o rendimento efetivo de campo fica em 70% a 85% do teórico por causa de manobras e paradas. Os números variam com marca, condição de uso e região — quanto menos horas por ano a máquina trabalha, mais pesam depreciação e juros por hora.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Pontos importantes
-        </div>
-        <p>O rendimento operacional <strong>real</strong> é menor que o teórico: vire de cabeceira, paradas, abastecimento e regulagens reduzem facilmente 15% a 30% da capacidade de campo. Use o rendimento efetivo medido a campo, não o catálogo. A depreciação contábil também difere do <strong>valor de mercado</strong> — em máquinas muito procuradas a desvalorização real é menor. Para análises mais conservadoras, refaça o cálculo com vida útil e residual ajustados ao seu mercado.</p>
-      </div>
+      <h2>Limitações</h2>
+      <p>O modelo usa depreciação linear e juros fixos de 6% a.a. sobre o capital médio — simplificações razoáveis para planejamento, mas diferentes da desvalorização real de mercado e do seu custo de capital. Ficam de fora seguro, guarda (galpão), impostos sobre a propriedade da máquina e o custo de horas paradas em janela crítica. O resultado também não é lucro de serviço: para precificar terceirização, acrescente margem, tributos e risco.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Por que incluir juros se a máquina foi comprada à vista?</h3>
+      <p>Porque o capital imobilizado tem custo de oportunidade: aplicado em outra atividade, ele renderia. Os juros sobre o capital médio capturam esse custo, mesmo sem financiamento.</p>
+      <h3>Quantas horas por ano minha máquina precisa trabalhar?</h3>
+      <p>Quanto mais horas, menor o custo fixo por hora. Se o uso anual é baixo, compare o custo calculado com o preço de contratar o serviço de terceiros — muitas vezes contratar sai mais barato.</p>
+      <h3>Uso o rendimento de catálogo ou o medido?</h3>
+      <p>O medido a campo. Manobras, abastecimento e regulagens reduzem 15% a 30% da capacidade teórica; usar o catálogo subestima o custo por hectare.</p>
+      <h3>O custo por hora muda se eu alterar o rendimento?</h3>
+      <p>Não — o rendimento (ha/h) só converte o custo horário em custo por hectare. Para reduzir o R$/h é preciso atuar em consumo, manutenção, uso anual ou valor da máquina.</p>
+
+      <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>

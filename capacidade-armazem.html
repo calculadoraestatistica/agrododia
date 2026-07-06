@@ -50,6 +50,7 @@
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que é o fator de aproveitamento?","acceptedAnswer":{"@type":"Answer","text":"É o percentual do volume geométrico realmente ocupado pelo grão. Ele desconta o ângulo de talude, os espaços de aeração e os cantos mortos. Valores usuais ficam em torno de 90% para silos verticais e 60% a 80% para graneleiros horizontais."}},{"@type":"Question","name":"Quantas sacas cabem em um silo por metro cúbico?","acceptedAnswer":{"@type":"Answer","text":"Depende da densidade do grão. Para soja ou milho a 720 kg/m³, cada metro cúbico útil comporta cerca de 12 sacas de 60 kg."}},{"@type":"Question","name":"A umidade do grão muda a capacidade?","acceptedAnswer":{"@type":"Answer","text":"Sim. A densidade aparente varia com a umidade, as impurezas e a compactação do enchimento, então a mesma estrutura comporta pesos diferentes conforme a condição do lote."}},{"@type":"Question","name":"Posso usar o resultado para projeto ou laudo?","acceptedAnswer":{"@type":"Answer","text":"Não. O cálculo é uma estimativa informativa. Projetos, laudos e certificação de unidades armazenadoras exigem responsável técnico e as normas do sistema nacional de certificação."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -211,14 +212,17 @@
       <h2>Para que serve</h2>
       <p>Esta calculadora estima a <strong>capacidade de armazenagem</strong> de silos e armazéns graneleiros. Serve para planejar o volume da colheita esperada contra a estrutura disponível, dimensionar projetos novos e avaliar contratos de arrendamento de armazenagem.</p>
 
-      <h2>Como calcular</h2>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As dimensões entram em <strong>metros</strong> e o resultado sai em m³, toneladas e sacas. O fator de aproveitamento é um percentual do volume geométrico: em torno de 90% para silos verticais e 60% a 80% para graneleiros horizontais são pontos de partida comuns. A densidade aparente do grão, em <strong>kg/m³</strong>, faz a ponte entre volume e peso: para soja e milho (720 kg/m³), cada m³ útil equivale a 0,72 t, ou <strong>12 sacas de 60 kg</strong>. O resultado também aparece em sacas de 50 kg, usadas para arroz em casca no RS e em SC.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <p>Primeiro calcula-se o volume geométrico da estrutura, aplica-se um fator de aproveitamento (perdas de canto, ângulo de talude, espaço de aeração) e converte-se com a densidade aparente do grão.</p>
       <div class="formula">Silo cilíndrico: V = π × (d/2)² × h</div>
       <div class="formula">Retangular / armazém: V = comprimento × largura × altura</div>
       <div class="formula">Toneladas = V × fator × densidade ÷ 1.000</div>
 
       <h2>Densidades aparentes de referência</h2>
-      <p>Valores típicos de densidade aparente (peso por metro cúbico de grão a granel) usados para dimensionamento:</p>
+      <p>Valores típicos de densidade aparente (peso por metro cúbico de grão a granel), amplamente citados em boletins públicos (ex.: Embrapa, CONAB), com variação conforme umidade, cultivar e região:</p>
       <ul>
         <li><strong>Soja</strong>: 720 kg/m³</li>
         <li><strong>Milho</strong>: 720 kg/m³</li>
@@ -230,7 +234,20 @@
       </ul>
 
       <h2>Exemplo</h2>
-      <p>Silo cilíndrico de 8 m de diâmetro por 12 m de altura útil, armazenando soja com 90% de aproveitamento: volume útil ≈ <strong>543 m³</strong>, cerca de <strong>391 t</strong> ou <strong>6.512 sacas</strong> de 60 kg.</p>
+      <p>Silo cilíndrico de 8 m de diâmetro por 12 m de altura útil, armazenando soja com 90% de aproveitamento. Substituindo passo a passo: volume bruto = π × (8 ÷ 2)² × 12 = π × 16 × 12 ≈ <strong>603 m³</strong>; volume útil = 603 × 0,90 ≈ <strong>543 m³</strong>; peso = 543 × 720 ÷ 1.000 ≈ <strong>391 t</strong>; em sacas, 391.000 ÷ 60 ≈ <strong>6.512 sacas</strong> de 60 kg. A mesma estrutura com trigo (770 kg/m³) comportaria cerca de 418 t — a densidade do grão muda o resultado tanto quanto as dimensões.</p>
+
+      <h2>Limitações</h2>
+      <p>O cálculo usa geometria simplificada: não modela fundos cônicos, cones de carga, tremonhas nem a compactação real do enchimento, e o fator de aproveitamento informado domina o resultado. A densidade aparente varia com umidade, impurezas e cultivar, de modo que a capacidade efetiva muda de lote para lote. A estimativa é informativa e não substitui o memorial do fabricante do silo nem projeto assinado por responsável técnico.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é o fator de aproveitamento?</h3>
+      <p>É o percentual do volume geométrico realmente ocupado pelo grão, descontando talude, aeração e cantos mortos. Em torno de 90% para silos verticais e 60% a 80% para graneleiros são pontos de partida usuais.</p>
+      <h3>Quantas sacas cabem por metro cúbico?</h3>
+      <p>Depende da densidade: para soja ou milho a 720 kg/m³, cerca de 12 sacas de 60 kg por m³ útil.</p>
+      <h3>A umidade do grão muda a capacidade?</h3>
+      <p>Sim. A densidade aparente varia com umidade, impurezas e compactação, então o peso armazenável muda conforme a condição do lote.</p>
+      <h3>Posso usar o resultado para projeto ou laudo?</h3>
+      <p>Não. Projetos, laudos e certificação de unidades armazenadoras exigem responsável técnico e as normas oficiais aplicáveis.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -248,6 +265,8 @@
           <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Adubo a partir da recomendação.</p></a>
         </div>
       </div>
+
+      <p><em>Conteúdo educacional e informativo, com densidades de referência aproximadas atribuídas a boletins públicos. Não substitui profissional habilitado nem projeto técnico. Veja as <a href="/fontes.html">fontes e referências</a>. Última revisão: 2026-07-06.</em></p>
 
     </article>
   </div>

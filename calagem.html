@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é PRNT?","acceptedAnswer":{"@type":"Answer","text":"É o Poder Relativo de Neutralização Total: mede quanto do calcário reage e em que velocidade, combinando pureza química e granulometria. Quanto maior o PRNT, menos toneladas são necessárias para a mesma correção."}},
+    {"@type":"Question","name":"Qual a diferença entre calcário calcítico e dolomítico?","acceptedAnswer":{"@type":"Answer","text":"O calcítico é rico em cálcio; o dolomítico traz também magnésio (MgO acima de 12%, em geral). A escolha depende dos teores de Ca e Mg do laudo, não do preço."}},
+    {"@type":"Question","name":"Posso aplicar a dose calculada sem análise de solo?","acceptedAnswer":{"@type":"Answer","text":"Não. Sem V1 e CTC reais o cálculo não tem base, e calcário em excesso induz deficiências de micronutrientes. A dose real sai da análise interpretada por um agrônomo."}},
+    {"@type":"Question","name":"Quanto tempo antes do plantio aplicar o calcário?","acceptedAnswer":{"@type":"Answer","text":"Boletins técnicos costumam citar ao menos 2-3 meses de antecedência, com umidade no solo, para o corretivo reagir — o prazo exato depende da região e do sistema de plantio."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -160,15 +172,39 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>A <strong>calagem</strong> corrige a acidez do solo e eleva a saturação por bases. Esta calculadora estima a necessidade de calcário pelo método da saturação por bases (V%).</p>
+      <h2>Para que serve no manejo</h2>
+      <p>A <strong>calagem</strong> corrige a acidez do solo, neutraliza o alumínio tóxico e eleva a saturação por bases, criando o ambiente químico em que raízes e adubos funcionam. Ela costuma ser a primeira intervenção do plano de correção, feita meses antes do plantio para que o calcário tenha tempo de reagir. Esta calculadora estima a necessidade de calcário pelo <strong>método da saturação por bases (V%)</strong>, o mais difundido no Centro-Sul do Brasil, e é útil para dimensionar a compra, o frete e a regulagem do distribuidor — etapas em que o erro de conta custa caro pela escala (toneladas por hectare).</p>
 
-      <h2>Como calcular</h2>
-      <p>A dose depende da diferença entre a saturação atual (V1) e a desejada (V2), da CTC do solo e do PRNT do calcário — todos vindos da análise de solo e da embalagem.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>Os quatro campos saem de dois documentos: o laudo da análise de solo e a nota fiscal (ou rótulo) do calcário.</p>
+      <ul>
+        <li><strong>V1 (%)</strong> — saturação por bases atual, do laudo.</li>
+        <li><strong>V2 (%)</strong> — saturação desejada para a cultura, definida na interpretação agronômica.</li>
+        <li><strong>CTC (cmolc/dm³)</strong> — capacidade de troca de cátions a pH 7,0 (também chamada de T).</li>
+        <li><strong>PRNT (%)</strong> — Poder Relativo de Neutralização Total do calcário comprado.</li>
+      </ul>
+      <p>O resultado sai em toneladas por hectare, para a camada padrão de 0-20 cm.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">NC (t/ha) = (V2 − V1) × CTC ÷ PRNT</div>
+      <ol>
+        <li>Diferença de saturação: 60 − 40 = 20 pontos percentuais.</li>
+        <li>Multiplica pela CTC: 20 × 8 = 160.</li>
+        <li>Corrige pela qualidade do corretivo: 160 ÷ 90 (PRNT) = <strong>1,78 t/ha</strong>.</li>
+      </ol>
+      <p>Repare no papel do PRNT: o mesmo solo pediria 2,29 t/ha de um calcário de PRNT 70% e apenas 1,78 t/ha de um de PRNT 90%. Por isso o preço por tonelada só pode ser comparado depois de corrigido pelo PRNT — o barato de PRNT baixo pode sair caro no frete.</p>
 
-      <h2>Exemplo</h2>
-      <p>Para subir a saturação de 40% para 60%, com CTC de 8 cmolc/dm³ e calcário de PRNT 90%: (60 − 40) × 8 ÷ 90 = <strong>1,78 t/ha</strong>.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa e manuais estaduais de adubação e calagem):</p>
+      <ul>
+        <li><strong>PRNT comercial</strong> da maioria dos calcários agrícolas fica entre <strong>70% e 90%</strong>; produtos calcinados podem superar 100%.</li>
+        <li><strong>Calcário dolomítico</strong> (com mais magnésio) é preferido quando o teor de Mg do solo é baixo; o <strong>calcítico</strong>, quando o Mg está adequado.</li>
+        <li><strong>V2 usual</strong> varia com a cultura e o estado: boletins regionais citam faixas aproximadas de 50% a 70% para grandes culturas.</li>
+      </ul>
+      <p>Os critérios mudam por região: RS e SC usam o índice SMP, e outros estados usam alumínio trocável — o método V% não é universal.</p>
+
+      <h2>Limitações</h2>
+      <p>A página aplica apenas a aritmética do método da saturação por bases — <strong>ela não recomenda dose de calcário</strong>. A dose real sai da análise de solo interpretada por um engenheiro agrônomo, que ajusta profundidade de incorporação, parcelamento, necessidade de gesso agrícola e o método de cálculo adotado no seu estado. Sem análise recente (idealmente a cada 2-3 anos), qualquer número aqui é chute.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -178,6 +214,16 @@
         <p>A calagem só funciona com base numa análise de solo recente. A saturação desejada (V2) varia conforme a cultura e a região — siga a recomendação oficial do seu estado.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é PRNT?</h3>
+      <p>É o Poder Relativo de Neutralização Total: mede quanto do calcário reage e em que velocidade, combinando pureza química e granulometria. Quanto maior o PRNT, menos toneladas são necessárias para a mesma correção.</p>
+      <h3>Qual a diferença entre calcário calcítico e dolomítico?</h3>
+      <p>O calcítico é rico em cálcio; o dolomítico traz também magnésio (MgO acima de 12%, em geral). A escolha depende dos teores de Ca e Mg do laudo, não do preço.</p>
+      <h3>Posso aplicar a dose calculada sem análise de solo?</h3>
+      <p>Não. Sem V1 e CTC reais o cálculo não tem base, e calcário em excesso induz deficiências de micronutrientes. A dose real sai da análise interpretada por um agrônomo.</p>
+      <h3>Quanto tempo antes do plantio aplicar?</h3>
+      <p>Boletins técnicos costumam citar ao menos 2-3 meses de antecedência, com umidade no solo, para o corretivo reagir — o prazo exato depende da região e do sistema de plantio.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -186,6 +232,9 @@
           <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire e mais.</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Qual a diferença entre matéria seca e o alimento como ele está?","acceptedAnswer":{"@type":"Answer","text":"Matéria seca (MS) é o alimento sem a água. Uma silagem com 30% de MS tem 700 kg de água em cada tonelada. Por isso os cálculos de consumo são feitos em MS e depois convertidos para o alimento fresco, dividindo pelo teor de MS."}},
+    {"@type":"Question","name":"Como converter matéria seca em silagem ou feno?","acceptedAnswer":{"@type":"Answer","text":"Divide-se a necessidade de MS pelo teor de MS do alimento. Exemplo: 736 kg de MS por dia com silagem de 30% de MS equivalem a 736 ÷ 0,30 ≈ 2.450 kg de silagem fresca por dia."}},
+    {"@type":"Question","name":"Por que o gado de leite consome mais que o de corte?","acceptedAnswer":{"@type":"Answer","text":"A produção de leite exige mais energia, e vacas em lactação apresentam consumo maior em relação ao peso vivo. Boletins técnicos descrevem faixas de 2,8% a 3,5% do peso vivo em MS para vacas em lactação, contra 2,0% a 2,5% para bovinos de corte."}},
+    {"@type":"Question","name":"O consumo de sal mineral muda ao longo do ano?","acceptedAnswer":{"@type":"Answer","text":"Sim. A literatura técnica descreve variação com a estação, a qualidade da forragem e a formulação do produto. Faixas de 50 a 100 g por cabeça ao dia para bovinos adultos são citadas como referência geral, com diferenças regionais."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -157,22 +169,58 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima quanto o rebanho consome de <strong>matéria seca</strong> (volumoso e ração) e de <strong>sal mineral</strong>, para planejar a compra de alimento.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Saber quanto o rebanho come por dia é a base de três decisões recorrentes na fazenda: <strong>quanto alimento comprar</strong> antes da seca, <strong>quanto volumoso produzir</strong> (área de silagem ou capineira) e <strong>se o estoque atual dura</strong> até a próxima colheita ou entrega. Esta calculadora estima o consumo diário de <strong>matéria seca (MS)</strong> e de <strong>sal mineral</strong> do lote e, se você informar os dias de estoque, projeta a quantidade total para o período. É o mesmo raciocínio usado em orçamentos forrageiros descritos em boletins técnicos públicos: partir do peso vivo do rebanho para chegar à demanda de alimento, antes de decidir compras ou plantios.</p>
 
-      <h2>Como calcular</h2>
-      <p>O consumo de matéria seca é calculado como uma porcentagem do peso vivo — cerca de 2,3% para gado de corte e 3,1% para gado de leite em lactação.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são: <strong>número de animais</strong> (cabeças), <strong>peso médio</strong> em kg de peso vivo (em bovinos, 1 arroba = 15 kg de carcaça, o que equivale a cerca de 30 kg de peso vivo com rendimento de 50%), <strong>tipo de criação</strong> (corte ou leite, que define o percentual do peso vivo) e <strong>dias de estoque</strong> (opcional). Os resultados saem em kg de MS por dia; para converter em alimento fresco, divide-se pelo teor de MS do volumoso.</p>
 
-      <h2>Exemplo</h2>
-      <p>80 bovinos de corte de 400 kg consomem cerca de 9,2 kg de MS cada → <strong>736 kg de matéria seca por dia</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">Consumo de MS (kg/dia) = nº de animais × peso médio (kg) × (% do peso vivo ÷ 100)</div>
+      <p>Exemplo com 80 bovinos de corte de 400 kg, usando 2,3% do peso vivo:</p>
+      <ol>
+        <li>Consumo por animal: 400 × 0,023 = <strong>9,2 kg de MS/dia</strong>;</li>
+        <li>Consumo do lote: 80 × 9,2 = <strong>736 kg de MS/dia</strong>;</li>
+        <li>Para 30 dias: 736 × 30 = <strong>22.080 kg ≈ 22 t de MS</strong>;</li>
+        <li>Em silagem de milho a 30% de MS: 22.080 ÷ 0,30 ≈ <strong>73,6 t de silagem fresca</strong>.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Boletins técnicos públicos (ex.: Embrapa) descrevem faixas típicas de consumo em relação ao peso vivo (PV). Os números variam com a dieta, o clima e a categoria animal.</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Categoria</th><th>Faixa citada (MS, % do PV/dia)</th></tr></thead>
+        <tbody>
+          <tr><td>Bovino de corte em pasto</td><td>2,0 a 2,5%</td></tr>
+          <tr><td>Bovino de corte em confinamento</td><td>2,0 a 2,6% (conforme a dieta)</td></tr>
+          <tr><td>Vaca de leite em lactação</td><td>2,8 a 3,5%</td></tr>
+          <tr><td>Bezerros e animais jovens</td><td>2,5 a 3,0%</td></tr>
+          <tr><td>Sal mineral (bovinos adultos)</td><td>50 a 100 g/cabeça/dia</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Em regiões e épocas de forragem de baixa qualidade, o consumo tende ao piso das faixas; dietas de alta energia e vacas de alta produção tendem ao teto.</p>
+
+      <h2>Limitações</h2>
+      <p>O percentual do peso vivo é uma média: o consumo real depende da energia e da fibra da dieta, da temperatura, da genética e do uso de aditivos. A conta também não inclui sobras de cocho, perdas de armazenamento nem a dificuldade de medir o consumo de pasto em lotação contínua. Para dietas formuladas, o ajuste fino cabe ao zootecnista ou nutricionista responsável.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           A matéria seca não é o peso do alimento
         </div>
-        <p>O capim verde e a silagem têm muita água. Para converter matéria seca em alimento fresco, divida pelo teor de MS do volumoso (a silagem de milho tem ~30% de MS, por exemplo).</p>
+        <p>O capim verde e a silagem têm muita água. Para converter matéria seca em alimento fresco, divide-se pelo teor de MS do volumoso (a silagem de milho tem cerca de 30% de MS, por exemplo).</p>
       </div>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Qual a diferença entre matéria seca e o alimento "como ele está"?</h3>
+      <p>Matéria seca é o alimento sem a água. Uma silagem com 30% de MS carrega 700 kg de água em cada tonelada. Como o valor nutritivo está na fração seca, os cálculos de consumo são feitos em MS e só depois convertidos para o alimento fresco.</p>
+      <h3>Como converter a necessidade de MS em silagem ou feno?</h3>
+      <p>Dividindo pelo teor de MS. Os 736 kg de MS/dia do exemplo, atendidos com silagem de 30% de MS, equivalem a 736 ÷ 0,30 ≈ 2.450 kg de silagem fresca por dia. Com feno de 88% de MS, seriam cerca de 836 kg/dia.</p>
+      <h3>Por que o gado de leite consome mais que o de corte?</h3>
+      <p>A produção de leite exige muita energia, e vacas em lactação apresentam consumo maior em relação ao peso vivo — a literatura descreve faixas de 2,8% a 3,5% do PV, contra 2,0% a 2,5% no corte.</p>
+      <h3>O consumo de sal mineral muda ao longo do ano?</h3>
+      <p>Sim. Boletins descrevem variação com a estação, a qualidade da forragem e a formulação do produto. A faixa de 50 a 100 g/cabeça/dia é citada como referência geral para bovinos adultos, com diferenças regionais.</p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>
@@ -181,6 +229,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Lotação de pastagem</h3><p>Taxa de lotação em UA/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-05. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

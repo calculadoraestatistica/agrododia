@@ -50,6 +50,7 @@
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantas sacas tem uma tonelada de soja?","acceptedAnswer":{"@type":"Answer","text":"Com a saca padrão de 60 kg, 1 tonelada equivale a 1.000 ÷ 60 ≈ 16,67 sacas. Dez toneladas correspondem a cerca de 166,7 sacas."}},{"@type":"Question","name":"Toda saca tem 60 kg?","acceptedAnswer":{"@type":"Answer","text":"Não. Soja, milho, trigo, feijão e café usam saca de 60 kg, mas o arroz em casca usa 50 kg no Rio Grande do Sul e em Santa Catarina. Confirme o padrão da sua cultura e região."}},{"@type":"Question","name":"Como converter sacas para arrobas?","acceptedAnswer":{"@type":"Answer","text":"A arroba equivale a 15 kg. Uma saca de 60 kg corresponde a 4 arrobas; converta primeiro para quilos e depois divida por 15."}},{"@type":"Question","name":"A conversão muda com a umidade do grão?","acceptedAnswer":{"@type":"Answer","text":"A conversão entre unidades não muda, mas o peso comercial pode ser corrigido pela umidade. Use a calculadora de umidade de grãos para estimar o peso corrigido antes de converter."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -160,13 +161,39 @@
     <article class="prose">
 
       <h2>Para que serve</h2>
-      <p>Este conversor passa quantidades entre <strong>sacas, quilos e toneladas</strong>. Como o peso da saca muda por cultura, ele é um campo ajustável.</p>
+      <p>Este conversor passa quantidades entre <strong>sacas, quilos e toneladas</strong> — as três unidades que convivem no dia a dia do agro brasileiro. A produção é negociada em sacas, o frete e a armazenagem costumam ser cotados por tonelada, e balanças e notas fiscais trabalham em quilos. Converter corretamente evita erros em contratos, romaneios e planejamento logístico. Como o peso da saca muda conforme a cultura e a região, ele é um campo ajustável: basta informar o peso correto para que a conversão sirva para soja, milho, trigo, feijão, café ou arroz.</p>
 
-      <h2>Como calcular</h2>
-      <p>Tudo é convertido primeiro para quilos e depois para a unidade de destino. A saca padrão de grãos é de 60 kg.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>Informe a quantidade, a unidade de origem, a de destino e o peso da saca em kg. O padrão de grãos no Brasil é a <strong>saca de 60 kg</strong> — o que dá 16,67 sacas por tonelada. O arroz em casca é a exceção mais conhecida: <strong>50 kg no RS e em SC</strong> (20 sacas por tonelada). Para relacionar com produtividade, 60 sc/ha de 60 kg equivalem a 3,6 t/ha. A arroba, usada na pecuária e no algodão em caroço, vale 15 kg (4 arrobas por saca de 60 kg).</p>
 
-      <h2>Exemplo</h2>
-      <p>100 sacas de 60 kg equivalem a 6.000 kg, ou seja, <strong>6 toneladas</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <p>Tudo é convertido primeiro para quilos e depois para a unidade de destino:</p>
+      <div class="formula">Quilos = sacas × peso da saca (kg)</div>
+      <div class="formula">Toneladas = quilos ÷ 1.000 &nbsp;·&nbsp; Sacas = quilos ÷ peso da saca</div>
+      <p>Exemplo do botão "Preencher com exemplo": converter 100 sacas de 60 kg para toneladas. Primeiro passo: 100 × 60 = <strong>6.000 kg</strong>. Segundo passo: 6.000 ÷ 1.000 = <strong>6 toneladas</strong>. No sentido inverso, 250 t de milho viram 250 × 1.000 = 250.000 kg e, com saca de 60 kg, 250.000 ÷ 60 ≈ <strong>4.166,7 sacas</strong>. Se fosse arroz em casca no RS (saca de 50 kg), as mesmas 250 t dariam 5.000 sacas — a diferença mostra por que o peso da saca precisa ser conferido antes de qualquer conta.</p>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Pesos de saca e equivalências usuais citados em publicações públicas (ex.: CONAB, MAPA), com possíveis variações regionais e contratuais:</p>
+      <ul>
+        <li><strong>Soja, milho, trigo, sorgo e feijão</strong>: saca de 60 kg (16,67 sc/t).</li>
+        <li><strong>Café beneficiado</strong>: saca de 60 kg, padrão histórico de comercialização.</li>
+        <li><strong>Arroz em casca</strong>: saca de 50 kg no RS e em SC; 60 kg em outras praças.</li>
+        <li><strong>Arroba</strong>: 15 kg — 1 t = 66,67 arrobas; 1 saca de 60 kg = 4 arrobas.</li>
+        <li><strong>Big bag</strong>: comum em torno de 1.000 kg, mas o peso nominal varia por embalagem.</li>
+      </ul>
+
+      <h2>Limitações</h2>
+      <p>A conversão é puramente aritmética: ela não corrige peso por umidade, impurezas ou avarias, que alteram o peso comercial efetivamente pago. Também não contempla unidades volumétricas (litros, m³), cuja conversão depende da densidade do grão. Em contratos, prevalece sempre a unidade e o peso de saca definidos entre as partes — confirme antes de fechar negócio.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quantas sacas tem uma tonelada de soja?</h3>
+      <p>Com a saca de 60 kg, 1.000 ÷ 60 ≈ 16,67 sacas. Dez toneladas correspondem a cerca de 166,7 sacas.</p>
+      <h3>Toda saca tem 60 kg?</h3>
+      <p>Não. O arroz em casca usa 50 kg no RS e em SC. Confirme o padrão da sua cultura e região.</p>
+      <h3>Como converter sacas para arrobas?</h3>
+      <p>A arroba vale 15 kg: uma saca de 60 kg são 4 arrobas. Converta para quilos e divida por 15.</p>
+      <h3>A conversão muda com a umidade do grão?</h3>
+      <p>A conversão entre unidades não muda, mas o peso comercial pode ser corrigido pela umidade — veja a calculadora de <a href="/umidade-graos.html">umidade de grãos</a>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -184,6 +211,8 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Custo por saca e equilíbrio.</p></a>
         </div>
       </div>
+
+      <p><em>Conteúdo educacional e informativo, com equivalências de referência atribuídas a publicações públicas. Não substitui profissional habilitado nem os termos do seu contrato. Veja as <a href="/fontes.html">fontes e referências</a>. Última revisão: 2026-07-06.</em></p>
 
     </article>
   </div>

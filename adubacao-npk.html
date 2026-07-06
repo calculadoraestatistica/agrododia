@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que significam os números da fórmula, como 04-14-08?","acceptedAnswer":{"@type":"Answer","text":"São as garantias em massa: 4% de N, 14% de P2O5 e 8% de K2O. Em 100 kg desse adubo há 4 kg de N, 14 kg de P2O5 e 8 kg de K2O."}},
+    {"@type":"Question","name":"Posso usar a calculadora para definir a dose de adubo?","acceptedAnswer":{"@type":"Answer","text":"Não. Ela só converte uma recomendação já existente em quantidade de produto. A dose real sai da análise de solo interpretada por um engenheiro agrônomo."}},
+    {"@type":"Question","name":"Por que as doses de N, P e K quase nunca fecham juntas?","acceptedAnswer":{"@type":"Answer","text":"Porque cada fórmula tem proporções fixas entre os nutrientes, e a recomendação da lavoura raramente segue a mesma proporção. Por isso se atende o nutriente mais crítico e se complementa o restante com fontes simples."}},
+    {"@type":"Question","name":"Como converter o resultado em sacos por hectare?","acceptedAnswer":{"@type":"Answer","text":"Divida os kg/ha pelo peso do saco. Por exemplo, 500 kg/ha em sacos de 50 kg equivalem a 10 sacos por hectare."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -172,15 +184,39 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora converte a <strong>recomendação técnica de adubação</strong> (kg/ha de N, P₂O₅ e K₂O) na quantidade de <strong>adubo comercial formulado</strong> a aplicar.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>A recomendação de adubação chega ao produtor em quilos de <strong>nutriente</strong> por hectare — por exemplo, 20 kg/ha de N, 70 kg/ha de P₂O₅ e 40 kg/ha de K₂O. O que se compra na revenda, porém, é <strong>adubo formulado</strong>, um produto em que os nutrientes vêm diluídos em percentuais fixos. Esta calculadora faz a ponte entre os dois mundos: converte a recomendação técnica na quantidade de produto comercial a aplicar. Na prática, ela ajuda a planejar a compra de insumos antes da safra, dimensionar o frete, regular a plantadeira ou o distribuidor a lanço e comparar formulações diferentes para atender a mesma recomendação com menos sobras.</p>
 
-      <h2>Como calcular</h2>
-      <p>Os três números da fórmula (ex.: 04-14-08) são percentuais. Para cada nutriente, divide-se a recomendação pelo percentual e multiplica-se por 100.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>São seis campos, todos em unidades usuais de campo:</p>
+      <ul>
+        <li><strong>Recomendação de N, P₂O₅ e K₂O</strong> em kg/ha — números que vêm do laudo da análise de solo interpretado por um engenheiro agrônomo.</li>
+        <li><strong>Garantias da fórmula</strong> em % — os três números do rótulo. Um 04-14-08 declara 4% de N, 14% de P₂O₅ e 8% de K₂O em massa.</li>
+      </ul>
+      <p>O resultado sai em kg/ha de adubo formulado. Para converter em sacos de 50 kg, divida por 50; para o total da lavoura, multiplique pelos hectares.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <p>Para cada nutriente, divide-se a recomendação pela garantia da fórmula e multiplica-se por 100:</p>
       <div class="formula">kg/ha de adubo = (recomendação do nutriente ÷ % na fórmula) × 100</div>
+      <p>Exemplo com recomendação 20-70-40 e o formulado 04-14-08:</p>
+      <ol>
+        <li><strong>P₂O₅:</strong> 70 ÷ 14 × 100 = <strong>500 kg/ha</strong> de adubo.</li>
+        <li><strong>Conferência do N:</strong> 500 kg × 4% = 20 kg/ha de N — exatamente a recomendação.</li>
+        <li><strong>Conferência do K₂O:</strong> 500 kg × 8% = 40 kg/ha de K₂O — também atendida.</li>
+      </ol>
+      <p>Neste exemplo a fórmula fecha nos três nutrientes, o que é raro. Em geral cada nutriente pede uma dose diferente do mesmo formulado, e a calculadora mostra as três para você enxergar o desequilíbrio.</p>
 
-      <h2>Exemplo</h2>
-      <p>Para 70 kg/ha de P₂O₅ com o adubo 04-14-08 (14% de P): 70 ÷ 14 × 100 = <strong>500 kg/ha</strong>.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa), algumas formulações e fontes muito comuns no mercado brasileiro são:</p>
+      <ul>
+        <li><strong>Formulados de plantio:</strong> 04-14-08, 08-28-16, 04-30-10, 10-10-10.</li>
+        <li><strong>Formulados de cobertura:</strong> 20-05-20, 30-00-20 e similares, mais ricos em N e K.</li>
+        <li><strong>Fontes simples:</strong> ureia (~45% de N), sulfato de amônio (~20% de N), MAP (~11-52-00), superfosfato simples (~18% de P₂O₅), superfosfato triplo (~41-46% de P₂O₅) e cloreto de potássio (~60% de K₂O).</li>
+      </ul>
+      <p>As garantias mínimas são regulamentadas, mas variam entre fabricantes e lotes — confira sempre o rótulo. A disponibilidade de fórmulas também muda de região para região, acompanhando as culturas predominantes.</p>
+
+      <h2>Limitações</h2>
+      <p>Esta página faz apenas a conversão aritmética entre recomendação e produto comercial — <strong>ela não recomenda doses</strong>. A dose real de N, P₂O₅ e K₂O sai da análise de solo interpretada por um engenheiro agrônomo, considerando cultura, produtividade esperada, histórico da área e teor de matéria orgânica. A calculadora também não trata de parcelamento, época e modo de aplicação, enxofre, micronutrientes nem da eficiência de aproveitamento de cada fonte.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -190,6 +226,16 @@
         <p>Raramente uma única fórmula atende N, P e K na medida exata. O usual é escolher a formulação pelo nutriente mais exigente e complementar os demais com fontes simples (ureia, superfosfato, cloreto de potássio). Siga sempre a recomendação da análise de solo.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O que significam os números da fórmula, como 04-14-08?</h3>
+      <p>São as garantias em massa: 4% de N, 14% de P₂O₅ e 8% de K₂O. Em 100 kg desse adubo há 4 kg de N, 14 kg de P₂O₅ e 8 kg de K₂O.</p>
+      <h3>Posso usar a calculadora para definir a dose de adubo?</h3>
+      <p>Não. Ela só converte uma recomendação já existente em quantidade de produto. A dose real sai da análise de solo interpretada por um engenheiro agrônomo.</p>
+      <h3>Por que as doses de N, P e K quase nunca fecham juntas?</h3>
+      <p>Porque cada fórmula tem proporções fixas entre os nutrientes, e a recomendação da lavoura raramente segue a mesma proporção. Por isso se atende o nutriente mais crítico e se complementa o restante com fontes simples.</p>
+      <h3>Como converter o resultado em sacos por hectare?</h3>
+      <p>Divida os kg/ha pelo peso do saco. Ex.: 500 kg/ha em sacos de 50 kg equivalem a 10 sacos por hectare.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -198,6 +244,9 @@
           <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Quantidade de sementes</h3><p>Sementes em kg/ha.</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

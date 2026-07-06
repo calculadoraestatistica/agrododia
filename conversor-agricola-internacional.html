@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Quanto vale 1 hectare em acres?","acceptedAnswer":{"@type":"Answer","text":"Um hectare equivale a cerca de 2,47 acres, ou 10.000 m². O acre, usado nos Estados Unidos e no Reino Unido, tem 4.047 m² — pouco menos da metade de um hectare."}},
+    {"@type":"Question","name":"O que significam hkg/ha, dt/ha e q/ha nos relatórios europeus?","acceptedAnswer":{"@type":"Answer","text":"São três nomes para a mesma medida: 100 kg por hectare. Hkg/ha (hectokilogram) aparece em dados do EUROSTAT, dt/ha (Doppelzentner) é comum na Alemanha e q/ha (quintale métrico) na Itália e na França. Assim, 80 q/ha de trigo são 8 t/ha."}},
+    {"@type":"Question","name":"Por que o bushel pesa diferente conforme a cultura?","acceptedAnswer":{"@type":"Answer","text":"O bushel é originalmente uma medida de volume, e cada grão tem densidade própria. Por convenção, soja e trigo pesam 60 lb/bu (27,22 kg), milho e sorgo 56 lb/bu (25,40 kg) e milho doce 50 lb/bu (22,68 kg). Por isso é preciso escolher a cultura antes de converter."}},
+    {"@type":"Question","name":"O feddan e o dunum aparecem em quais países?","acceptedAnswer":{"@type":"Answer","text":"O feddan (cerca de 4.200 m²) é a unidade de área tradicional do Egito e de parte do mundo árabe; o dunum (em geral 1.000 m² na versão métrica) é usado no Oriente Médio e nos Bálcãs. Ambos aparecem em relatórios da FAO e de estatísticas nacionais dessas regiões."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -260,6 +272,19 @@
         <p>Não converta bu sem saber qual. Soja e trigo pesam 60 lb/bu (27,22 kg); milho e sorgo pesam 56 lb/bu (25,40 kg); milho doce pesa 50 lb/bu (22,68 kg). Aveia, cevada, arroz e outras culturas têm pesos próprios. Selecione a cultura no conversor acima — converter bushels assumindo um peso padrão é o erro mais comum em planilhas internacionais.</p>
       </div>
 
+      <h2>Limitações</h2>
+      <p>As conversões usam fatores fixos padronizados; pesos de bushel diferentes dos convencionados (grãos fora do peso-teste, culturas não listadas) exigem o fator específico da cultura. A ferramenta converte unidades, mas não ajusta teor de umidade — relatórios podem reportar produtividade em bases de umidade distintas, o que altera a comparação. Para decisões comerciais ou contratos, confirme sempre a unidade, a cultura e a base de umidade da fonte original.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quanto vale 1 hectare em acres?</h3>
+      <p>Um hectare equivale a cerca de 2,47 acres, ou 10.000 m². O acre, usado nos Estados Unidos e no Reino Unido, tem 4.047 m² — pouco menos da metade de um hectare.</p>
+      <h3>O que significam hkg/ha, dt/ha e q/ha?</h3>
+      <p>São três nomes para a mesma medida: 100 kg por hectare. Hkg/ha aparece em dados do EUROSTAT, dt/ha (Doppelzentner) é comum na Alemanha e q/ha (quintale métrico) na Itália e na França. Assim, 80 q/ha de trigo são 8 t/ha.</p>
+      <h3>Por que o bushel pesa diferente conforme a cultura?</h3>
+      <p>O bushel é originalmente uma medida de volume, e cada grão tem densidade própria. Por convenção, soja e trigo pesam 60 lb/bu (27,22 kg), milho e sorgo 56 lb/bu (25,40 kg) e milho doce 50 lb/bu (22,68 kg).</p>
+      <h3>O feddan e o dunum aparecem em quais países?</h3>
+      <p>O feddan (cerca de 4.200 m²) é a unidade tradicional do Egito e de parte do mundo árabe; o dunum (em geral 1.000 m² na versão métrica) é usado no Oriente Médio e nos Bálcãs. Ambos aparecem em relatórios da FAO.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -267,6 +292,10 @@
           <a class="calc-card" href="/conversao-de-sacas.html"><h3>Conversão de sacas</h3><p>Sacas, kg e toneladas.</p></a>
           <a class="calc-card" href="/produtividade.html"><h3>Conversão de produtividade</h3><p>Sacas/ha, kg/ha e t/ha.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

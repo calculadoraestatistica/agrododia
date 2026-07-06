@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é o peso de mil sementes (PMS)?","acceptedAnswer":{"@type":"Answer","text":"É a massa, em gramas, de mil sementes do lote. Também chamado de PMG ou TKW, vem impresso na etiqueta e permite converter o número de sementes por hectare em quilos. O PMS varia por cultivar, ano e lote."}},
+    {"@type":"Question","name":"Por que descontar germinação e pureza?","acceptedAnswer":{"@type":"Answer","text":"Nem toda semente do saco germina, e nem tudo no saco é semente pura. Germinação e pureza formam o valor cultural (VC = germinação × pureza ÷ 100); dividir a população desejada pelo VC compensa as sementes que não vão virar planta."}},
+    {"@type":"Question","name":"Devo usar o PMS da etiqueta ou um valor médio?","acceptedAnswer":{"@type":"Answer","text":"Sempre o da etiqueta do lote que você vai plantar. Valores médios de tabela servem só para estimativa: o PMS muda bastante entre cultivares e safras, e usar um número genérico distorce a quantidade a comprar."}},
+    {"@type":"Question","name":"Sementes de milho híbrido também se calculam em kg?","acceptedAnswer":{"@type":"Answer","text":"Em geral não. O milho híbrido costuma ser vendido por número de sementes (sacos de 60 mil), o que dispensa converter para kg. Para as demais culturas de grão, o cálculo em kg/ha continua sendo o padrão."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -165,15 +177,39 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima quantos <strong>quilos de semente por hectare</strong> comprar e semear para atingir a população de plantas desejada.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Entre decidir a população de plantas e fechar o pedido na revenda existe uma conta que muita gente faz de cabeça — e erra: quantos <strong>quilos de semente por hectare</strong> comprar. Sementes não são todas viáveis (germinação), nem todas puras (pureza), e o campo ainda impõe perdas de emergência. Esta calculadora converte a população desejada em kg/ha já com esses descontos, ajudando a dimensionar a compra sem falta (replantio caro) nem sobra (capital parado). Também serve para comparar lotes: um lote mais caro com germinação maior pode custar menos por planta estabelecida.</p>
 
-      <h2>Como calcular</h2>
-      <p>A população desejada é ajustada pelo valor cultural (germinação × pureza) e convertida em quilos pelo peso de mil sementes (PMS).</p>
-      <div class="formula">kg/ha = (sementes/ha ajustadas × PMS em gramas) ÷ 1.000.000</div>
+      <h2>Entradas, unidades e conversões</h2>
+      <ul>
+        <li><strong>População desejada</strong> em plantas/ha.</li>
+        <li><strong>PMS</strong> — peso de mil sementes, em gramas, impresso na etiqueta do lote.</li>
+        <li><strong>Germinação (%)</strong> e <strong>pureza (%)</strong> do lote; juntas formam o valor cultural (VC = germinação × pureza ÷ 100).</li>
+        <li><strong>Margem de perda (%)</strong> opcional, como folga para falhas de campo.</li>
+      </ul>
+      <p>O resultado sai em kg/ha; multiplique pela área para o total e divida pelo peso da embalagem para saber quantos sacos pedir.</p>
 
-      <h2>Exemplo</h2>
-      <p>Para 300.000 plantas/ha, PMS de 200 g e valor cultural de 93%, com 5% de margem, são cerca de <strong>68 kg/ha</strong> de semente.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">sementes/ha = população ÷ (VC ÷ 100) × (1 + margem ÷ 100)</div>
+      <div class="formula">kg/ha = (sementes/ha × PMS em gramas) ÷ 1.000.000</div>
+      <p>Para 300.000 plantas/ha com PMS de 200 g, germinação 95%, pureza 98% e margem de 5%:</p>
+      <ol>
+        <li>Valor cultural: 95 × 98 ÷ 100 = 93,1%.</li>
+        <li>Sementes necessárias: 300.000 ÷ 0,931 ≈ 322.234; com 5% de folga, ≈ 338.346 sementes/ha.</li>
+        <li>Massa: 338.346 × 200 ÷ 1.000.000 ≈ <strong>68 kg/ha</strong> de semente.</li>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa) e os padrões oficiais de comercialização de sementes:</p>
+      <ul>
+        <li><strong>Germinação mínima comercial</strong> costuma ficar em torno de 80% para as grandes culturas (soja, milho, feijão), com pureza mínima próxima de 98-99% — lotes certificados frequentemente superam esses pisos.</li>
+        <li><strong>PMS típico:</strong> soja em torno de 120-200 g; milho, 250-400 g; trigo, 30-45 g — sempre confira a etiqueta do lote, pois o PMS varia por cultivar e ano.</li>
+        <li>Sementes de milho híbrido são em geral vendidas por número de sementes (sacos de 60 mil), não por quilo.</li>
+      </ul>
+      <p>Os padrões variam por espécie, categoria de semente e regulamentação vigente em cada estado.</p>
+
+      <h2>Limitações</h2>
+      <p>A calculadora não define a população ideal nem recomenda cultivares — essas decisões saem da recomendação regional interpretada por um engenheiro agrônomo. Os resultados dependem inteiramente dos dados do lote: usar PMS ou germinação genéricos distorce a compra. Ela também não modela vigor, tratamento de sementes, profundidade de semeadura nem perdas específicas do seu solo.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -183,6 +219,16 @@
         <p>O PMS muda de lote para lote e de cultivar para cultivar. Use o valor informado na embalagem do lote que você vai plantar, não um valor genérico.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é o peso de mil sementes (PMS)?</h3>
+      <p>É a massa, em gramas, de mil sementes do lote. Também chamado de PMG ou TKW, vem impresso na etiqueta e permite converter o número de sementes por hectare em quilos. O PMS varia por cultivar, ano e lote.</p>
+      <h3>Por que descontar germinação e pureza?</h3>
+      <p>Nem toda semente do saco germina, e nem tudo é semente pura. Germinação e pureza formam o valor cultural (VC = germinação × pureza ÷ 100); dividir a população desejada pelo VC compensa as sementes que não vão virar planta.</p>
+      <h3>Devo usar o PMS da etiqueta ou um valor médio?</h3>
+      <p>Sempre o da etiqueta do lote que você vai plantar. Valores de tabela servem só para estimativa: o PMS muda bastante entre cultivares e safras, e um número genérico distorce a quantidade a comprar.</p>
+      <h3>Sementes de milho híbrido também se calculam em kg?</h3>
+      <p>Em geral não. O milho híbrido costuma ser vendido por número de sementes (sacos de 60 mil), o que dispensa converter para kg. Para as demais culturas de grão, o cálculo em kg/ha continua padrão.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -190,6 +236,10 @@
           <a class="calc-card" href="/adubacao-npk.html"><h3>Adubação NPK</h3><p>Da recomendação ao adubo.</p></a>
           <a class="calc-card" href="/produtividade.html"><h3>Conversão de produtividade</h3><p>Sacas/ha, kg/ha e t/ha.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

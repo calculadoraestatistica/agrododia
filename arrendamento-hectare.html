@@ -49,6 +49,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Quantas sacas por hectare é um arrendamento normal?","acceptedAnswer":{"@type":"Answer","text":"Não há tabela oficial. A referência prática fica entre 10% e 20% da produtividade esperada da região, mas contratos reais variam muito com solo, logística e concorrência pela terra. Compare com negócios recentes da sua microrregião."}},
+    {"@type":"Question","name":"Qual modalidade é melhor: sacas, valor fixo ou percentual?","acceptedAnswer":{"@type":"Answer","text":"Depende de quem assume o risco. Valor fixo protege o proprietário e concentra o risco no arrendatário; percentual do faturamento divide risco de preço e de produtividade; sacas fixas dividem apenas o risco de preço."}},
+    {"@type":"Question","name":"O arrendamento entra no custo de produção?","acceptedAnswer":{"@type":"Answer","text":"Sim. Nas metodologias públicas de custo (ex.: CONAB) ele compõe o custo operacional e total da lavoura. Some o arrendamento aos demais custos ao calcular preço de equilíbrio e margem."}},
+    {"@type":"Question","name":"Posso usar a calculadora para contratos por alqueire?","acceptedAnswer":{"@type":"Answer","text":"Pode, convertendo antes: divida as sacas por alqueire por 2,42 (paulista) ou 4,84 (mineiro/goiano) para obter sacas por hectare e lance o resultado no campo correspondente."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -228,34 +240,41 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora ajuda o produtor a avaliar se o <strong>arrendamento da terra</strong> sai do bolso, empata ou deixa margem ao final da safra. Ela compara as três modalidades mais usadas no Brasil — sacas por hectare (parceria), valor fixo em reais e percentual do faturamento — e mostra quanto resta de lucro líquido depois de pagar o aluguel da terra e o custo de produção.</p>
+      <h2>Para que serve na gestão da fazenda</h2>
+      <p>Em muitas regiões produtoras, o <strong>arrendamento da terra</strong> é o segundo maior item de custo da lavoura, atrás apenas dos insumos. Antes de assinar ou renovar um contrato, o produtor precisa saber quanto do faturamento esperado ficará comprometido com a terra e quanta margem sobra para remunerar o trabalho, o capital de giro e o risco da atividade. Esta calculadora apoia exatamente essa etapa do planejamento: compara as três modalidades mais usadas no Brasil — sacas por hectare, valor fixo em reais e percentual do faturamento — e mostra a margem líquida por hectare, o percentual da receita consumido pelo arrendamento e a produtividade de equilíbrio, aquela que apenas empata as contas.</p>
 
-      <h2>Modalidades de contrato</h2>
-      <p><strong>Sacas por hectare:</strong> o arrendatário entrega ao proprietário um número fixo de sacas (ou seu equivalente em reais pelo preço da saca no vencimento). É a modalidade mais comum em soja e milho.</p>
-      <p><strong>Valor fixo R$/ha:</strong> aluguel em dinheiro, definido em contrato. Protege o proprietário da queda de preço, mas concentra o risco de mercado no arrendatário.</p>
-      <p><strong>% do faturamento bruto:</strong> o proprietário recebe um percentual da receita bruta. Divide melhor o risco de preço, mas também divide a alta.</p>
+      <h2>Entradas e unidades</h2>
+      <p>Informe o arrendamento na unidade do contrato: <strong>sc/ha</strong> (sacas de 60 kg por hectare), <strong>R$/ha</strong> (valor fixo) ou <strong>%</strong> do faturamento bruto. A produtividade pode ser lançada em sacas ou toneladas por hectare — use a mesma unidade no preço (R$/sc ou R$/t). Atenção a contratos redigidos <strong>por alqueire</strong>: 1 alqueire paulista equivale a 2,42 ha e 1 alqueire mineiro/goiano a 4,84 ha; converta tudo para hectare antes de comparar propostas.</p>
 
-      <h2>Como calcular</h2>
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">Receita/ha = produtividade × preço</div>
       <div class="formula">Margem líquida/ha = receita - custo - arrendamento + outras receitas</div>
       <div class="formula">Produtividade de equilíbrio = (custo + arrendamento) ÷ preço</div>
-
-      <h2>Exemplo</h2>
-      <p>Soja, arrendamento de 15 sc/ha, preço R$ 130/sc, produtividade esperada de 60 sc/ha e custo de R$ 4.500/ha:</p>
+      <p>Exemplo: soja com arrendamento de 15 sc/ha, saca a R$ 130, produtividade esperada de 60 sc/ha e custo de produção de R$ 4.500/ha.</p>
       <ul>
-        <li>Arrendamento: 15 × 130 = <strong>R$ 1.950/ha</strong></li>
-        <li>Receita bruta: 60 × 130 = <strong>R$ 7.800/ha</strong></li>
-        <li>Margem líquida: 7.800 − 4.500 − 1.950 = <strong>R$ 1.350/ha</strong></li>
+        <li><strong>Passo 1 — arrendamento:</strong> 15 × 130 = <strong>R$ 1.950/ha</strong></li>
+        <li><strong>Passo 2 — receita bruta:</strong> 60 × 130 = <strong>R$ 7.800/ha</strong></li>
+        <li><strong>Passo 3 — margem líquida:</strong> 7.800 − 4.500 − 1.950 = <strong>R$ 1.350/ha</strong></li>
+        <li><strong>Passo 4 — equilíbrio:</strong> (4.500 + 1.950) ÷ 130 ≈ <strong>49,6 sc/ha</strong>; abaixo disso o cenário fecha no vermelho.</li>
       </ul>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Estimativa pré-safra
-        </div>
-        <p>Esta é uma estimativa pré-safra. Risco climático, preço e custos podem mover muito o resultado. Trabalhe com cenários (pessimista, base, otimista) antes de assinar contrato e considere o valor da saca no vencimento, não na data de hoje.</p>
-      </div>
+      <h2>Referências práticas</h2>
+      <p>Em lavouras de grãos, levantamentos públicos (ex.: CONAB, IMEA) e a prática de mercado indicam arrendamentos historicamente na faixa de <strong>10% a 20% da produtividade esperada</strong> da área. Numa lavoura de soja de 60 sc/ha, isso representa algo entre 6 e 12 sc/ha; em terras consolidadas e disputadas aparecem contratos de 13 a 18 sc/ha, enquanto áreas de abertura ou pastagem saem por bem menos. A variação regional é muito forte — dentro de um mesmo estado os valores podem diferir 50% entre microrregiões — e o número também muda com prazo do contrato, qualidade do solo, logística e benfeitorias. Trate esses intervalos como ponto de partida da negociação, não como tabela.</p>
+
+      <h2>Limitações</h2>
+      <p>A margem calculada aqui não é lucro final: ela não inclui custos fixos da estrutura (administração, depreciação de máquinas próprias, pró-labore) nem tributos como Funrural e imposto de renda. O resultado depende de produtividade e preço que ainda não se realizaram — trabalhe com cenários pessimista, base e otimista antes de assinar, e lembre que em contratos em sacas o valor relevante é o preço da saca no vencimento, não o de hoje.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quantas sacas por hectare é um arrendamento "normal"?</h3>
+      <p>Não há tabela oficial. A referência prática fica entre 10% e 20% da produtividade esperada da região, mas contratos reais variam muito com solo, logística e concorrência pela terra. Compare com negócios recentes da sua microrregião.</p>
+      <h3>Qual modalidade é melhor: sacas, valor fixo ou percentual?</h3>
+      <p>Depende de quem assume o risco. Valor fixo protege o proprietário e concentra o risco no arrendatário; percentual do faturamento divide risco de preço e de produtividade; sacas fixas dividem apenas o risco de preço.</p>
+      <h3>O arrendamento entra no custo de produção?</h3>
+      <p>Sim. Nas metodologias públicas de custo (ex.: CONAB) ele compõe o custo operacional e total da lavoura. Some o arrendamento aos demais custos ao calcular preço de equilíbrio e margem.</p>
+      <h3>Posso usar a calculadora para contratos por alqueire?</h3>
+      <p>Pode, convertendo antes: divida as sacas por alqueire por 2,42 (paulista) ou 4,84 (mineiro/goiano) para obter sacas por hectare e lance o resultado no campo correspondente.</p>
+
+      <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>

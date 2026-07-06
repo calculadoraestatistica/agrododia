@@ -50,6 +50,7 @@
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantas sacas por hectare são 4 toneladas por hectare?","acceptedAnswer":{"@type":"Answer","text":"Com a saca de 60 kg, 4 t/ha = 4.000 kg/ha ÷ 60 ≈ 66,7 sc/ha. A regra rápida: t/ha × 16,67 = sc/ha."}},{"@type":"Question","name":"Por que o peso da saca importa na conversão?","acceptedAnswer":{"@type":"Answer","text":"Porque sacas por hectare dependem do peso da saca. Para soja e milho a saca tem 60 kg, mas o arroz em casca usa 50 kg no RS e em SC — usar o peso errado distorce o resultado."}},{"@type":"Question","name":"Como converter produtividade por alqueire para hectare?","acceptedAnswer":{"@type":"Answer","text":"Divida a produção do alqueire pela sua área em hectares: o alqueire paulista tem 2,42 ha e o mineiro/goiano, 4,84 ha. Depois converta as unidades normalmente."}},{"@type":"Question","name":"A produtividade convertida considera a umidade dos grãos?","acceptedAnswer":{"@type":"Answer","text":"Não. A conversão é aritmética. Para comparar lavouras, use pesos na mesma base de umidade, corrigindo antes com a calculadora de umidade de grãos."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -160,13 +161,38 @@
     <article class="prose">
 
       <h2>Para que serve</h2>
-      <p>Este conversor passa a <strong>produtividade da lavoura</strong> entre sacas por hectare, quilos por hectare e toneladas por hectare.</p>
+      <p>Este conversor passa a <strong>produtividade da lavoura</strong> entre sacas por hectare (sc/ha), quilos por hectare (kg/ha) e toneladas por hectare (t/ha). No Brasil, o produtor fala em sacas por hectare, mas boletins de safra, artigos técnicos e comparações internacionais costumam usar kg/ha ou t/ha — e é comum precisar transitar entre as três unidades ao ler um relatório, preencher um cadastro ou comparar a própria lavoura com médias publicadas. A ferramenta faz a conversão nos dois sentidos, usando o peso de saca da cultura, e evita os erros de fator que distorcem comparações de desempenho.</p>
 
-      <h2>Como calcular</h2>
-      <p>O valor é convertido para kg/ha e, em seguida, para a unidade de destino. A conversão de sacas usa o peso da saca da cultura.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>Informe o valor, a unidade de origem, a de destino e o peso da saca. Para soja e milho vale a <strong>saca de 60 kg</strong>, o que dá as regras rápidas: <strong>t/ha × 16,67 = sc/ha</strong> e <strong>sc/ha × 0,06 = t/ha</strong>. O arroz em casca usa saca de 50 kg no RS e em SC (t/ha × 20 = sc/ha). Se a sua referência é por alqueire, converta a área antes: o alqueire paulista tem 2,42 ha e o mineiro/goiano, 4,84 ha.</p>
 
-      <h2>Exemplo</h2>
-      <p>60 sacas/ha de 60 kg equivalem a 3.600 kg/ha, ou <strong>3,6 t/ha</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <p>O valor é convertido para kg/ha e, em seguida, para a unidade de destino:</p>
+      <div class="formula">kg/ha = sc/ha × peso da saca &nbsp;·&nbsp; t/ha = kg/ha ÷ 1.000</div>
+      <div class="formula">sc/ha = kg/ha ÷ peso da saca</div>
+      <p>Exemplo do botão "Preencher com exemplo": 60 sc/ha de soja com saca de 60 kg. Primeiro passo: 60 × 60 = <strong>3.600 kg/ha</strong>. Segundo passo: 3.600 ÷ 1.000 = <strong>3,6 t/ha</strong>. No sentido inverso, uma reportagem que cita 8,4 t/ha de milho corresponde a 8.400 ÷ 60 = <strong>140 sc/ha</strong>. Para arroz no RS (saca de 50 kg), 7,5 t/ha equivalem a 7.500 ÷ 50 = <strong>150 sc/ha</strong> — o mesmo número em t/ha rende mais sacas quando a saca é mais leve.</p>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Médias nacionais amplamente divulgadas em boletins públicos de safra (ex.: CONAB) ajudam a situar o seu número — com grande variação entre regiões, sistemas e anos:</p>
+      <ul>
+        <li><strong>Soja</strong>: médias nacionais recentes na casa de 3,3 a 3,6 t/ha (55 a 60 sc/ha).</li>
+        <li><strong>Milho 1ª safra</strong>: frequentemente em torno de 6 t/ha (100 sc/ha), com talhões de alta tecnologia bem acima disso.</li>
+        <li><strong>Milho 2ª safra</strong>: médias um pouco menores, sensíveis à janela de plantio e ao clima.</li>
+        <li><strong>Trigo</strong>: médias nacionais na faixa de 2,5 a 3 t/ha em anos recentes.</li>
+      </ul>
+
+      <h2>Limitações</h2>
+      <p>A conversão é aritmética e não corrige diferenças de umidade ou impurezas entre pesagens — produtividades devem ser comparadas na mesma base de umidade. As médias citadas são agregados nacionais de boletins públicos e não representam nenhuma lavoura específica; solo, clima, cultivar e manejo dominam o resultado real. Use os números como contexto informativo, não como meta ou garantia.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quantas sacas por hectare são 4 t/ha?</h3>
+      <p>Com saca de 60 kg: 4.000 ÷ 60 ≈ 66,7 sc/ha. Regra rápida: t/ha × 16,67 = sc/ha.</p>
+      <h3>Por que o peso da saca importa?</h3>
+      <p>Porque sc/ha depende do peso da saca: 60 kg para soja e milho, 50 kg para arroz em casca no RS e em SC.</p>
+      <h3>Como converter produtividade por alqueire para hectare?</h3>
+      <p>Divida a produção pela área do alqueire em hectares (paulista 2,42 ha; mineiro/goiano 4,84 ha) e depois converta as unidades.</p>
+      <h3>A conversão considera a umidade dos grãos?</h3>
+      <p>Não. Para comparar lavouras, corrija antes o peso com a calculadora de <a href="/umidade-graos.html">umidade de grãos</a>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -184,6 +210,8 @@
           <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire e mais.</p></a>
         </div>
       </div>
+
+      <p><em>Conteúdo educacional e informativo, com médias de referência aproximadas atribuídas a boletins públicos de safra. Não substitui profissional habilitado. Veja as <a href="/fontes.html">fontes e referências</a>. Última revisão: 2026-07-06.</em></p>
 
     </article>
   </div>

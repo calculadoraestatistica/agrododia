@@ -100,6 +100,51 @@ def parse_rows(body):
         })
     return items
 
+HISTORY_PATH = DATA_DIR / "cotacoes-historico.json"
+HISTORY_MAX = 750  # entradas por indicador (~3 anos de dias uteis)
+
+def append_history(items, path=HISTORY_PATH):
+    """Acrescenta um snapshot diario por indicador em cotacoes-historico.json.
+
+    Estrutura: {"<slug>": [{"d": "YYYY-MM-DD", "v": <float>}, ...], ...}
+    - "d" e a data do proprio indicador (data de referencia CEPEA), entao rodar
+      o scraper varias vezes no mesmo dia nao duplica entradas (idempotente):
+      se a data ja existe, apenas atualiza o valor.
+    - Mantem no maximo HISTORY_MAX entradas por indicador (descarta as antigas).
+    """
+    try:
+        history = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(history, dict):
+            history = {}
+    except (FileNotFoundError, ValueError):
+        history = {}
+
+    changed = False
+    for it in items:
+        slug, date, value = it.get("slug"), it.get("date"), it.get("value")
+        if not slug or not date or not isinstance(value, (int, float)) or value <= 0:
+            continue
+        series = history.setdefault(slug, [])
+        existing = next((e for e in series if e.get("d") == date), None)
+        if existing is None:
+            series.append({"d": date, "v": value})
+            series.sort(key=lambda e: e.get("d", ""))
+            changed = True
+        elif existing.get("v") != value:
+            existing["v"] = value
+            changed = True
+        if len(series) > HISTORY_MAX:
+            del series[:len(series) - HISTORY_MAX]
+
+    if changed:
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        tmp.write_text(json.dumps(history, ensure_ascii=False, separators=(",", ":")),
+                       encoding="utf-8")
+        import os
+        os.replace(tmp, path)
+        print(f"OK (historico): {len(history)} indicadores -> {path.name}")
+    return history
+
 def scrape_and_save(ids, out_path, label):
     body = fetch_widget(ids)
     items = parse_rows(body)
@@ -116,6 +161,10 @@ def scrape_and_save(ids, out_path, label):
     print(f"OK ({label}): {len(items)} indicadores -> {out_path.name}")
     for it in items:
         print(f"  {it['name']:30s} {it['value_display']:>16s} / {it['unit']} ({it['date']})")
+    try:
+        append_history(items)
+    except Exception as e:  # historico nunca derruba o scrape principal
+        print(f"AVISO historico: {type(e).__name__}: {e}", file=sys.stderr)
 
 def main():
     ap = argparse.ArgumentParser()

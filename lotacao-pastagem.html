@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é uma Unidade Animal (UA)?","acceptedAnswer":{"@type":"Answer","text":"É uma unidade de padronização que equivale a 450 kg de peso vivo. Ela permite somar categorias diferentes — bezerros, novilhas, vacas, touros — em uma única medida de pressão de pastejo sobre a área."}},
+    {"@type":"Question","name":"Qual é a lotação média das pastagens no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Levantamentos públicos citam médias nacionais em torno de 1 UA/ha, com grande variação regional: pastagens degradadas ficam abaixo de 0,5 UA/ha, enquanto pastagens adubadas e bem manejadas alcançam 2 a 4 UA/ha, e sistemas irrigados rotacionados podem superar isso."}},
+    {"@type":"Question","name":"A lotação muda entre águas e seca?","acceptedAnswer":{"@type":"Answer","text":"Sim. A produção de forragem cai fortemente na estação seca na maior parte do Brasil, e boletins técnicos descrevem reduções da capacidade de suporte da ordem de 40% a 60% nesse período, exigindo ajuste do rebanho, suplementação ou reserva de volumoso."}},
+    {"@type":"Question","name":"Como aumentar a capacidade de suporte do pasto?","acceptedAnswer":{"@type":"Answer","text":"A literatura técnica associa maior capacidade de suporte à correção do solo, adubação, escolha de forrageira adaptada, manejo rotacionado com períodos de descanso e ajuste fino da carga animal. As respostas variam por região e sistema, e o plano de manejo cabe ao técnico responsável."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -147,15 +159,39 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>A <strong>taxa de lotação</strong> indica quantos animais uma pastagem comporta, padronizados em <strong>Unidades Animais (UA)</strong>. É a conta de base do manejo de pasto.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>A <strong>taxa de lotação</strong> expressa a pressão de pastejo sobre a área, padronizando o rebanho em <strong>Unidades Animais (UA)</strong>. É a conta de base do manejo de pasto e aparece em decisões recorrentes: saber se o pasto está <strong>sublotado ou superlotado</strong> para a estação, planejar a <strong>redução de carga antes da seca</strong> (venda, suplementação ou reserva de volumoso), comparar módulos e retiros da mesma fazenda e acompanhar o efeito de adubação e reforma de pastagem ao longo dos anos. Como o resultado sai em uma unidade padronizada, ele também permite comparar sistemas e propriedades diferentes na mesma régua, prática comum em levantamentos técnicos públicos.</p>
 
-      <h2>Como calcular</h2>
-      <p>Soma-se o peso vivo de todo o rebanho, divide-se por 450 kg (1 UA) e divide-se o resultado pela área. Assim categorias diferentes — bezerros, novilhas, vacas — entram na mesma régua.</p>
+      <h2>Entradas, unidades e conversões</h2>
+      <p>As entradas são: <strong>número de animais</strong> (cabeças), <strong>peso médio</strong> em kg de peso vivo e <strong>área de pastagem</strong> em hectares (1 ha = 10.000 m²; 1 alqueire paulista = 2,42 ha). A padronização usa <strong>1 UA = 450 kg de peso vivo</strong>: uma vaca adulta de 450 kg vale 1 UA, um bezerro de 180 kg vale 0,4 UA. Para lotes heterogêneos, informe o peso médio ponderado do rebanho ou calcule cada categoria separadamente e some as UA.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">UA/ha = (nº de animais × peso médio ÷ 450) ÷ área (ha)</div>
+      <p>Exemplo com 120 animais de 400 kg em 60 ha de pastagem:</p>
+      <ol>
+        <li>Peso vivo total: 120 × 400 = <strong>48.000 kg</strong>;</li>
+        <li>Conversão em Unidades Animais: 48.000 ÷ 450 = <strong>106,7 UA</strong>;</li>
+        <li>Taxa de lotação: 106,7 ÷ 60 = <strong>1,78 UA/ha</strong>.</li>
+      </ol>
+      <p>Se a capacidade de suporte estimada do pasto na seca fosse 1,2 UA/ha, esse lote precisaria de cerca de 89 ha — ou de suplementação — para atravessar o período sem perda de desempenho.</p>
 
-      <h2>Exemplo</h2>
-      <p>120 animais de 400 kg em 60 ha somam 48.000 kg → 106,7 UA → <strong>1,78 UA/ha</strong>.</p>
+      <h2>Valores de referência práticos</h2>
+      <p>Levantamentos e boletins técnicos públicos (ex.: Embrapa) citam faixas típicas de lotação, que variam com solo, clima, forrageira e manejo:</p>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Situação da pastagem</th><th>Faixa citada (UA/ha)</th></tr></thead>
+        <tbody>
+          <tr><td>Pastagem degradada</td><td>abaixo de 0,5</td></tr>
+          <tr><td>Pastagem extensiva média (Brasil)</td><td>0,5 a 1,0</td></tr>
+          <tr><td>Pastagem recuperada/adubada</td><td>2,0 a 4,0</td></tr>
+          <tr><td>Pastejo rotacionado intensivo/irrigado</td><td>acima de 4,0</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Na estação seca, a capacidade de suporte pode cair 40% a 60% em relação às águas, conforme a região e a forrageira. Os números são indicativos e variam bastante entre biomas.</p>
+
+      <h2>Limitações</h2>
+      <p>A calculadora mostra a <strong>lotação atual</strong>, não a capacidade de suporte do pasto — esta depende da produção de forragem (kg de MS/ha), da espécie forrageira, da adubação e da estação. A padronização em UA também simplifica: categorias com a mesma UA podem ter exigências nutricionais diferentes, e sistemas com equinos, ovinos ou caprinos usam equivalências próprias. O ajuste da carga animal ideal cabe ao técnico que conhece o pasto.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -165,6 +201,16 @@
         <p>Esta calculadora mostra a lotação atual. A capacidade de suporte real do pasto depende da produção de forragem (kg de matéria seca por hectare), que varia com a espécie forrageira, a adubação e a estação do ano.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>O que é uma Unidade Animal (UA)?</h3>
+      <p>É uma unidade de padronização equivalente a 450 kg de peso vivo. Ela permite somar categorias diferentes — bezerros, novilhas, vacas, touros — em uma única medida de pressão de pastejo.</p>
+      <h3>Qual é a lotação média das pastagens no Brasil?</h3>
+      <p>Levantamentos públicos citam médias em torno de 1 UA/ha, com grande variação regional: pastagens degradadas ficam abaixo de 0,5 UA/ha, enquanto áreas adubadas e bem manejadas alcançam 2 a 4 UA/ha.</p>
+      <h3>A lotação muda entre águas e seca?</h3>
+      <p>Sim. A produção de forragem cai fortemente na seca na maior parte do país, e boletins descrevem reduções de 40% a 60% na capacidade de suporte, exigindo ajuste de carga, suplementação ou reserva de volumoso.</p>
+      <h3>Como aumentar a capacidade de suporte do pasto?</h3>
+      <p>A literatura técnica associa ganhos à correção do solo, adubação, forrageira adaptada, manejo rotacionado com descanso e ajuste fino da carga. As respostas variam por região, e o plano de manejo cabe ao técnico responsável.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -172,6 +218,10 @@
           <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Consumo do rebanho</h3><p>Matéria seca e sal mineral.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Cocho e bebedouro</h3><p>Dimensionamento do cocho.</p></a>
         </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(127,127,127,.35);margin-top:32px;padding-top:16px;font-size:.85em;opacity:.75;">
+        <p>Conteúdo educacional baseado em literatura técnica pública. Não substitui a avaliação de um engenheiro agrônomo, zootecnista ou médico-veterinário. Última revisão: 2026-07-06. <a href="fontes.html">Fontes</a></p>
       </div>
 
     </article>

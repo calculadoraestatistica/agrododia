@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Posso misturar quaisquer fertilizantes?","acceptedAnswer":{"@type":"Answer","text":"Não. Algumas combinações empedram ou perdem nutriente — ureia com superfosfato simples é um caso clássico de incompatibilidade citado em boletins técnicos. Verifique tabelas de compatibilidade antes de misturar fisicamente."}},
+    {"@type":"Question","name":"A mistura sai mais barata que o formulado pronto?","acceptedAnswer":{"@type":"Answer","text":"Depende dos preços do dia. Calcule o custo por kg de nutriente entregue em cada cenário; a mistura costuma ganhar quando as fontes simples estão baratas, mas exige mais logística e cuidado no armazenamento."}},
+    {"@type":"Question","name":"E se nenhum fertilizante informado tiver um dos nutrientes?","acceptedAnswer":{"@type":"Answer","text":"O nutriente fica descoberto e a calculadora sinaliza a falta. Inclua uma fonte específica (ex.: KCl para potássio) ou trate o complemento em outra operação."}},
+    {"@type":"Question","name":"De onde vem a necessidade de N, P e K que eu digito?","acceptedAnswer":{"@type":"Answer","text":"Da recomendação oficial da sua região aplicada ao laudo da análise de solo, interpretada por um engenheiro agrônomo. A página não gera recomendações."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -279,20 +291,32 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora combina <strong>até três fertilizantes</strong> (simples ou formulados) para tentar atender a recomendação técnica de N, P₂O₅ e K₂O por hectare. É útil quando você não tem uma fórmula pronta que cobre todos os nutrientes e precisa <strong>misturar adubos</strong> para chegar perto do alvo.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Esta calculadora combina <strong>até três fertilizantes</strong> (simples ou formulados) para tentar atender a recomendação técnica de N, P₂O₅ e K₂O por hectare. É a situação clássica de quem não encontra uma fórmula pronta que feche os três nutrientes: em vez de aceitar sobra ou falta, monta-se uma <strong>mistura de adubos</strong> com o que a revenda tem em estoque. No manejo, ela ajuda a aproveitar insumos já comprados, comparar o custo da mistura com o do formulado pronto e enxergar quanto de cada nutriente a combinação realmente entrega antes de fechar o pedido.</p>
 
-      <h2>Como funciona</h2>
-      <p>A calculadora aplica uma <strong>heurística gulosa</strong>: começa pelo nutriente que tem menos opções entre os fertilizantes informados (geralmente P ou K) e escolhe o fertilizante mais rico naquele nutriente para atendê-lo. Em seguida ajusta o próximo nutriente descontando o que já foi entregue. O N costuma ser o último, completado com ureia ou outro adubo nitrogenado.</p>
-      <div class="formula">dose do fert (kg/ha) = (necessidade restante ÷ % do nutriente) × 100</div>
-
-      <h2>Exemplo</h2>
-      <p>Necessidade 80-60-40 com MAP (18-46-00), KCl (00-00-60) e Ureia (45-00-00):</p>
+      <h2>Entradas, unidades e conversões</h2>
       <ul>
-        <li>MAP atende o P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, entregando ~23 kg de N.</li>
+        <li><strong>Necessidade de N, P₂O₅ e K₂O</strong> em kg/ha — do laudo de análise de solo interpretado por agrônomo.</li>
+        <li><strong>Composição de cada fertilizante</strong> em % de garantia (ex.: MAP 11-52-00, ureia 45-00-00, KCl 00-00-60).</li>
+        <li><strong>Dose máxima</strong> opcional em kg/ha, para limitar um insumo escasso ou salino.</li>
+      </ul>
+      <p>O resultado sai em kg/ha de cada fertilizante; multiplique pela área para o total e divida pelo peso do saco para converter em sacos.</p>
+
+      <h2>Como funciona e exemplo passo a passo</h2>
+      <p>A calculadora aplica uma <strong>heurística gulosa</strong>: começa pelo nutriente com menos opções entre os fertilizantes informados (geralmente P ou K), atende-o com a fonte mais rica e desconta o que essa fonte entrega dos demais nutrientes. O N costuma ficar por último, completado com ureia ou outra fonte nitrogenada.</p>
+      <div class="formula">dose do fert (kg/ha) = (necessidade restante ÷ % do nutriente) × 100</div>
+      <p>Exemplo com necessidade 80-60-40 e MAP (18-46-00), KCl (00-00-60) e ureia (45-00-00):</p>
+      <ol>
+        <li>MAP atende o P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, entregando de carona ~23 kg de N.</li>
         <li>KCl atende o K: 40 ÷ 60 × 100 ≈ <strong>67 kg/ha</strong>.</li>
         <li>Ureia completa o N restante (80 − 23 = 57): 57 ÷ 45 × 100 ≈ <strong>127 kg/ha</strong>.</li>
-      </ul>
+      </ol>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa), as garantias típicas das fontes mais usadas em misturas no Brasil são: <strong>ureia</strong> ~45% de N; <strong>sulfato de amônio</strong> ~20% de N (com enxofre); <strong>MAP</strong> ~11% de N e 52% de P₂O₅; <strong>superfosfato simples</strong> ~18% de P₂O₅ (com Ca e S); <strong>superfosfato triplo</strong> ~41-46% de P₂O₅; <strong>cloreto de potássio</strong> ~60% de K₂O. Entre formulados, 04-14-08, 08-28-16 e 20-05-20 são presenças comuns nas revendas — a oferta varia por região e safra, então confirme as garantias no rótulo do lote.</p>
+
+      <h2>Limitações</h2>
+      <p>A ferramenta faz aritmética de mistura — <strong>não recomenda doses</strong>: a necessidade de N, P₂O₅ e K₂O sai da análise de solo interpretada por um engenheiro agrônomo. Ela também não avalia compatibilidade física e química entre fontes (higroscopicidade, segregação, ureia com superfosfato), salinidade no sulco nem parcelamento entre plantio e cobertura.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -302,6 +326,16 @@
         <p>Nem sempre é possível atender exatamente os três nutrientes. Quando faltar uma fonte específica (ex.: nenhum fertilizante com K) o nutriente fica descoberto. Quando os fertilizantes têm composições sobrepostas (ex.: dois com N) a heurística pode entregar sobra. <strong>O usuário precisa decidir a prioridade</strong>: priorizar P e K (caros e pouco móveis no solo) e ajustar N com adubação de cobertura costuma ser a escolha mais prática.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Posso misturar quaisquer fertilizantes?</h3>
+      <p>Não. Algumas combinações empedram ou perdem nutriente — ureia com superfosfato simples é um caso clássico de incompatibilidade citado em boletins técnicos. Verifique tabelas de compatibilidade antes de misturar fisicamente.</p>
+      <h3>A mistura sai mais barata que o formulado pronto?</h3>
+      <p>Depende dos preços do dia. Calcule o custo por kg de nutriente entregue em cada cenário; a mistura costuma ganhar quando as fontes simples estão baratas, mas exige mais logística e cuidado no armazenamento.</p>
+      <h3>E se nenhum fertilizante informado tiver um dos nutrientes?</h3>
+      <p>O nutriente fica descoberto e a calculadora sinaliza a falta. Inclua uma fonte específica (ex.: KCl para potássio) ou trate o complemento em outra operação.</p>
+      <h3>De onde vem a necessidade de N, P e K que eu digito?</h3>
+      <p>Da recomendação oficial da sua região aplicada ao laudo da análise de solo, interpretada por um engenheiro agrônomo. A página não gera recomendações.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -310,6 +344,9 @@
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>População de plantas</h3><p>Plantas por hectare.</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

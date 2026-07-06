@@ -51,6 +51,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Quantos litros de diesel por hectare gasta uma lavoura de grãos?","acceptedAnswer":{"@type":"Answer","text":"Depende do sistema: em plantio direto, o ciclo completo da soja costuma ficar entre 40 e 70 L/ha; sistemas com preparo convencional gastam mais. Meça o consumo real das suas operações para calibrar o planejamento."}},
+    {"@type":"Question","name":"Onde obtenho o consumo em L/h do meu trator?","acceptedAnswer":{"@type":"Answer","text":"Monitores de bordo modernos registram o consumo médio por operação. Sem monitor, abasteça o tanque cheio, trabalhe um período conhecido e divida os litros repostos pelas horas efetivas trabalhadas."}},
+    {"@type":"Question","name":"O que mais reduz o consumo por hectare?","acceptedAnswer":{"@type":"Answer","text":"Manutenção em dia (filtros, bicos), lastro e pressão de pneus corretos, profundidade de trabalho técnica e a regra marcha alta com rotação baixa quando a operação permite."}},
+    {"@type":"Question","name":"O custo de diesel calculado é o custo da operação?","acceptedAnswer":{"@type":"Answer","text":"Não. É só a parcela de combustível — tipicamente 15% a 30% do custo operacional da máquina. Some depreciação, manutenção, operador e lubrificantes para precificar a operação completa."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -172,41 +184,42 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima quanto o <strong>combustível</strong> pesa no custo de uma operação mecanizada — preparo de solo, plantio, pulverização ou colheita. Com consumo do equipamento, preço do litro e rendimento operacional, ela devolve litros por hectare, custo por hora, custo por hectare e, se a área for informada, o custo total da operação.</p>
+      <h2>Para que serve na gestão da fazenda</h2>
+      <p>O diesel é um dos custos variáveis mais visíveis da mecanização e um dos primeiros a estourar o orçamento quando o preço do litro sobe. Esta calculadora estima quanto o <strong>combustível</strong> pesa em cada operação — preparo de solo, plantio, pulverização ou colheita — e ajuda a planejar o abastecimento da safra, comparar equipamentos e conjuntos, precificar serviços de terceiros e identificar operações fora do padrão de consumo. Com o consumo do equipamento, o preço do litro e o rendimento operacional, ela devolve litros por hectare, custo por hora, custo por hectare e, se a área for informada, o custo total e os litros totais da operação.</p>
 
-      <h2>Como calcular</h2>
-      <p>O cálculo parte do consumo horário do equipamento (L/h), do preço do combustível (R$/L) e do rendimento operacional (ha/h) — quantos hectares o equipamento entrega em uma hora de trabalho efetivo.</p>
+      <h2>Entradas e unidades</h2>
+      <p>Informe o <strong>consumo em L/h</strong> (litros por hora efetiva de trabalho, medido no talhão ou obtido no monitor do equipamento), o <strong>preço em R$/L</strong> do diesel entregue na fazenda e o <strong>rendimento operacional em ha/h</strong> — quantos hectares o conjunto entrega por hora, já descontadas manobras e paradas. A área da operação, em hectares, é opcional e serve para totalizar o custo e os litros da operação inteira.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">litros/ha = consumo (L/h) ÷ rendimento (ha/h)</div>
       <div class="formula">custo/hora = consumo (L/h) × preço (R$/L)</div>
       <div class="formula">custo/ha = custo/hora ÷ rendimento (ha/h)</div>
       <div class="formula">custo total = custo/ha × área (ha)</div>
-
-      <h2>Exemplo</h2>
       <p>Trator com consumo de 15 L/h, diesel a R$ 6,80/L e rendimento de 2 ha/h em uma operação de 50 hectares:</p>
       <ul>
-        <li>litros/ha = 15 ÷ 2 = <strong>7,5 L/ha</strong></li>
-        <li>custo/hora = 15 × 6,80 = <strong>R$ 102,00/h</strong></li>
-        <li>custo/ha = 102 ÷ 2 = <strong>R$ 51,00/ha</strong></li>
-        <li>custo total = 51 × 50 = <strong>R$ 2.550,00</strong> (375 L no total)</li>
+        <li><strong>Passo 1:</strong> litros/ha = 15 ÷ 2 = <strong>7,5 L/ha</strong></li>
+        <li><strong>Passo 2:</strong> custo/hora = 15 × 6,80 = <strong>R$ 102,00/h</strong></li>
+        <li><strong>Passo 3:</strong> custo/ha = 102 ÷ 2 = <strong>R$ 51,00/ha</strong></li>
+        <li><strong>Passo 4:</strong> custo total = 51 × 50 = <strong>R$ 2.550,00</strong> (375 L no total)</li>
       </ul>
 
-      <h2>Boas práticas</h2>
-      <ul>
-        <li><strong>Regulagem do motor</strong>: motor desregulado, filtro de ar sujo ou bicos injetores gastos elevam o consumo em 10 a 20%. Mantenha as revisões em dia.</li>
-        <li><strong>Lastro adequado</strong>: lastro a mais aumenta o consumo sem ganho de tração; lastro a menos provoca patinagem e desperdiça diesel. Ajuste conforme o implemento.</li>
-        <li><strong>Profundidade de trabalho</strong>: cada centímetro a mais na grade ou subsolador eleva muito a demanda de potência. Trabalhe na profundidade técnica recomendada, não na máxima.</li>
-        <li><strong>Marcha e rotação</strong>: prefira marcha mais alta com rotação reduzida quando a operação permitir (regra "marcha alta, motor baixo") — reduz consumo sem perder velocidade de campo.</li>
-        <li><strong>Calibração de pneus e velocidade</strong>: pneus na pressão correta e velocidade compatível com a operação evitam consumo extra e perdas de qualidade.</li>
-      </ul>
+      <h2>Referências práticas</h2>
+      <p>Como ordem de grandeza, boletins de mecanização e levantamentos públicos de custo (ex.: CONAB, IMEA) trabalham com consumos típicos por operação: <strong>gradagem e preparo pesado, 8 a 15 L/ha; subsolagem, 12 a 20 L/ha; plantio direto, 4 a 8 L/ha; pulverização tratorizada, 0,5 a 1,5 L/ha; colheita de grãos, 12 a 20 L/ha</strong>. Um ciclo completo de soja em plantio direto costuma somar algo entre 40 e 70 L/ha. Os números reais variam bastante com solo, umidade, relevo, potência do conjunto e habilidade do operador — a variação regional e entre fazendas é forte, e a melhor referência é o histórico medido na própria propriedade.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Combustível não é o custo total
-        </div>
-        <p>Esta calculadora estima apenas a parcela de combustível. O custo operacional completo inclui também depreciação, manutenção, mão de obra, lubrificantes e juros sobre o capital empatado na máquina. Para o custo cheio, use a calculadora de custo de produção.</p>
-      </div>
+      <h2>Limitações</h2>
+      <p>A calculadora estima apenas a parcela de combustível: o custo operacional completo da máquina inclui depreciação, manutenção, lubrificantes, operador e juros sobre o capital — para o custo cheio, use a calculadora de custo de máquina por hora. O rendimento informado deve ser o efetivo de campo, não o de catálogo; motor desregulado, lastro incorreto e profundidade excessiva de trabalho podem elevar o consumo em 10% a 20% sobre o previsto.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Quantos litros de diesel por hectare gasta uma lavoura de grãos?</h3>
+      <p>Depende do sistema: em plantio direto, o ciclo completo da soja costuma ficar entre 40 e 70 L/ha; sistemas com preparo convencional gastam mais. Meça o consumo real das suas operações para calibrar o planejamento.</p>
+      <h3>Onde obtenho o consumo em L/h do meu trator?</h3>
+      <p>Monitores de bordo modernos registram o consumo médio por operação. Sem monitor, abasteça o tanque cheio, trabalhe um período conhecido e divida os litros repostos pelas horas efetivas trabalhadas.</p>
+      <h3>O que mais reduz o consumo por hectare?</h3>
+      <p>Manutenção em dia (filtros, bicos), lastro e pressão de pneus corretos, profundidade de trabalho técnica e a regra "marcha alta, rotação baixa" quando a operação permite. Juntas, essas práticas evitam desperdícios de duas casas percentuais.</p>
+      <h3>O custo de diesel calculado é o custo da operação?</h3>
+      <p>Não. É só a parcela de combustível — tipicamente 15% a 30% do custo operacional da máquina. Some depreciação, manutenção, operador e lubrificantes para precificar a operação completa.</p>
+
+      <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>

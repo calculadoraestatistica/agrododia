@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Qual a diferença entre custo operacional e custo total?","acceptedAnswer":{"@type":"Answer","text":"O operacional soma desembolsos, depreciação e mão de obra familiar; o total acrescenta a remuneração da terra e do capital investido. Vender acima do operacional paga a safra; acima do total, remunera todos os fatores."}},
+    {"@type":"Question","name":"Devo incluir depreciação no custo?","acceptedAnswer":{"@type":"Answer","text":"Sim, para decisões de médio prazo. Máquinas e benfeitorias se desgastam e precisarão ser repostas; ignorar a depreciação subestima o custo real e pode levar a vender abaixo do equilíbrio verdadeiro."}},
+    {"@type":"Question","name":"Custo por saca ou custo por hectare: qual usar?","acceptedAnswer":{"@type":"Answer","text":"Os dois. O custo por hectare orienta o orçamento da safra; o custo por unidade (saca, arroba, litro) é o que se compara com o preço de mercado na decisão de venda."}},
+    {"@type":"Question","name":"Como uso o ponto de equilíbrio na comercialização?","acceptedAnswer":{"@type":"Answer","text":"Ele é o piso informativo da negociação: preços acima dele geram margem, abaixo geram prejuízo. Muitos produtores escalonam vendas conforme o mercado supera o equilíbrio em percentuais definidos no planejamento."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -149,23 +161,40 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora estima o <strong>custo de produção por unidade</strong> — por saca, por arroba ou por litro — e o <strong>ponto de equilíbrio</strong>, o preço mínimo de venda.</p>
+      <h2>Para que serve na gestão da fazenda</h2>
+      <p>Saber quanto custa produzir cada saca, arroba ou litro é a base de qualquer decisão comercial na fazenda: define o preço mínimo aceitável na negociação, orienta o momento de travar vendas, mostra quais atividades remuneram melhor o capital e revela onde o custo saiu do controle de uma safra para outra. Esta calculadora transforma o custo total da atividade em <strong>custo por unidade produzida</strong> e no <strong>ponto de equilíbrio</strong> — o preço de venda que cobre exatamente todos os custos. Informando também o preço de venda, ela devolve receita, lucro e margem, permitindo comparar talhões, safras e culturas com a mesma régua.</p>
 
-      <h2>Como calcular</h2>
-      <p>Divide-se o custo total pela quantidade produzida. Esse custo por unidade é também o preço de venda que cobre exatamente todos os custos.</p>
+      <h2>Entradas e unidades</h2>
+      <p>Informe o <strong>custo total em R$</strong> da atividade no período (insumos, operações, arrendamento, mão de obra etc.) e a <strong>quantidade produzida na unidade em que você vende</strong>: sacas de 60 kg para grãos, arrobas para boi gordo, litros para leite. O preço de venda, opcional, deve estar na mesma unidade (R$/sc, R$/@, R$/L). Se o seu controle é por hectare, multiplique o custo por hectare pela área para obter o custo total.</p>
+
+      <h2>Fórmula e exemplo passo a passo</h2>
       <div class="formula">Custo por unidade = custo total ÷ quantidade produzida</div>
+      <div class="formula">Margem (%) = (preço − custo por unidade) ÷ preço × 100</div>
+      <p>Exemplo em grãos:</p>
+      <ul>
+        <li><strong>Passo 1:</strong> custo total da lavoura = <strong>R$ 240.000</strong> (200 ha × R$ 1.200/ha, por exemplo);</li>
+        <li><strong>Passo 2:</strong> produção colhida = <strong>1.200 sacas</strong>;</li>
+        <li><strong>Passo 3:</strong> custo por saca = 240.000 ÷ 1.200 = <strong>R$ 200/sc</strong> — este é o ponto de equilíbrio;</li>
+        <li><strong>Passo 4:</strong> vendendo a R$ 250/sc, o lucro é de R$ 50/sc e a margem de <strong>20%</strong> sobre o preço.</li>
+      </ul>
 
-      <h2>Exemplo</h2>
-      <p>Um custo total de R$ 240.000 para 1.200 sacas dá <strong>R$ 200 por saca</strong>. Vendendo a R$ 250, a margem é de 20%.</p>
+      <h2>Referências práticas</h2>
+      <p>Levantamentos públicos de custo (ex.: CONAB, IMEA) separam o custo em três camadas: <strong>custo efetivo</strong> (desembolsos da safra), <strong>custo operacional</strong> (efetivo + depreciação e mão de obra familiar) e <strong>custo total</strong> (operacional + remuneração da terra e do capital). Como ordem de grandeza nesses levantamentos, fertilizantes e corretivos costumam responder por 25% a 35% do custo de uma lavoura de grãos, sementes e defensivos por outra fatia expressiva, e as operações mecanizadas por 10% a 20%. Os valores absolutos variam fortemente por região, nível tecnológico e ano-safra — compare sempre o seu número com o levantamento mais recente da sua região, e não com médias nacionais.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Inclua os custos invisíveis
-        </div>
-        <p>Para um ponto de equilíbrio realista, some também a depreciação de máquinas, a remuneração da terra e a mão de obra da família. A metodologia da Conab separa custo efetivo, operacional e total.</p>
-      </div>
+      <h2>Limitações</h2>
+      <p>O resultado depende inteiramente do que você incluiu no custo total: se depreciação de máquinas, remuneração da terra própria e mão de obra da família ficarem de fora, o ponto de equilíbrio fica artificialmente baixo. A margem apresentada não desconta tributos sobre a venda (Funrural, ICMS conforme a operação) nem custos financeiros, e o cálculo rateia o custo pela produção realizada — quebras de produtividade elevam o custo por unidade.</p>
+
+      <h2>Perguntas frequentes</h2>
+      <h3>Qual a diferença entre custo operacional e custo total?</h3>
+      <p>O operacional soma desembolsos, depreciação e mão de obra familiar; o total acrescenta a remuneração da terra e do capital investido. Vender acima do operacional paga a safra; acima do total, remunera todos os fatores.</p>
+      <h3>Devo incluir depreciação no custo?</h3>
+      <p>Sim, para decisões de médio prazo. Máquinas e benfeitorias se desgastam e precisarão ser repostas; ignorar a depreciação subestima o custo real e pode levar a vender abaixo do equilíbrio verdadeiro.</p>
+      <h3>Custo por saca ou custo por hectare: qual usar?</h3>
+      <p>Os dois. O custo por hectare orienta o orçamento da safra; o custo por unidade (saca, arroba, litro) é o que se compara com o preço de mercado na decisão de venda.</p>
+      <h3>Como uso o ponto de equilíbrio na comercialização?</h3>
+      <p>Ele é o piso informativo da negociação: preços acima dele geram margem, abaixo geram prejuízo. Muitos produtores escalonam vendas conforme o mercado supera o equilíbrio em percentuais definidos no planejamento.</p>
+
+      <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
 
       <div class="related">
         <h2>Outras calculadoras</h2>

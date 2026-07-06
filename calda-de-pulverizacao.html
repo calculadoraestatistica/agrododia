@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Como descubro a taxa de aplicação do meu pulverizador?","acceptedAnswer":{"@type":"Answer","text":"Calibrando: com bicos revisados, meça a vazão por bico e a velocidade real de trabalho e calcule os L/ha. Refaça a calibração ao trocar bicos, pressão ou velocidade."}},
+    {"@type":"Question","name":"Qual a diferença entre dose por hectare e dose por 100 L?","acceptedAnswer":{"@type":"Answer","text":"Dose por hectare independe do volume de calda; dose por 100 L (concentração) acompanha o volume do tanque. Usar o modo errado pode dobrar ou reduzir à metade o produto aplicado."}},
+    {"@type":"Question","name":"O que faço com a sobra de calda?","acceptedAnswer":{"@type":"Answer","text":"O ideal é não sobrar — por isso a conta do tanque parcial. Sobras devem ser diluídas e aplicadas na própria lavoura conforme a bula, nunca descartadas em fontes de água."}},
+    {"@type":"Question","name":"Preciso de receituário agronômico para comprar o produto?","acceptedAnswer":{"@type":"Answer","text":"Sim. No Brasil a venda de defensivos exige receituário emitido por profissional habilitado, e a aplicação deve seguir a bula e as normas estaduais."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -165,15 +177,33 @@
 
     <article class="prose">
 
-      <h2>Para que serve</h2>
-      <p>Esta calculadora ajuda a preparar a <strong>calda de pulverização</strong>: o volume total de mistura e quanto de produto colocar em cada tanque do pulverizador.</p>
+      <h2>Para que serve no manejo</h2>
+      <p>Preparar a <strong>calda de pulverização</strong> é uma conta que se repete a cada aplicação: quantos litros de mistura a área pede, quantos tanques serão necessários e quanto de produto vai em cada tanque. Errar para mais gera sobra de calda — que não pode ser descartada em qualquer lugar e vira custo e passivo ambiental; errar para menos interrompe a operação no meio do talhão. Esta calculadora organiza o planejamento operacional: converte área, taxa de aplicação e dose do rótulo em volume total, número de tanques e produto por tanque, para o operador abastecer com segurança e sem desperdício.</p>
 
-      <h2>Como calcular</h2>
-      <p>O volume de calda é a taxa de aplicação multiplicada pela área. A dose por tanque depende de quantos hectares cada tanque cobre.</p>
-      <div class="formula">Volume de calda = taxa de aplicação (L/ha) × área (ha)</div>
+      <h2>Entradas, unidades e conversões</h2>
+      <ul>
+        <li><strong>Área a pulverizar</strong> em hectares.</li>
+        <li><strong>Taxa de aplicação</strong> em L/ha — sai da calibração do pulverizador (bicos, pressão e velocidade), não do rótulo do produto.</li>
+        <li><strong>Capacidade do tanque</strong> em litros.</li>
+        <li><strong>Dose do produto</strong>, em dois modos: por hectare (L/ha ou kg/ha) ou por 100 L de calda — leia com atenção qual dos dois o receituário usa, pois confundi-los muda a conta.</li>
+      </ul>
 
-      <h2>Exemplo</h2>
-      <p>50 ha a 100 L/ha exigem 5.000 L de calda. Com tanque de 2.000 L (cobre 20 ha) e dose de 0,5 L/ha, são <strong>10 L de produto por tanque</strong>.</p>
+      <h2>Fórmula e exemplo passo a passo</h2>
+      <div class="formula">Volume de calda (L) = taxa de aplicação (L/ha) × área (ha)</div>
+      <div class="formula">Produto por tanque = dose (por ha) × hectares que o tanque cobre</div>
+      <ol>
+        <li>Volume total: 100 L/ha × 50 ha = <strong>5.000 L</strong> de calda.</li>
+        <li>Cobertura de cada tanque: 2.000 L ÷ 100 L/ha = <strong>20 ha por tanque</strong>.</li>
+        <li>Número de tanques: 5.000 ÷ 2.000 = 2 tanques cheios + 1 parcial de 1.000 L.</li>
+        <li>Produto por tanque cheio: 0,5 L/ha × 20 ha = <strong>10 L</strong>. No tanque parcial (10 ha), 5 L.</li>
+      </ol>
+      <p>Quando a dose é "por 100 L", multiplica-se direto pelo volume do tanque: 0,5 L/100 L em um tanque de 2.000 L dá 10 L.</p>
+
+      <h2>Valores de referência práticos</h2>
+      <p>Segundo boletins técnicos públicos (ex.: Embrapa), os volumes de calda usuais em aplicações terrestres com barra ficam, em ordem de grandeza, entre <strong>50 e 200 L/ha</strong>; aplicações aéreas e com drones trabalham com volumes bem menores (frequentemente 10-40 L/ha), e culturas arbóreas com turboatomizador podem passar de 400 L/ha. Esses números variam com alvo biológico, tipo de bico, clima e tecnologia de aplicação — a taxa correta é a da <strong>sua calibração</strong>, refeita a cada mudança de condição. A dose do produto, por sua vez, vem exclusivamente da bula e do receituário agronômico.</p>
+
+      <h2>Limitações</h2>
+      <p>Esta página trata apenas da aritmética do abastecimento. <strong>Ela não recomenda produtos nem doses</strong> — dose, alvo, época e compatibilidade de mistura em tanque são definidos na bula e no receituário emitido por engenheiro agrônomo. A calculadora também não considera ordem de adição dos produtos, volume morto do pulverizador nem condições meteorológicas de aplicação (vento, temperatura, umidade).</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -183,6 +213,16 @@
         <p>Use sempre os equipamentos de proteção individual, siga a bula e as normas de aplicação de defensivos. Esta calculadora é um apoio de planejamento, não substitui a receita agronômica.</p>
       </div>
 
+      <h2>Perguntas frequentes</h2>
+      <h3>Como descubro a taxa de aplicação do meu pulverizador?</h3>
+      <p>Calibrando: com bicos revisados, meça a vazão por bico e a velocidade real de trabalho e calcule os L/ha. Refaça a calibração ao trocar bicos, pressão ou velocidade.</p>
+      <h3>Qual a diferença entre dose por hectare e dose por 100 L?</h3>
+      <p>Dose por hectare independe do volume de calda; dose por 100 L (concentração) acompanha o volume do tanque. Usar o modo errado pode dobrar ou reduzir à metade o produto aplicado.</p>
+      <h3>O que faço com a sobra de calda?</h3>
+      <p>O ideal é não sobrar — por isso a conta do tanque parcial. Sobras devem ser diluídas e aplicadas na própria lavoura conforme a bula, nunca descartadas em fontes de água.</p>
+      <h3>Preciso de receituário agronômico para comprar o produto?</h3>
+      <p>Sim. No Brasil a venda de defensivos exige receituário emitido por profissional habilitado, e a aplicação deve seguir a bula e as normas estaduais.</p>
+
       <div class="related">
         <h2>Outras calculadoras</h2>
         <div class="calc-grid">
@@ -191,6 +231,9 @@
           <a class="calc-card" href="/conversao-de-area.html"><h3>Conversão de área</h3><p>Hectare, alqueire e mais.</p></a>
         </div>
       </div>
+
+      <hr>
+      <p><em>Conteúdo educacional revisado pela equipe do Agro do Dia com base em boletins técnicos públicos (ex.: Embrapa). Não substitui a recomendação de um engenheiro agrônomo. Última revisão: 2026-07-05 · <a href="/fontes.html">Fontes e referências</a>.</em></p>
 
     </article>
   </div>

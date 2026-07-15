@@ -10,7 +10,7 @@ Sets de indicadores:
   completo (27): conjunto historico do widget original — boi gordo SP/SE,
                  leite, suino, algodao, etanol, trigo, arroz, etc.
 """
-import argparse, json, re, sys
+import argparse, json, re, sys, time
 import urllib.request as u
 import urllib.error
 from datetime import datetime, timezone, timedelta
@@ -43,14 +43,25 @@ def widget_url(ids):
     )
     return base + "".join(f"&id_indicador%5B%5D={i}" for i in ids)
 
-def fetch_widget(ids):
+def fetch_widget(ids, attempts=3):
     req = u.Request(widget_url(ids), headers={
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
         "Referer": "https://agrododia.com.br/",
     })
-    with u.urlopen(req, timeout=20) as r:
-        return r.read().decode("utf-8")
+    last_exc = None
+    for i in range(attempts):
+        try:
+            with u.urlopen(req, timeout=25) as r:
+                return r.read().decode("utf-8")
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            last_exc = e
+            if i < attempts - 1:
+                wait = 15 * (i + 1)
+                print(f"AVISO: tentativa {i+1}/{attempts} falhou ({e}); "
+                      f"nova tentativa em {wait}s", file=sys.stderr)
+                time.sleep(wait)
+    raise last_exc
 
 def parse_rows(body):
     """Extrai linhas (data, produto, valor) do document.write retornado."""
@@ -166,6 +177,16 @@ def scrape_and_save(ids, out_path, label):
     except Exception as e:  # historico nunca derruba o scrape principal
         print(f"AVISO historico: {type(e).__name__}: {e}", file=sys.stderr)
 
+def existing_data_age_hours():
+    """Idade (em horas) do cotacoes.json atual; None se nao existe/ilegivel."""
+    try:
+        doc = json.loads((DATA_DIR / "cotacoes.json").read_text(encoding="utf-8"))
+        updated = datetime.fromisoformat(doc["updated_at"])
+        return (datetime.now(updated.tzinfo) - updated).total_seconds() / 3600
+    except Exception:
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--set", choices=["basico", "completo", "all"], default="all",
@@ -176,8 +197,18 @@ def main():
             scrape_and_save(SET_BASICO, DATA_DIR / "cotacoes.json", "basico")
         if args.set in ("completo", "all"):
             scrape_and_save(SET_COMPLETO, DATA_DIR / "cotacoes-completas.json", "completo")
-    except urllib.error.URLError as e:
-        print(f"ERRO conexao CEPEA: {e}", file=sys.stderr)
+    except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+        # Indisponibilidade do CEPEA (522, timeout etc.) e transitoria: o job
+        # roda a cada 30 min e a proxima execucao recupera. So vira falha do
+        # workflow (e email de alerta) se os dados atuais ja estao velhos.
+        age = existing_data_age_hours()
+        if age is not None and age < 72:
+            print(f"AVISO conexao CEPEA: {e} — mantendo dados anteriores "
+                  f"({age:.1f}h de idade); proxima execucao tenta de novo.",
+                  file=sys.stderr)
+            sys.exit(0)
+        print(f"ERRO conexao CEPEA: {e} — dados locais ausentes ou com mais "
+              f"de 72h; alertando.", file=sys.stderr)
         sys.exit(1)
     except Exception as e:
         print(f"ERRO: {type(e).__name__}: {e}", file=sys.stderr)

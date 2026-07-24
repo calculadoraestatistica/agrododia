@@ -33,10 +33,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cotacoes.json data/cotacoes-completas.json
+          git add data/cotacoes.json data/cotacoes-completas.json data/cotacoes-historico.json
           if git diff --staged --quiet; then
             echo "Sem mudanças nos preços — skip commit."
           else
             git commit -m "cotacoes: atualiza CEPEA spot ($(TZ='America/Sao_Paulo' date +%Y-%m-%d_%Hh%M))"
-            git push
+            # Retry: cobre 500 transitorio do GitHub e corrida com outro push
+            n=0
+            until git push; do
+              n=$((n+1))
+              if [ "$n" -ge 3 ]; then echo "push falhou apos 3 tentativas"; exit 1; fi
+              echo "push falhou (tentativa $n/3) — rebase e retry em 20s"
+              sleep 20
+              git pull --rebase origin main || true
+            done
           fi

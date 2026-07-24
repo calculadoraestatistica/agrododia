@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T18:30:17-03:00",
+  "updated_at": "2026-07-24T19:00:22-03:00",
   "source": "CEPEA/Esalq",
   "source_url": "https://www.cepea.org.br/",
   "items": [
@@ -8,108 +8,108 @@
       "slug": "boi-gordo",
       "icon": "boi",
       "unit": "@",
-      "value": 343.75,
-      "value_display": "R$ 343,75",
-      "date": "2026-07-23"
+      "value": 344.2,
+      "value_display": "R$ 344,20",
+      "date": "2026-07-24"
     },
     {
       "name": "Bezerro - MS",
       "slug": "bezerro-ms",
       "icon": "",
       "unit": "cabeça",
-      "value": 3395.4,
-      "value_display": "R$ 3.395,40",
-      "date": "2026-07-23"
+      "value": 3388.21,
+      "value_display": "R$ 3.388,21",
+      "date": "2026-07-24"
     },
     {
       "name": "Bezerro - SP",
       "slug": "bezerro-sp",
       "icon": "",
       "unit": "cabeça",
-      "value": 3164.71,
-      "value_display": "R$ 3.164,71",
-      "date": "2026-07-23"
+      "value": 3160.12,
+      "value_display": "R$ 3.160,12",
+      "date": "2026-07-24"
     },
     {
       "name": "Soja - PR",
       "slug": "soja-pr",
       "icon": "soja",
       "unit": "sc de 60kg",
-      "value": 139.28,
-      "value_display": "R$ 139,28",
-      "date": "2026-07-23"
+      "value": 140.26,
+      "value_display": "R$ 140,26",
+      "date": "2026-07-24"
     },
     {
       "name": "Milho",
       "slug": "milho",
       "icon": "milho",
       "unit": "sc de 60kg",
-      "value": 65.55,
-      "value_display": "R$ 65,55",
-      "date": "2026-07-23"
+      "value": 65.74,
+      "value_display": "R$ 65,74",
+      "date": "2026-07-24"
     },
     {
       "name": "Trigo - PR",
       "slug": "trigo-pr",
       "icon": "",
       "unit": "t",
-      "value": 1394.69,
-      "value_display": "R$ 1.394,69",
-      "date": "2026-07-23"
+      "value": 1403.24,
+      "value_display": "R$ 1.403,24",
+      "date": "2026-07-24"
     },
     {
       "name": "Trigo - RS",
       "slug": "trigo-rs",
       "icon": "",
       "unit": "t",
-      "value": 1321.59,
-      "value_display": "R$ 1.321,59",
-      "date": "2026-07-23"
+      "value": 1324.66,
+      "value_display": "R$ 1.324,66",
+      "date": "2026-07-24"
     },
     {
       "name": "Café Arábica",
       "slug": "cafe-arabica",
       "icon": "cafe",
       "unit": "sc de 60kg",
-      "value": 1692.59,
-      "value_display": "R$ 1.692,59",
-      "date": "2026-07-23"
+      "value": 1676.28,
+      "value_display": "R$ 1.676,28",
+      "date": "2026-07-24"
     },
     {
       "name": "Café Robusta",
       "slug": "caf-robusta",
       "icon": "",
       "unit": "sc de 60kg",
-      "value": 1066.24,
-      "value_display": "R$ 1.066,24",
-      "date": "2026-07-23"
+      "value": 1070.72,
+      "value_display": "R$ 1.070,72",
+      "date": "2026-07-24"
     },
     {
       "name": "ARROZ EM CASCA CEPEA/IRGA-RS (58% DE GRÃOS INTEIROS)",
       "slug": "arroz-em-casca-cepea-irga-rs-58-de-gr-os-inteiros",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 66.72,
-      "value_display": "R$ 66,72",
-      "date": "2026-07-23"
+      "value": 66.98,
+      "value_display": "R$ 66,98",
+      "date": "2026-07-24"
     },
     {
       "name": "Açúcar - SP",
       "slug": "a-car-sp",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 91.49,
-      "value_display": "R$ 91,49",
-      "date": "2026-07-23"
+      "value": 93.3,
+      "value_display": "R$ 93,30",
+      "date": "2026-07-24"
     },
     {
       "name": "Açúcar - Santos",
       "slug": "a-car-santos",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 105.9,
-      "value_display": "R$ 105,90",
-      "date": "2026-07-23"
+      "value": 106.68,
+      "value_display": "R$ 106,68",
+      "date": "2026-07-24"
     },
     {
       "name": "Etanol Anidro - AL",
@@ -134,9 +134,9 @@
       "slug": "etanol-anidro-pb",
       "icon": "",
       "unit": "litro",
-      "value": 3.2115,
-      "value_display": "R$ 3,2115",
-      "date": "2026-07-03"
+      "value": 3.0686,
+      "value_display": "R$ 3,0686",
+      "date": "2026-07-24"
     },
     {
       "name": "Etanol Anidro - PE",
@@ -152,9 +152,9 @@
       "slug": "etanol-anidro-sp",
       "icon": "",
       "unit": "litro",
-      "value": 2.4421,
-      "value_display": "R$ 2,4421",
-      "date": "2026-07-17"
+      "value": 2.3786,
+      "value_display": "R$ 2,3786",
+      "date": "2026-07-24"
     },
     {
       "name": "Etanol Hidratado - AL",
@@ -170,18 +170,18 @@
       "slug": "etanol-hidratado-go",
       "icon": "",
       "unit": "litro",
-      "value": 2.4044,
-      "value_display": "R$ 2,4044",
-      "date": "2026-07-17"
+      "value": 2.338,
+      "value_display": "R$ 2,338",
+      "date": "2026-07-24"
     },
     {
       "name": "Etanol Hidratado - MT",
       "slug": "etanol-hidratado-mt",
       "icon": "",
       "unit": "m3",
-      "value": 2652.81,
-      "value_display": "R$ 2.652,81",
-      "date": "2026-07-17"
+      "value": 2624.74,
+      "value_display": "R$ 2.624,74",
+      "date": "2026-07-24"
     },
     {
       "name": "Etanol Hidratado - PE",
@@ -197,9 +197,9 @@
       "slug": "etanol-hidratado-sp",
       "icon": "",
       "unit": "litro",
-      "value": 2.1336,
-      "value_display": "R$ 2,1336",
-      "date": "2026-07-17"
+      "value": 2.0764,
+      "value_display": "R$ 2,0764",
+      "date": "2026-07-24"
     }
   ]
 }

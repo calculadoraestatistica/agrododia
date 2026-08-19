@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T18:30:18-03:00",
+  "updated_at": "2026-08-19T18:53:30-03:00",
   "source": "CEPEA/Esalq",
   "source_url": "https://www.cepea.org.br/",
   "items": [
@@ -8,108 +8,108 @@
       "slug": "boi-gordo",
       "icon": "boi",
       "unit": "@",
-      "value": 344.8,
-      "value_display": "R$ 344,80",
-      "date": "2026-08-18"
+      "value": 344.85,
+      "value_display": "R$ 344,85",
+      "date": "2026-08-19"
     },
     {
       "name": "Bezerro - MS",
       "slug": "bezerro-ms",
       "icon": "",
       "unit": "cabeça",
-      "value": 3385.31,
-      "value_display": "R$ 3.385,31",
-      "date": "2026-08-18"
+      "value": 3389.33,
+      "value_display": "R$ 3.389,33",
+      "date": "2026-08-19"
     },
     {
       "name": "Bezerro - SP",
       "slug": "bezerro-sp",
       "icon": "",
       "unit": "cabeça",
-      "value": 3200.95,
-      "value_display": "R$ 3.200,95",
-      "date": "2026-08-18"
+      "value": 3206.96,
+      "value_display": "R$ 3.206,96",
+      "date": "2026-08-19"
     },
     {
       "name": "Soja - PR",
       "slug": "soja-pr",
       "icon": "soja",
       "unit": "sc de 60kg",
-      "value": 143.21,
-      "value_display": "R$ 143,21",
-      "date": "2026-08-18"
+      "value": 144.03,
+      "value_display": "R$ 144,03",
+      "date": "2026-08-19"
     },
     {
       "name": "Milho",
       "slug": "milho",
       "icon": "milho",
       "unit": "sc de 60kg",
-      "value": 67.2,
-      "value_display": "R$ 67,20",
-      "date": "2026-08-18"
+      "value": 67.39,
+      "value_display": "R$ 67,39",
+      "date": "2026-08-19"
     },
     {
       "name": "Trigo - PR",
       "slug": "trigo-pr",
       "icon": "",
       "unit": "t",
-      "value": 1419.12,
-      "value_display": "R$ 1.419,12",
-      "date": "2026-08-18"
+      "value": 1444.01,
+      "value_display": "R$ 1.444,01",
+      "date": "2026-08-19"
     },
     {
       "name": "Trigo - RS",
       "slug": "trigo-rs",
       "icon": "",
       "unit": "t",
-      "value": 1320.04,
-      "value_display": "R$ 1.320,04",
-      "date": "2026-08-18"
+      "value": 1321.69,
+      "value_display": "R$ 1.321,69",
+      "date": "2026-08-19"
     },
     {
       "name": "Café Arábica",
       "slug": "cafe-arabica",
       "icon": "cafe",
       "unit": "sc de 60kg",
-      "value": 1815.45,
-      "value_display": "R$ 1.815,45",
-      "date": "2026-08-18"
+      "value": 1804.65,
+      "value_display": "R$ 1.804,65",
+      "date": "2026-08-19"
     },
     {
       "name": "Café Robusta",
       "slug": "caf-robusta",
       "icon": "",
       "unit": "sc de 60kg",
-      "value": 1075.11,
-      "value_display": "R$ 1.075,11",
-      "date": "2026-08-18"
+      "value": 1062.69,
+      "value_display": "R$ 1.062,69",
+      "date": "2026-08-19"
     },
     {
       "name": "ARROZ EM CASCA CEPEA/IRGA-RS (58% DE GRÃOS INTEIROS)",
       "slug": "arroz-em-casca-cepea-irga-rs-58-de-gr-os-inteiros",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 75.96,
-      "value_display": "R$ 75,96",
-      "date": "2026-08-18"
+      "value": 76.08,
+      "value_display": "R$ 76,08",
+      "date": "2026-08-19"
     },
     {
       "name": "Açúcar - SP",
       "slug": "a-car-sp",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 102.27,
-      "value_display": "R$ 102,27",
-      "date": "2026-08-18"
+      "value": 102.49,
+      "value_display": "R$ 102,49",
+      "date": "2026-08-19"
     },
     {
       "name": "Açúcar - Santos",
       "slug": "a-car-santos",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 126.24,
-      "value_display": "R$ 126,24",
-      "date": "2026-08-18"
+      "value": 125.21,
+      "value_display": "R$ 125,21",
+      "date": "2026-08-19"
     },
     {
       "name": "Etanol Anidro - AL",

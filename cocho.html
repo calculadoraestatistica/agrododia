@@ -161,7 +161,7 @@
     <article class="prose">
 
       <h2>Para que serve no manejo</h2>
-      <p>O espaço linear de cocho — a chamada <strong>frente de cocho</strong> — é um dos pontos que boletins técnicos públicos (ex.: Embrapa) mais associam à uniformidade do lote em confinamento e à eficiência da suplementação a pasto. Quando a frente é curta, os animais dominantes ocupam o cocho primeiro e os mais tímidos comem menos e por último; o resultado costuma ser maior desuniformidade de peso dentro do lote e sobras mal distribuídas. Esta calculadora mostra, ainda na fase de planejamento, quantos metros lineares de cocho e de bebedouro corresponderiam a um lote de determinado tamanho em cada tipo de manejo — trato controlado, ração à vontade, suplemento proteinado ou sal mineral.</p>
+      <p>O espaço linear de cocho, a chamada <strong>frente de cocho</strong>, é um dos pontos que boletins técnicos públicos (ex.: Embrapa) mais associam à uniformidade do lote em confinamento e à eficiência da suplementação a pasto. Quando a frente é curta, os animais dominantes ocupam o cocho primeiro e os mais tímidos comem menos e por último; o resultado costuma ser maior desuniformidade de peso dentro do lote e sobras mal distribuídas. Esta calculadora mostra, ainda na fase de planejamento, quantos metros lineares de cocho e de bebedouro corresponderiam a um lote de determinado tamanho em cada tipo de manejo: trato controlado, ração à vontade, suplemento proteinado ou sal mineral.</p>
 
       <h2>Entradas, unidades e conversões</h2>
       <p>A calculadora usa duas entradas: o <strong>número de animais</strong> (cabeças no lote ou piquete) e o <strong>tipo de manejo</strong>, que define o espaço por cabeça em centímetros. O resultado sai em metros lineares — 100 cm equivalem a 1 m. Uma conversão prática lembrada em materiais técnicos: um cocho com acesso pelos dois lados oferece o dobro de frente, ou seja, 10 m de cocho duplo equivalem a 20 m lineares. O bebedouro também é expresso em centímetros lineares por cabeça.</p>
@@ -193,7 +193,7 @@
       <p>Animais com chifres, categorias jovens em fase de adaptação e lotes muito heterogêneos costumam aparecer na literatura associados às faixas mais folgadas.</p>
 
       <h2>Limitações</h2>
-      <p>A conta considera apenas o comprimento. Ela não avalia altura, largura e profundidade do cocho, cobertura contra chuva, vazão e reserva de água do bebedouro nem o desenho do curral. Também assume lote homogêneo: misturar categorias muito diferentes no mesmo cocho muda a dinâmica de disputa. Em manejos com fornecimento em horários fixos, o espaço tende a pesar mais do que em sistemas à vontade — situações específicas pedem a avaliação de um profissional.</p>
+      <p>A conta considera apenas o comprimento. Ela não avalia altura, largura e profundidade do cocho, cobertura contra chuva, vazão e reserva de água do bebedouro nem o desenho do curral. Também assume lote homogêneo: misturar categorias muito diferentes no mesmo cocho muda a dinâmica de disputa. Em manejos com fornecimento em horários fixos, o espaço tende a pesar mais do que em sistemas à vontade: situações específicas pedem a avaliação de um profissional.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -209,7 +209,7 @@
       <h3>Por que o trato controlado exige mais espaço?</h3>
       <p>Porque a ração chega em horários definidos e o lote inteiro tenta comer ao mesmo tempo. Na ração à vontade, o alimento fica disponível o dia todo e os animais se revezam, o que reduz a frente necessária por cabeça.</p>
       <h3>Sal mineral precisa de tão pouco cocho assim?</h3>
-      <p>O consumo de sal mineral é pequeno e esporádico — o animal visita o cocho poucas vezes ao dia. Boletins técnicos citam poucos centímetros por cabeça, desde que o cocho fique em local de fácil acesso e seja reabastecido com regularidade.</p>
+      <p>O consumo de sal mineral é pequeno e esporádico: o animal visita o cocho poucas vezes ao dia. Boletins técnicos citam poucos centímetros por cabeça, desde que o cocho fique em local de fácil acesso e seja reabastecido com regularidade.</p>
       <h3>O comprimento do bebedouro garante água suficiente?</h3>
       <p>Não. O comprimento é só uma das variáveis: a vazão de reposição, o volume do reservatório e a temperatura da água também aparecem na literatura como fatores decisivos, especialmente no calor.</p>
 
@@ -317,7 +317,7 @@
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (Fmt.num(r.comprimentoCocho, 1) + ' <small>m de cocho</small>') + '</div>';
       html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Espaço de cocho por animal</div>' + '<div class="metric__value">' + (Fmt.int(r.espacoPorAnimal) + ' cm') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Comprimento de bebedouro</div>' + '<div class="metric__value">' + (Fmt.num(r.comprimentoBebedouro, 1) + ' m') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('No trato controlado, todos os animais comem ao mesmo tempo — por isso o cocho precisa de mais espaço por cabeça do que no sistema com ração à vontade.') + '</p></div>';
+    html += '<div class="result__interpretation"><p>' + ('No trato controlado, todos os animais comem ao mesmo tempo, por isso o cocho precisa de mais espaço por cabeça do que no sistema com ração à vontade.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

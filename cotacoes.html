@@ -31,7 +31,6 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
 <script src="/js/cookie-consent.js" defer></script>
-  <script src="/js/media-loop.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://agrododia.com.br/"},{"@type":"ListItem","position":2,"name":"Cotações","item":"https://agrododia.com.br/cotacoes.html"}]}</script>
 <!-- schema-enhanced -->
 </head>
@@ -168,14 +167,10 @@
     </article>
 
   </div>
-
-      <figure class="media-figure">
-        <video data-loop width="960" height="540" muted loop playsinline
-               preload="none" poster="/img/poster-boi-gordo-br.jpg">
-          <source src="/video/boi-gordo-br.mp4" type="video/mp4">
-        </video>
-        <figcaption>A série do boi gordo das últimas semanas, com a máxima e a mínima marcadas. Os pontos são os mesmos que alimentam a tabela acima: o robô lê o indicador CEPEA todo dia útil e guarda o valor.</figcaption>
-      </figure>
+      <section class="section" aria-label="Como o preço andou">
+        <h2>Como o preço andou</h2>
+        <div data-cot-chart></div>
+      </section>
 </main>
 
 <footer class="site-footer">
@@ -233,6 +228,7 @@
 
 <script src="/js/config.js"></script>
 <script src="/js/app.js"></script>
-<script src="/js/cotacoes-cepea.js" defer></script>
+<script src="/js/cot-chart.js" defer></script>
+  <script src="/js/cotacoes-cepea.js" defer></script>
 </body>
 </html>

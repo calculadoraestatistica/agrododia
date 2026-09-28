@@ -16,6 +16,8 @@
   ]
 }
 </script>
+<!-- manutencao -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Calculadora de Frete Agrícola","url":"https://agrododia.com.br/frete-agricola.html","datePublished":"2026-06-10","dateModified":"2026-09-26","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Agro do Dia","url":"https://agrododia.com.br/"},"author":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/"},"publisher":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/"}}</script>
 </head>
 <body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="site-header"><div class="container site-header__inner"><a class="brand" href="/"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16a34a"/><path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/><path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/></svg><span class="brand__name">Agro <span>do Dia</span></span><span class="brand__tagline">Cotações do dia e Calculadoras Agro</span></a><button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><nav class="main-nav" id="menu"><ul><li><a href="/">Início</a></li><li><a href="/cotacoes.html">Cotações</a></li><li><a href="/futuros.html">Futuros</a></li><li><a href="/calculadoras.html">Calculadoras</a></li><li><a href="/sobre.html">Sobre</a></li></ul></nav></div></header>
 <main id="conteudo"><div class="page-head"><div class="container"><nav class="breadcrumb"><ol><li><a href="/">Início</a></li><li>Frete agrícola</li></ol></nav><h1>Calculadora de Frete Agrícola</h1><p class="lead">Calcule o frete por carga, por tonelada e por saca para comparar comprador, armazém e rota.</p></div></div><div class="container narrow"><form class="calculator" id="calc-form" novalidate><h2 class="calculator__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17h4V5H2v12h3"/><path d="M14 17h1V9h4l3 4v4h-2"/><circle cx="7" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></svg>Calcular frete</h2><fieldset class="field-group"><legend>Rota e carga</legend><div class="field-row"><div class="field"><label for="distancia">Distância</label><div class="input-affix"><input class="input" id="distancia" type="text" inputmode="decimal" placeholder="Ex.: 180"><span class="input-affix__unit">km</span></div></div><div class="field"><label for="carga">Carga</label><div class="input-affix"><input class="input" id="carga" type="text" inputmode="decimal" placeholder="Ex.: 32"><span class="input-affix__unit">t</span></div></div></div><div class="field-row"><div class="field"><label for="valorTonKm">Valor do frete</label><div class="input-affix"><input class="input" id="valorTonKm" type="text" inputmode="decimal" placeholder="Ex.: 0,35"><span class="input-affix__unit">R$/t.km</span></div></div><div class="field"><label for="pesoSaca">Peso da saca</label><div class="input-affix"><input class="input" id="pesoSaca" type="text" inputmode="decimal" placeholder="60"><span class="input-affix__unit">kg</span></div></div></div></fieldset><fieldset class="field-group"><legend>Custos extras</legend><div class="field-row"><div class="field"><label for="pedagio">Pedágio</label><div class="input-affix"><input class="input" id="pedagio" type="text" inputmode="decimal" placeholder="0"><span class="input-affix__unit">R$</span></div></div><div class="field"><label for="cargaDescarga">Carga/descarga</label><div class="input-affix"><input class="input" id="cargaDescarga" type="text" inputmode="decimal" placeholder="0"><span class="input-affix__unit">R$</span></div></div></div><div class="field"><label for="outrosCustos">Outros custos</label><div class="input-affix"><input class="input" id="outrosCustos" type="text" inputmode="decimal" placeholder="0"><span class="input-affix__unit">R$</span></div></div></fieldset><p class="field-error" id="calc-error" role="alert"></p><div class="calculator__actions"><button class="btn btn--primary btn--lg" type="submit">Calcular frete</button><button class="btn btn--ghost" type="button" id="calc-example">Preencher com exemplo</button></div><section class="result" id="calc-result" hidden aria-live="polite"></section></form><div class="ad-slot" data-ad-slot=""></div><article class="prose">
@@ -48,5 +50,61 @@
 <h3>Como uso o custo por saca na decisão de venda?</h3>
 <p>Desconte-o do preço oferecido em cada destino e compare os líquidos. Um comprador que paga R$ 2 a mais na saca, mas exige R$ 3 a mais de frete, rende menos.</p>
 <p><em>Conteúdo educacional, de caráter informativo. Não substitui consultoria agronômica ou contábil. Última revisão: 2026-07-05. Veja as <a href="/fontes.html">fontes e referências</a> do site.</em></p>
-<div class="related"><h2>Outras calculadoras</h2><div class="calc-grid"><a class="calc-card" href="/vender-ou-armazenar.html"><h3>Vender ou armazenar</h3><p>Compare cenários de venda.</p></a><a class="calc-card" href="/margem-bruta.html"><h3>Margem bruta</h3><p>Receita e custos por hectare.</p></a><a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Ponto de equilíbrio.</p></a></div></div></article></div></main><footer class="site-footer"><div class="container"><div class="footer-bottom"><p>As calculadoras têm finalidade informativa e fornecem estimativas.</p><p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p></div></div></footer>
+<div class="related"><h2>Outras calculadoras</h2><div class="calc-grid"><a class="calc-card" href="/vender-ou-armazenar.html"><h3>Vender ou armazenar</h3><p>Compare cenários de venda.</p></a><a class="calc-card" href="/margem-bruta.html"><h3>Margem bruta</h3><p>Receita e custos por hectare.</p></a><a class="calc-card" href="/custo-de-producao.html"><h3>Custo de produção</h3><p>Ponto de equilíbrio.</p></a></div></div></article></div>  <div class="container narrow"><p class="revisao">Publicada em 10 de junho de 2026 e revisada pela última vez em 26 de setembro de 2026. O que mudou no site está no <a href="/mudancas.html">histórico de alterações</a>.</p></div>
+</main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#16a34a"/>
+            <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+            <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+          </svg>
+          <span class="brand__name">Agro do Dia</span>
+        </a>
+        <p>Cotações do agro e calculadoras agropecuárias, atualizadas todo dia.</p>
+      </div>
+      <div>
+        <h3>Mercado</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Cotações do dia</a></li>
+          <li><a href="/futuros.html">Futuros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Calculadoras</h3>
+        <ul>
+          <li><a href="/calculadoras.html">Todas as calculadoras</a></li>
+          <li><a href="/lotacao-pastagem.html">Lotação de pastagem</a></li>
+          <li><a href="/conversao-de-sacas.html">Conversão de sacas</a></li>
+          <li><a href="/adubacao-npk.html">Adubação NPK</a></li>
+          <li><a href="/conversao-de-area.html">Conversão de área</a></li>
+          <li><a href="/margem-bruta.html">Margem bruta</a></li>
+          <li><a href="/umidade-graos.html">Umidade de grãos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Sobre</a></li>
+          <li><a href="/metodologia.html">Metodologia</a></li>
+          <li><a href="/procedencia.html">Procedência dos dados</a></li>
+          <li><a href="/mudancas.html">Histórico de alterações</a></li>
+          <li><a href="/politica-editorial.html">Política editorial</a></li>
+          <li><a href="/fontes.html">Fontes</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+          <li><a href="/privacidade.html">Privacidade</a></li>
+          <li><a href="/termos.html">Termos de uso</a></li>
+          <li><a href="/apoiar.html">Apoiar o projeto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>As calculadoras têm finalidade informativa e fornecem estimativas. As cotações são de terceiros (CEPEA/Esalq e B3 via TradingView).</p>
+      <p>© <span data-year>2026</span> Agro do Dia · Feito no Brasil.</p>
+    </div>
+  </div>
+</footer>
 <script src="/js/config.js"></script><script src="/js/agro.js"></script><script src="/js/app.js"></script><script>(function(){'use strict';var $=function(id){return document.getElementById(id);},form=$('calc-form'),result=$('calc-result'),errBox=$('calc-error');function showError(m){errBox.textContent=m;errBox.classList.add('is-visible');result.hidden=true;}function clearError(){errBox.textContent='';errBox.classList.remove('is-visible');}$('calc-example').addEventListener('click',function(){$('distancia').value='180';$('carga').value='32';$('valorTonKm').value='0,35';$('pesoSaca').value='60';$('pedagio').value='180';$('cargaDescarga').value='250';$('outrosCustos').value='0';compute();});form.addEventListener('submit',function(e){e.preventDefault();compute();});function readForm(){return{distancia:parseNum($('distancia').value),carga:parseNum($('carga').value),valorTonKm:parseNum($('valorTonKm').value),pesoSaca:parseNum($('pesoSaca').value),pedagio:parseNum($('pedagio').value),cargaDescarga:parseNum($('cargaDescarga').value),outrosCustos:parseNum($('outrosCustos').value)};}function compute(){clearError();var r=Agro.freteAgricola(readForm());if(r.error){showError(r.error);return;}render(r);}function money(v){return 'R$ '+Fmt.num(v,2);}function render(r){result.className='result result--neutral';result.innerHTML='<div class="result__banner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div><div class="result__headline">Custo total do frete</div><div class="result__sub">Carga completa</div></div></div><div class="result__body"><div class="result__main">'+money(r.custoTotal)+'</div><div class="result__metrics"><div class="metric"><div class="metric__label">Custo por tonelada</div><div class="metric__value">'+money(r.custoPorT)+'</div></div><div class="metric"><div class="metric__label">Custo por saca</div><div class="metric__value">'+money(r.custoPorSaca)+'</div></div><div class="metric"><div class="metric__label">Extras</div><div class="metric__value">'+money(r.extras)+'</div></div></div><div class="result__interpretation"><p>Use o custo por saca para comparar o preço líquido de venda em diferentes destinos.</p></div></div>';result.hidden=false;result.scrollIntoView({behavior:'smooth',block:'nearest'});}})();</script></body></html>

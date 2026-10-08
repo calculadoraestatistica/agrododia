@@ -1,11 +1,21 @@
 name: Scrape CEPEA cotações
 
-# Roda a cada 30min em horário comercial BRT (11h-22h UTC = 8h-19h BRT), seg-sex.
-# Manual também via workflow_dispatch.
+# Roda em volta do horário em que o CEPEA publica, seg-sex.
+#
+# Antes rodava a cada 30 minutos das 8h às 19h BRT, 24 vezes por dia. Medindo o
+# histórico (300 commits), 96% deles não mudavam nenhum preço, e as mudanças
+# reais aconteciam às 19h BRT em 9 de 11 vezes. Ou seja: 23 das 24 execuções
+# diárias existiam para nada, e o empilhamento no grupo de concorrência era o
+# que gerava os e-mails de "All jobs were cancelled".
+#
+# Agora: seis passadas cobrindo 18h-20h30 BRT, mais uma de manhã para pegar
+# eventual correção publicada fora do horário. Sete em vez de 24.
 on:
   schedule:
-    # */30 minutos, das 11h às 22h UTC (= 8h-19h BRT), seg-sex
-    - cron: '*/30 11-22 * * 1-5'
+    # 21h00 a 23h30 UTC, de meia em meia hora = 18h00 a 20h30 BRT
+    - cron: '0,30 21-23 * * 1-5'
+    # 13h05 UTC = 10h05 BRT, rede de segurança para correção tardia
+    - cron: '5 13 * * 1-5'
   workflow_dispatch: {}
 
 permissions:

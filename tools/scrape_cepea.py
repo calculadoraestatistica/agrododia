@@ -156,6 +156,33 @@ def append_history(items, path=HISTORY_PATH):
         print(f"OK (historico): {len(history)} indicadores -> {path.name}")
     return history
 
+def gravar_se_mudou(path, payload, ignorar=("updated_at",)):
+    """Grava o JSON so quando algum dado mudou de verdade.
+
+    O carimbo updated_at muda a cada execucao. Enquanto ele era escrito sempre,
+    o arquivo diferia sempre, a guarda "so commita se mudou" do workflow nunca
+    disparava e o robo commitava a cada meia hora. Medido no historico: 288 de
+    299 commits (96%) nao mudavam nenhum preco. Alem do ruido, as execucoes se
+    empilhavam no grupo de concorrencia e o GitHub cancelava as pendentes, que
+    era a origem dos emails de "All jobs were cancelled".
+
+    Comparar ignorando o carimbo resolve as duas coisas de uma vez. O
+    updated_at passa a significar "quando os numeros mudaram", que e o que o
+    leitor entende quando le aquilo, e nao "quando olhamos pela ultima vez".
+    """
+    if path.exists():
+        try:
+            atual = json.loads(path.read_text(encoding="utf-8"))
+            limpo = {k: v for k, v in atual.items() if k not in ignorar}
+            novo = {k: v for k, v in payload.items() if k not in ignorar}
+            if limpo == novo:
+                return False
+        except (ValueError, OSError):
+            pass  # arquivo ilegivel: reescreve
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    return True
+
+
 def scrape_and_save(ids, out_path, label):
     body = fetch_widget(ids)
     items = parse_rows(body)
@@ -168,8 +195,10 @@ def scrape_and_save(ids, out_path, label):
         "source_url": "https://www.cepea.org.br/",
         "items": items,
     }
-    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"OK ({label}): {len(items)} indicadores -> {out_path.name}")
+    if gravar_se_mudou(out_path, out):
+        print(f"OK ({label}): {len(items)} indicadores -> {out_path.name}")
+    else:
+        print(f"OK ({label}): {len(items)} indicadores, nenhum preco mudou -> nao reescreve")
     for it in items:
         print(f"  {it['name']:30s} {it['value_display']:>16s} / {it['unit']} ({it['date']})")
     try:

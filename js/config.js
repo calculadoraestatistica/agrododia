@@ -1,11 +1,9 @@
 /* ==========================================================================
-   config.js — Configuração do Agro do Dia
+   config.js — Configuração
    --------------------------------------------------------------------------
-   As cotações vêm de widgets externos (CEPEA e TradingView), incorporados
-   diretamente nas páginas. O campo "adsenseClient" abaixo é usado apenas
-   para posicionamento manual de anúncios nos espaços <div class="ad-slot">.
+   O AdSense foi retirado em 29/10/2026. As unidades nunca serviram anúncio
+   e, sem pedido de revisão, não iriam servir.
    ========================================================================== */
 window.SITE_CONFIG = {
-  adsenseClient: "",
   baseUrl: "https://agrododia.com.br"
 };

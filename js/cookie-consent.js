@@ -62,7 +62,7 @@
     wrap.setAttribute('aria-label', 'Preferências de cookies');
     wrap.innerHTML = [
       '<div class="cookie-banner__inner">',
-      '  <p class="cookie-banner__text">Usamos cookies para anúncios (Google AdSense) e para melhorar o site. Saiba mais na nossa ',
+      '  <p class="cookie-banner__text">O site não exibe anúncios. As páginas de cotações carregam widgets do TradingView, que podem gravar cookies próprios no seu navegador. Detalhes na ',
       '  <a href="/privacidade.html">política de privacidade</a>.</p>',
       '  <div class="cookie-banner__actions">',
       '    <button type="button" class="cc-btn cc-btn--ghost" data-cookie="deny">Recusar</button>',

@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.cepea.org.br">
 <meta name="google-adsense-account" content="ca-pub-7516029395999799">
 <title>Cotações do Agro Hoje — Boi, Soja, Milho e Café | Agro do Dia</title>
@@ -28,7 +27,6 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
-<script src="/js/cookie-consent.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Agro do Dia","url":"https://agrododia.com.br/","inLanguage":"pt-BR","description":"Cotações do agro atualizadas todo dia e calculadoras agropecuárias.","publisher":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/","logo":{"@type":"ImageObject","url":"https://agrododia.com.br/favicon-512.png","width":512,"height":512}}}</script>
 <!-- manutencao -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Cotações do agro, todo dia.","url":"https://agrododia.com.br/","datePublished":"2026-05-23","dateModified":"2026-09-26","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Agro do Dia","url":"https://agrododia.com.br/"},"author":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/"},"publisher":{"@type":"Organization","name":"Agro do Dia","url":"https://agrododia.com.br/"}}</script>
@@ -67,8 +65,12 @@
 <div class="ticker-band">
   <!-- Faixa de cotações (TradingView). -->
   <div class="tradingview-widget-container tv-skeleton tv-skeleton--ticker" style="min-height:70px;">
+              <div class="tv-gate">
+                <p class="tv-gate__tekst">O gráfico é carregado da TradingView, que define cookies próprios. Ele só aparece depois que você clica.</p>
+                <button class="tv-gate__knap" type="button">Carregar gráfico da TradingView</button>
+              </div>
     <div class="tradingview-widget-container__widget"></div>
-    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    <script type="application/json" class="tv-config" data-tv-src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
     {
     "symbols": [
       { "description": "Dólar", "proName": "FX_IDC:USDBRL" },
@@ -127,11 +129,15 @@
         <div class="widget-card__body">
           <!-- TradingView Symbol Overview: futuros internacionais + USD/BRL -->
           <div class="tradingview-widget-container tv-skeleton" style="min-height:380px;">
+              <div class="tv-gate">
+                <p class="tv-gate__tekst">O gráfico é carregado da TradingView, que define cookies próprios. Ele só aparece depois que você clica.</p>
+                <button class="tv-gate__knap" type="button">Carregar gráfico da TradingView</button>
+              </div>
             <div class="tradingview-widget-container__widget"></div>
             <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
               <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Cotações pelo TradingView</a>
             </div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+            <script type="application/json" class="tv-config" data-tv-src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js">
             {"symbols":[["Soja","OANDA:SOYBNUSD|3M"],["Milho","OANDA:CORNUSD|3M"],["Café","OANDA:COFFEEUSD|3M"],["Açúcar","OANDA:SUGARUSD|3M"],["Dólar BRL","FX_IDC:USDBRL|3M"]],"chartOnly":false,"width":"100%","height":380,"locale":"br","colorTheme":"light","autosize":true,"showVolume":false,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":false,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Inter, system-ui, sans-serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#2F6B3A","maLineWidth":1,"maLength":9,"backgroundColor":"rgba(255, 255, 255, 1)","lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D"]}
             </script>
           </div>
@@ -284,5 +290,6 @@
 <script src="/js/config.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/cotacoes-cepea.js" defer></script>
+<script src="/js/tv-consent.js" defer></script>
 </body>
 </html>

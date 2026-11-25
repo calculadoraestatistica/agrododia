@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T19:00:22-03:00",
+  "updated_at": "2026-11-25T19:00:22-03:00",
   "source": "CEPEA/Esalq",
   "source_url": "https://www.cepea.org.br/",
   "items": [
@@ -35,81 +35,81 @@
       "slug": "soja-pr",
       "icon": "soja",
       "unit": "sc de 60kg",
-      "value": 162.9,
-      "value_display": "R$ 162,90",
-      "date": "2026-11-24"
+      "value": 162.98,
+      "value_display": "R$ 162,98",
+      "date": "2026-11-25"
     },
     {
       "name": "Milho",
       "slug": "milho",
       "icon": "milho",
       "unit": "sc de 60kg",
-      "value": 68.16,
-      "value_display": "R$ 68,16",
-      "date": "2026-11-24"
+      "value": 67.94,
+      "value_display": "R$ 67,94",
+      "date": "2026-11-25"
     },
     {
       "name": "Trigo - PR",
       "slug": "trigo-pr",
       "icon": "",
       "unit": "t",
-      "value": 1577.46,
-      "value_display": "R$ 1.577,46",
-      "date": "2026-11-24"
+      "value": 1579.34,
+      "value_display": "R$ 1.579,34",
+      "date": "2026-11-25"
     },
     {
       "name": "Trigo - RS",
       "slug": "trigo-rs",
       "icon": "",
       "unit": "t",
-      "value": 1449.83,
-      "value_display": "R$ 1.449,83",
-      "date": "2026-11-24"
+      "value": 1469.73,
+      "value_display": "R$ 1.469,73",
+      "date": "2026-11-25"
     },
     {
       "name": "Café Arábica",
       "slug": "cafe-arabica",
       "icon": "cafe",
       "unit": "sc de 60kg",
-      "value": 1679.04,
-      "value_display": "R$ 1.679,04",
-      "date": "2026-11-24"
+      "value": 1678.92,
+      "value_display": "R$ 1.678,92",
+      "date": "2026-11-25"
     },
     {
       "name": "Café Robusta",
       "slug": "caf-robusta",
       "icon": "",
       "unit": "sc de 60kg",
-      "value": 905.45,
-      "value_display": "R$ 905,45",
-      "date": "2026-11-24"
+      "value": 873.54,
+      "value_display": "R$ 873,54",
+      "date": "2026-11-25"
     },
     {
       "name": "ARROZ EM CASCA CEPEA/IRGA-RS (58% DE GRÃOS INTEIROS)",
       "slug": "arroz-em-casca-cepea-irga-rs-58-de-gr-os-inteiros",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 80.82,
-      "value_display": "R$ 80,82",
-      "date": "2026-11-24"
+      "value": 80.75,
+      "value_display": "R$ 80,75",
+      "date": "2026-11-25"
     },
     {
       "name": "Açúcar - SP",
       "slug": "a-car-sp",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 130.22,
-      "value_display": "R$ 130,22",
-      "date": "2026-11-24"
+      "value": 132.07,
+      "value_display": "R$ 132,07",
+      "date": "2026-11-25"
     },
     {
       "name": "Açúcar - Santos",
       "slug": "a-car-santos",
       "icon": "",
       "unit": "sc de 50kg",
-      "value": 138.48,
-      "value_display": "R$ 138,48",
-      "date": "2026-11-24"
+      "value": 143.56,
+      "value_display": "R$ 143,56",
+      "date": "2026-11-25"
     },
     {
       "name": "Etanol Anidro - AL",
